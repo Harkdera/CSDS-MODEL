@@ -81,12 +81,31 @@ def main():
             # ---------------------------------------------------------
             # 5) Plot
             # ---------------------------------------------------------
-            plt.figure()
+            plt.figure(figsize=(8, 6))
 
             plt.plot(u_vals, tau_vals, label="CSDS model")
             plt.scatter([u_p], [tau_p], marker="o", label="Peak (u_p, tau_p)")
             plt.scatter([u_r], [tau_r], marker="s", label="Residual data")
             plt.scatter([u_r], [tau_r_model], marker="x", label="Residual model")
+
+            # Parameter text box
+            param_text = (
+                f"tau_r = {tau_r:.3f} MPa\n"
+                f"u_r = {u_r:.3f} mm\n"
+                f"d = {d:.3f}\n"
+                f"e = {e:.3f}\n"
+                f"u_p = {u_p:.3f} mm\n"
+                f"tau_p = {tau_p:.3f} MPa"
+            )
+
+            plt.text(
+                0.65, 0.97,
+                param_text,
+                transform=plt.gca().transAxes,
+                fontsize=9,
+                verticalalignment="top",
+                bbox=dict(facecolor="white", alpha=0.8, edgecolor="black")
+            )
 
             plt.xlabel("Shear displacement u (mm)")
             plt.ylabel("Shear stress tau (MPa)")

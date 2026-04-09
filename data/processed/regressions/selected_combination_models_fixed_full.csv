@@ -1,0 +1,4 @@
+Dataset,Model_Name,Features,Degree,R2_train,RMSE_train,R2_val,RMSE_val,Equation,Excluded
+FULL,Model_147_deg2,u_r_mm + delta_peak_mm + tau_p_div_u_r,2,0.27027827234815127,76.38834708764686,0.7901613366847575,17.284450278117006,d_csds = 2.986284 + 0.770221*u_r_mm - 7.387731*delta_peak_mm - 2.765124*tau_p_div_u_r - 0.087059*u_r_mm^2 + 0.487539*u_r_mm delta_peak_mm + 1.608518*u_r_mm tau_p_div_u_r - 0.029043*delta_peak_mm^2 + 16.942915*delta_peak_mm tau_p_div_u_r - 2.794696*tau_p_div_u_r^2,False
+FULL,Model_148_deg1,u_r_mm + delta_peak_mm + tau_peak_MPa_csds + tau_p_div_u_r,1,0.19118820468991993,80.42150792628279,0.4156613698301074,28.843311159534295,d_csds = 0.413783 - 3.624122*u_r_mm + 18.779968*delta_peak_mm + 4.939985*tau_peak_MPa_csds - 5.842613*tau_p_div_u_r,False
+FULL,Model_148_deg2_REDUNDANT_EXCLUDED,u_r_mm + delta_peak_mm + tau_peak_MPa_csds + tau_p_div_u_r,2,,,,,EXCLUDED: exact redundancy because u_r_mm * tau_p_div_u_r = tau_peak_MPa_csds,True

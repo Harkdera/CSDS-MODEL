@@ -1,0 +1,7 @@
+dataset,model_label,target,degree,features,n_obs,n_params,theoretical_train_size_15p,actual_train_size,validation_size,R2_train,RMSE_train,R2_val,RMSE_val,BIC_val
+FULL,Model 1,d_csds,2,delta_peak_mm + tau_peak_MPa_csds + u_r_mm + tau_r_MPa + a_csds + b_csds + c_csds,299,36,540,209,90,1.0,2.8728554051318444e-13,1.0,6.988492116709287e-13,-4876.0883031513495
+FULL,Model 1,e_csds,2,delta_peak_mm + tau_peak_MPa_csds + u_r_mm + tau_r_MPa + a_csds + b_csds + c_csds,299,36,540,209,90,0.691862796252412,6.018641827814795,-3.359045370053007,13.246655394465282,627.0672656834995
+LOW,Model 1,d_csds,2,delta_peak_mm + tau_peak_MPa_csds + u_r_mm + tau_r_MPa + a_csds + b_csds + c_csds,202,36,540,141,61,1.0,1.1309320170974856e-14,1.0,8.924138257776745e-15,-3798.7105692199266
+LOW,Model 1,e_csds,2,delta_peak_mm + tau_peak_MPa_csds + u_r_mm + tau_r_MPa + a_csds + b_csds + c_csds,202,36,540,141,61,0.758167679462813,6.0405134806033915,-4.732218942139293,21.397148201873115,521.7088925997023
+HIGH,Model 1,d_csds,2,delta_peak_mm + tau_peak_MPa_csds + u_r_mm + tau_r_MPa + a_csds + b_csds + c_csds,97,36,540,67,30,1.0,7.645075240281107e-14,1.0,2.738049003300695e-12,-1474.9834237646994
+HIGH,Model 1,e_csds,2,delta_peak_mm + tau_peak_MPa_csds + u_r_mm + tau_r_MPa + a_csds + b_csds + c_csds,97,36,540,67,30,0.9494983694232261,0.8190813823598357,-1256.8205752987537,150.63675087942693,423.3353846601925

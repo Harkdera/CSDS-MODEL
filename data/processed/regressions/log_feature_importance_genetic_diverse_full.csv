@@ -1,0 +1,10 @@
+Feature,Frequency
+u_r_mm,5
+u_p_div_u_r,5
+tau_r_div_tau_p,5
+u_p_div_tau_r,3
+tau_p_div_u_r,2
+u_r_div_tau_r,2
+tau_p_div_u_p,2
+tau_r_div_u_r,2
+u_r_x_u_p,1

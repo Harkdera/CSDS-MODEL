@@ -1,0 +1,43 @@
+Dataset,Rank_in_saved_results,Polynomial_Term,Coefficient_in_scaled_space
+HIGH,1,tau_p_div_u_p,-1.0485207221719288
+HIGH,1,tau_r_div_u_r,-1.1395073711179207
+HIGH,1,tau_p_div_u_r,1.3407847185483124
+HIGH,1,tau_p_div_u_p^2,0.38966408361325694
+HIGH,1,tau_p_div_u_p tau_r_div_u_r,0.40301369639664253
+HIGH,1,tau_p_div_u_p tau_p_div_u_r,-0.5929389461034142
+HIGH,1,tau_r_div_u_r^2,0.10903876273832835
+HIGH,1,tau_r_div_u_r tau_p_div_u_r,-0.22589718775758794
+HIGH,1,tau_p_div_u_r^2,-0.010586190965734096
+HIGH,2,tau_r_div_u_r,-1.1615891736573474
+HIGH,2,tau_p_div_u_p,-0.44741932247785493
+HIGH,2,u_p_div_tau_p,0.7265798020682951
+HIGH,2,tau_p_div_u_r,1.524526465487876
+HIGH,2,tau_r_div_u_r^2,0.1571136543714863
+HIGH,2,tau_r_div_u_r tau_p_div_u_p,0.45592781575379243
+HIGH,2,tau_r_div_u_r u_p_div_tau_p,-0.12381756452216501
+HIGH,2,tau_r_div_u_r tau_p_div_u_r,-0.2836733674680252
+HIGH,2,tau_p_div_u_p^2,0.0785264981066467
+HIGH,2,tau_p_div_u_p u_p_div_tau_p,-0.3478407241900353
+HIGH,2,tau_p_div_u_p tau_p_div_u_r,-0.5696399414706902
+HIGH,2,u_p_div_tau_p^2,-0.13205586943932543
+HIGH,2,u_p_div_tau_p tau_p_div_u_r,0.3997132797794869
+HIGH,2,tau_p_div_u_r^2,0.10258197142846187
+HIGH,3,tau_p_div_u_r,0.4893566236426642
+HIGH,3,tau_r_div_u_p,-1.1178496837754475
+HIGH,3,tau_p_div_u_r^2,-0.04035894235790974
+HIGH,3,tau_p_div_u_r tau_r_div_u_p,-0.25169383180696014
+HIGH,3,tau_r_div_u_p^2,0.4115247102009739
+HIGH,4,tau_p_div_u_p,-1.1669292006101277
+HIGH,4,tau_p_div_u_r,0.8194810030180825
+HIGH,4,tau_r_MPa,-0.5598161724364397
+HIGH,4,tau_p_div_u_p^2,0.47480266360375517
+HIGH,4,tau_p_div_u_p tau_p_div_u_r,-0.45070729226600026
+HIGH,4,tau_p_div_u_p tau_r_MPa,0.18080090437483556
+HIGH,4,tau_p_div_u_r^2,0.14730289457489185
+HIGH,4,tau_p_div_u_r tau_r_MPa,-0.4265677293641533
+HIGH,4,tau_r_MPa^2,0.147012190494138
+HIGH,5,u_p_x_tau_p,0.8899593257011671
+HIGH,5,tau_p_div_u_r,0.3574357782538383
+HIGH,5,u_p_x_tau_p^2,-0.144198483443499
+HIGH,5,u_p_x_tau_p tau_p_div_u_r,0.2350385986834268
+HIGH,5,tau_p_div_u_r^2,-0.03725528417032505

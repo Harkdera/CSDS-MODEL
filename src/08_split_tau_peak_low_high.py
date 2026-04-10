@@ -20,6 +20,12 @@ OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 
 df = pd.read_csv(INPUT_FILE)
 
+if "sample_id" not in df.columns:
+    raise ValueError("Column sample_id not found in converged file.")
+
+if df["sample_id"].duplicated().any():
+    raise ValueError("Duplicate sample_id values found in converged file.")
+
 # Vérifier que la colonne de découpage est disponible.
 if "tau_peak_MPa_csds" not in df.columns:
     raise ValueError("Column tau_peak_MPa_csds not found in file.")
@@ -37,6 +43,10 @@ SPLIT = 7.0 # MPa
 # Définir les deux sous-groupes à partir du seuil.
 df_low = df[df["tau_peak_MPa_csds"] < SPLIT].copy()
 df_high = df[df["tau_peak_MPa_csds"] >= SPLIT].copy()
+
+# Conserver explicitement l'ordre du fichier convergé de référence.
+df_low = df_low.sort_values(by="sample_id", key=lambda s: pd.Categorical(s, categories=df["sample_id"], ordered=True)).reset_index(drop=True)
+df_high = df_high.sort_values(by="sample_id", key=lambda s: pd.Categorical(s, categories=df["sample_id"], ordered=True)).reset_index(drop=True)
 
 # Calculer la taille de chaque groupe.
 count_low = len(df_low)

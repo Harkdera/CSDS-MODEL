@@ -21,6 +21,7 @@ if str(SRC_DIR) not in sys.path:
 from direct_e.common import (  # noqa: E402
     COMPARISON_DIR,
     CONVERGED_FILE,
+    DIRECT_E_MODEL_FIGURES_DIR,
     EVALUATION_DIR,
     GROUP_DIR,
     csds_tau,
@@ -536,7 +537,7 @@ def main() -> None:
             dataset_summary_df.to_csv(dataset_summary_file, index=False)
             print(f"\nDataset summary saved: {dataset_summary_file}")
 
-            combined_plots_dir = out_dir / "plots_by_sample_all_models"
+            combined_plots_dir = DIRECT_E_MODEL_FIGURES_DIR / folder_name / "all_models_by_sample"
             create_combined_plots_for_dataset(
                 dataset_plot_rows=dataset_plot_rows,
                 dataset_name=dataset_name,

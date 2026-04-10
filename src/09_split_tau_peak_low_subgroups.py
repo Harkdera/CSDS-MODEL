@@ -16,7 +16,7 @@ CONVERGED_FILE = BASE_DIR / "data" / "processed" / "csds_parameters_converged_on
 OUTPUT_LOW_1 = BASE_DIR / "data" / "interim" / "csds_tau_peak_low_1.csv"
 OUTPUT_LOW_2 = BASE_DIR / "data" / "interim" / "csds_tau_peak_low_2.csv"
 
-OUTPUT_DIR = BASE_DIR / "figures" / "splits" / "tau_peak_low_subgroups"
+OUTPUT_DIR = BASE_DIR / "results" / "figures" / "splits" / "tau_peak_low_subgroups"
 OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 
 df = pd.read_csv(INPUT_FILE)

@@ -9,9 +9,9 @@ import matplotlib.pyplot as plt
 from sklearn.metrics import mean_squared_error, r2_score
 
 try:
-    from direct_d.common import B_FROM_D_DIR, COMPARE_DIR, CONVERGED_FILE, E_FROM_D_DIR, GROUP_DIR, N_CURVE_POINTS, find_sample_id_column, csds_tau, make_u_grid
+    from direct_d.common import B_FROM_D_DIR, COMPARE_DIR, CONVERGED_FILE, DIRECT_D_CURVES_FIG_DIR, DIRECT_D_MODEL_FIGURES_DIR, E_FROM_D_DIR, GROUP_DIR, N_CURVE_POINTS, find_sample_id_column, csds_tau, make_u_grid
 except ModuleNotFoundError:
-    from common import B_FROM_D_DIR, COMPARE_DIR, CONVERGED_FILE, E_FROM_D_DIR, GROUP_DIR, N_CURVE_POINTS, find_sample_id_column, csds_tau, make_u_grid
+    from common import B_FROM_D_DIR, COMPARE_DIR, CONVERGED_FILE, DIRECT_D_CURVES_FIG_DIR, DIRECT_D_MODEL_FIGURES_DIR, E_FROM_D_DIR, GROUP_DIR, N_CURVE_POINTS, find_sample_id_column, csds_tau, make_u_grid
 
 
 # ============================================================
@@ -830,7 +830,7 @@ def main() -> None:
                 comparison_file = model_dir / f"{model_name}_comparison_d_b_e_tau_u.csv"
                 comparison_df.to_csv(comparison_file, index=False)
 
-                plots_dir = model_dir / "plots_tau_u"
+                plots_dir = DIRECT_D_CURVES_FIG_DIR / folder_name / model_name
                 create_plots_for_model(
                     comparison_df=comparison_df,
                     dataset_name=dataset_name,
@@ -866,7 +866,7 @@ def main() -> None:
             dataset_summary_df.to_csv(dataset_summary_file, index=False)
             print(f"\nDataset summary saved: {dataset_summary_file}")
 
-            combined_plots_dir = out_dir / "plots_by_sample_all_models"
+            combined_plots_dir = DIRECT_D_MODEL_FIGURES_DIR / folder_name / "all_models_by_sample"
             create_combined_plots_for_dataset(
                 dataset_plot_rows=dataset_plot_rows,
                 dataset_name=dataset_name,

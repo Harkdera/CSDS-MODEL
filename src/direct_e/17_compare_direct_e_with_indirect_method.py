@@ -16,14 +16,16 @@ if str(SRC_DIR) not in sys.path:
 
 from direct_e.common import (  # noqa: E402
     COMPARISON_DIR,
+    EVALUATION_DIR,
     ensure_output_dirs,
 )
+from direct_d.common import COMPARE_DIR as INDIRECT_COMPARE_DIR, E_FROM_D_DIR as INDIRECT_E_FROM_D_DIR
 
 
 BASE_DIR = Path(__file__).resolve().parent.parent.parent
-DIRECT_SUMMARY_FILE = BASE_DIR / "data" / "processed" / "direct_e" / "evaluations" / "summary_all_b_d_from_e_models.csv"
-INDIRECT_E_SUMMARY_FILE = BASE_DIR / "data" / "processed" / "e_from_all_retained_d_models" / "summary_all_retained_models_e_from_d.csv"
-INDIRECT_CURVE_SUMMARY_FILE = BASE_DIR / "data" / "processed" / "compare_d_b_e_tau_u" / "summary_all_models_compare_d_b_e_tau_u.csv"
+DIRECT_SUMMARY_FILE = EVALUATION_DIR / "summary_all_b_d_from_e_models.csv"
+INDIRECT_E_SUMMARY_FILE = INDIRECT_E_FROM_D_DIR / "summary_all_retained_models_e_from_d.csv"
+INDIRECT_CURVE_SUMMARY_FILE = INDIRECT_COMPARE_DIR / "summary_all_models_compare_d_b_e_tau_u.csv"
 
 
 def load_direct_summary() -> pd.DataFrame:

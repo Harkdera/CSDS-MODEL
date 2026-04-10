@@ -7,6 +7,7 @@ import pandas as pd
 BASE_DIR = Path(__file__).resolve().parent.parent
 RAW_DIR = BASE_DIR / "data" / "raw"
 INTERIM_DIR = BASE_DIR / "data" / "interim"
+RESULTS_DATASETS_DIR = BASE_DIR / "results" / "datasets"
 
 # ------------------------------
 # 1) Chemins vers les fichiers CSV d'entrée
@@ -94,6 +95,8 @@ df_final = pd.concat(dfs, axis=1)
 output_file = INTERIM_DIR / "csds_full_table_clean.csv"
 output_file.parent.mkdir(parents=True, exist_ok=True)
 df_final.to_csv(output_file, index=False)
+RESULTS_DATASETS_DIR.mkdir(parents=True, exist_ok=True)
+df_final.to_csv(RESULTS_DATASETS_DIR / output_file.name, index=False)
 
 print(f"\nSaved to: {output_file}")
 print(df_final.head())

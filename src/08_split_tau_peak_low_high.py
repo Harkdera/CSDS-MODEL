@@ -14,8 +14,9 @@ INPUT_FILE = BASE_DIR / "data" / "processed" / "csds_parameters_converged_only.c
 
 OUTPUT_LOW = BASE_DIR / "data" / "interim" / "csds_tau_peak_low.csv"
 OUTPUT_HIGH = BASE_DIR / "data" / "interim" / "csds_tau_peak_high.csv"
+RESULTS_DATASETS_DIR = BASE_DIR / "results" / "datasets"
 
-OUTPUT_DIR = BASE_DIR / "results" / "figures" / "splits" / "tau_peak_low_high"
+OUTPUT_DIR = BASE_DIR / "results" / "split" / "tau_peak_low_high"
 OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 
 df = pd.read_csv(INPUT_FILE)
@@ -63,6 +64,9 @@ OUTPUT_HIGH.parent.mkdir(parents=True, exist_ok=True)
 
 df_low.to_csv(OUTPUT_LOW, index=False)
 df_high.to_csv(OUTPUT_HIGH, index=False)
+RESULTS_DATASETS_DIR.mkdir(parents=True, exist_ok=True)
+df_low.to_csv(RESULTS_DATASETS_DIR / OUTPUT_LOW.name, index=False)
+df_high.to_csv(RESULTS_DATASETS_DIR / OUTPUT_HIGH.name, index=False)
 
 # ================================
 # 4) Tracer l'histogramme global avec le seuil

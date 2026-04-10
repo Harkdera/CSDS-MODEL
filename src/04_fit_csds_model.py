@@ -39,6 +39,7 @@ import pandas as pd
 BASE_DIR = Path(__file__).resolve().parent.parent
 INPUT_CSV = BASE_DIR / "data" / "interim" / "csds_parameters_cleaned.csv"
 OUTPUT_CSV = BASE_DIR / "data" / "processed" / "csds_parameters_with_model.csv"
+RESULTS_DATASETS_DIR = BASE_DIR / "results" / "datasets"
 
 
 def csds_tau(u, a, b, c, d, e):
@@ -227,6 +228,8 @@ def main():
     # 5) Sauvegarder le résultat
     OUTPUT_CSV.parent.mkdir(parents=True, exist_ok=True)
     df_out.to_csv(OUTPUT_CSV, index=False)
+    RESULTS_DATASETS_DIR.mkdir(parents=True, exist_ok=True)
+    df_out.to_csv(RESULTS_DATASETS_DIR / OUTPUT_CSV.name, index=False)
 
     print("CSDS model parameters saved to:", OUTPUT_CSV)
 

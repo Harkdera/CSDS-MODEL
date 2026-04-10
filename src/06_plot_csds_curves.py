@@ -35,7 +35,7 @@ import matplotlib.pyplot as plt
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 INPUT_CSV = BASE_DIR / "data" / "processed" / "csds_parameters_converged_only.csv"
-OUTPUT_DIR = BASE_DIR / "results" / "direct_d" / "figures" / "curves" / "csds_tau_vs_u"
+OUTPUT_DIR = BASE_DIR / "results" / "figures" / "curves" / "csds_tau_vs_u"
 
 
 def csds_tau_simon(u, tau_r, u_r, d, e):

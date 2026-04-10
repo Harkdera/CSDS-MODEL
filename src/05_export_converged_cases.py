@@ -11,6 +11,7 @@ def main():
     # -------------------------------------------------------------
     BASE_DIR = Path(__file__).resolve().parent.parent
     input_csv = BASE_DIR / "data" / "processed" / "csds_parameters_with_model.csv"
+    results_datasets_dir = BASE_DIR / "results" / "datasets"
 
     # -------------------------------------------------------------
     # 2) Lire le fichier complet
@@ -55,6 +56,8 @@ def main():
     output_csv = BASE_DIR / "data" / "processed" / "csds_parameters_converged_only.csv"
     output_csv.parent.mkdir(parents=True, exist_ok=True)
     df_converged.to_csv(output_csv, index=False)
+    results_datasets_dir.mkdir(parents=True, exist_ok=True)
+    df_converged.to_csv(results_datasets_dir / output_csv.name, index=False)
 
     print(f"\nSaved file: {output_csv}")
     print("This file contains only samples where csds_converged == True.")

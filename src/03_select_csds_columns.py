@@ -7,6 +7,7 @@ import pandas as pd
 BASE_DIR = Path(__file__).resolve().parent.parent
 INPUT_FILE = BASE_DIR / "data" / "interim" / "csds_parameters.csv"
 OUTPUT_FILE = BASE_DIR / "data" / "interim" / "csds_parameters_cleaned.csv"
+RESULTS_DATASETS_DIR = BASE_DIR / "results" / "datasets"
 
 
 # ---------------------------------------
@@ -49,6 +50,8 @@ df_clean = df[keep_cols].copy()
 # ----------------------------------------------------
 OUTPUT_FILE.parent.mkdir(parents=True, exist_ok=True)
 df_clean.to_csv(OUTPUT_FILE, index=False)
+RESULTS_DATASETS_DIR.mkdir(parents=True, exist_ok=True)
+df_clean.to_csv(RESULTS_DATASETS_DIR / OUTPUT_FILE.name, index=False)
 
 print(f"\nFile saved: {OUTPUT_FILE}")
 print(df_clean.head())

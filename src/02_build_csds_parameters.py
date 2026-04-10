@@ -9,6 +9,7 @@ import math
 BASE_DIR = Path(__file__).resolve().parent.parent
 INPUT_FILE = BASE_DIR / "data" / "interim" / "csds_full_table_clean.csv"
 OUTPUT_FILE = BASE_DIR / "data" / "interim" / "csds_parameters.csv"
+RESULTS_DATASETS_DIR = BASE_DIR / "results" / "datasets"
 
 
 # --------------------------------------------------
@@ -142,5 +143,7 @@ df["tau_r_estimated"] = tau_r_flag
 # --------------------------------------------------
 OUTPUT_FILE.parent.mkdir(parents=True, exist_ok=True)
 df.to_csv(OUTPUT_FILE, index=False)
+RESULTS_DATASETS_DIR.mkdir(parents=True, exist_ok=True)
+df.to_csv(RESULTS_DATASETS_DIR / OUTPUT_FILE.name, index=False)
 
 print(f"Created: {OUTPUT_FILE}")

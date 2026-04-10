@@ -13,7 +13,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 FILE = BASE_DIR / "data" / "processed" / "csds_parameters_converged_only.csv"
 
-OUT_DIR = BASE_DIR / "results" / "figures" / "eda" / "converged_csds"
+OUT_DIR = BASE_DIR / "results" / "eda" / "converged_csds"
 OUT_DIR.mkdir(parents=True, exist_ok=True)
 
 # ================================

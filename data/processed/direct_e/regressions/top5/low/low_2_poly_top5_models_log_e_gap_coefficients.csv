@@ -1,0 +1,84 @@
+Dataset,Rank_in_saved_results,Polynomial_Term,Coefficient_in_scaled_space
+LOW_2,1,u_p_x_tau_p,-1.029774286052359
+LOW_2,1,u_p_div_u_r,-0.909178687955747
+LOW_2,1,tau_r_div_tau_p,0.3735645949919204
+LOW_2,1,u_p_x_tau_p^2,0.14360929355250812
+LOW_2,1,u_p_x_tau_p u_p_div_u_r,0.0946640850056807
+LOW_2,1,u_p_x_tau_p tau_r_div_tau_p,0.09398112488884489
+LOW_2,1,u_p_div_u_r^2,-0.06900010748364437
+LOW_2,1,u_p_div_u_r tau_r_div_tau_p,0.2115504894627892
+LOW_2,1,tau_r_div_tau_p^2,-0.0384041172181749
+LOW_2,2,delta_peak_mm,-0.39355079541466237
+LOW_2,2,u_p_div_u_r,-0.3293696127503811
+LOW_2,2,u_r_div_u_p,0.4022351982520781
+LOW_2,2,tau_r_div_tau_p,0.42711207022021097
+LOW_2,2,tau_r_div_u_p,0.44079140945414397
+LOW_2,2,delta_peak_mm^2,0.03376727309907169
+LOW_2,2,delta_peak_mm u_p_div_u_r,0.031670793494479946
+LOW_2,2,delta_peak_mm u_r_div_u_p,0.006345299104276268
+LOW_2,2,delta_peak_mm tau_r_div_tau_p,0.0066796268291094895
+LOW_2,2,delta_peak_mm tau_r_div_u_p,0.022355913257558247
+LOW_2,2,u_p_div_u_r^2,-0.11630952408271915
+LOW_2,2,u_p_div_u_r u_r_div_u_p,0.14322686171979995
+LOW_2,2,u_p_div_u_r tau_r_div_tau_p,0.14902538165767445
+LOW_2,2,u_p_div_u_r tau_r_div_u_p,-0.02316681423094033
+LOW_2,2,u_r_div_u_p^2,-0.0462977321004426
+LOW_2,2,u_r_div_u_p tau_r_div_tau_p,-0.09027956134685831
+LOW_2,2,u_r_div_u_p tau_r_div_u_p,0.012147108430665516
+LOW_2,2,tau_r_div_tau_p^2,0.07706198476105365
+LOW_2,2,tau_r_div_tau_p tau_r_div_u_p,-0.023880303561630532
+LOW_2,2,tau_r_div_u_p^2,-0.09669172463537934
+LOW_2,3,u_p_x_tau_p,-0.41593037522903153
+LOW_2,3,u_p_div_u_r,-0.3128544690663428
+LOW_2,3,u_r_div_u_p,0.37856958191892126
+LOW_2,3,tau_r_div_tau_p,0.3862416376024752
+LOW_2,3,tau_r_div_u_p,0.4705239777293573
+LOW_2,3,u_p_x_tau_p^2,0.05009068397280153
+LOW_2,3,u_p_x_tau_p u_p_div_u_r,0.05935013112116928
+LOW_2,3,u_p_x_tau_p u_r_div_u_p,0.021658780128288025
+LOW_2,3,u_p_x_tau_p tau_r_div_tau_p,-0.033408618845862506
+LOW_2,3,u_p_x_tau_p tau_r_div_u_p,0.03963736630561221
+LOW_2,3,u_p_div_u_r^2,-0.1088812085069861
+LOW_2,3,u_p_div_u_r u_r_div_u_p,0.14093961089278131
+LOW_2,3,u_p_div_u_r tau_r_div_tau_p,0.13680435781697073
+LOW_2,3,u_p_div_u_r tau_r_div_u_p,-0.0012938971411527685
+LOW_2,3,u_r_div_u_p^2,-0.030435390242275494
+LOW_2,3,u_r_div_u_p tau_r_div_tau_p,-0.0619669201409475
+LOW_2,3,u_r_div_u_p tau_r_div_u_p,0.011468072780359622
+LOW_2,3,tau_r_div_tau_p^2,0.08175646072580754
+LOW_2,3,tau_r_div_tau_p tau_r_div_u_p,-0.057181648287644944
+LOW_2,3,tau_r_div_u_p^2,-0.10119615742745544
+LOW_2,4,u_p_div_u_r,-0.2797583624108521
+LOW_2,4,u_r_div_u_p,0.37298393791465695
+LOW_2,4,tau_r_div_tau_p,0.42279007365767846
+LOW_2,4,tau_r_div_u_p,0.8321149131341218
+LOW_2,4,u_p_div_u_r^2,-0.1868288745815196
+LOW_2,4,u_p_div_u_r u_r_div_u_p,0.07779489767950852
+LOW_2,4,u_p_div_u_r tau_r_div_tau_p,0.19884067931965937
+LOW_2,4,u_p_div_u_r tau_r_div_u_p,-0.020439495945511886
+LOW_2,4,u_r_div_u_p^2,-0.023931150976956698
+LOW_2,4,u_r_div_u_p tau_r_div_tau_p,-0.16155288731950943
+LOW_2,4,u_r_div_u_p tau_r_div_u_p,0.0032371491222146923
+LOW_2,4,tau_r_div_tau_p^2,0.0960997053321517
+LOW_2,4,tau_r_div_tau_p tau_r_div_u_p,0.06090190583568775
+LOW_2,4,tau_r_div_u_p^2,-0.25984748418628484
+LOW_2,5,u_r_mm,-0.30833797273606817
+LOW_2,5,u_p_div_u_r,-0.38937855817816597
+LOW_2,5,u_r_div_u_p,0.5039682350867499
+LOW_2,5,tau_r_div_tau_p,0.4211645582303464
+LOW_2,5,tau_r_div_u_p,0.5099224201360114
+LOW_2,5,u_r_mm^2,0.03443709289142466
+LOW_2,5,u_r_mm u_p_div_u_r,0.009199039273956123
+LOW_2,5,u_r_mm u_r_div_u_p,0.06011686433134285
+LOW_2,5,u_r_mm tau_r_div_tau_p,-0.024820761228834285
+LOW_2,5,u_r_mm tau_r_div_u_p,0.0909040552328332
+LOW_2,5,u_p_div_u_r^2,-0.11188409050875209
+LOW_2,5,u_p_div_u_r u_r_div_u_p,0.12950402863939303
+LOW_2,5,u_p_div_u_r tau_r_div_tau_p,0.13778007535768985
+LOW_2,5,u_p_div_u_r tau_r_div_u_p,0.044473291504100246
+LOW_2,5,u_r_div_u_p^2,-0.07634793496809349
+LOW_2,5,u_r_div_u_p tau_r_div_tau_p,-0.08902046168451004
+LOW_2,5,u_r_div_u_p tau_r_div_u_p,-0.004325952432554795
+LOW_2,5,tau_r_div_tau_p^2,0.0858630040788315
+LOW_2,5,tau_r_div_tau_p tau_r_div_u_p,-0.04493108068684861
+LOW_2,5,tau_r_div_u_p^2,-0.084677356377906

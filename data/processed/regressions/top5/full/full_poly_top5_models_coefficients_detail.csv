@@ -1,0 +1,115 @@
+Dataset,Rank_in_saved_results,Polynomial_Term,Coefficient_in_scaled_space
+FULL,1,u_p_div_tau_r,-1.6568827346402615
+FULL,1,tau_p_div_u_r,2.076225657587009
+FULL,1,u_r_mm,0.8303960018478486
+FULL,1,u_p_div_u_r,1.4674941804901789
+FULL,1,tau_r_div_tau_p,-1.1133420901002384
+FULL,1,u_p_div_tau_r^2,0.5441498680332891
+FULL,1,u_p_div_tau_r tau_p_div_u_r,0.6702278681387347
+FULL,1,u_p_div_tau_r u_r_mm,-0.51937368802161
+FULL,1,u_p_div_tau_r u_p_div_u_r,0.14901830358533816
+FULL,1,u_p_div_tau_r tau_r_div_tau_p,-0.1976451731558647
+FULL,1,tau_p_div_u_r^2,-0.5235733747909812
+FULL,1,tau_p_div_u_r u_r_mm,0.23621433065285105
+FULL,1,tau_p_div_u_r u_p_div_u_r,-0.16166668499666245
+FULL,1,tau_p_div_u_r tau_r_div_tau_p,0.13522358341102714
+FULL,1,u_r_mm^2,-0.09531036806580188
+FULL,1,u_r_mm u_p_div_u_r,-0.05367783891492962
+FULL,1,u_r_mm tau_r_div_tau_p,0.11083043205247492
+FULL,1,u_p_div_u_r^2,0.11933438843873148
+FULL,1,u_p_div_u_r tau_r_div_tau_p,-0.7960682015051099
+FULL,1,tau_r_div_tau_p^2,-0.09257543064969027
+FULL,2,u_r_div_tau_r,-2.0042477070792746
+FULL,2,u_p_div_u_r,0.8888218421962375
+FULL,2,tau_r_div_tau_p,-1.1043434506982688
+FULL,2,tau_p_div_u_r,2.210019203662666
+FULL,2,u_r_mm,0.7916147232460233
+FULL,2,u_r_div_tau_r^2,0.5420025788241991
+FULL,2,u_r_div_tau_r u_p_div_u_r,-1.0092671229361376
+FULL,2,u_r_div_tau_r tau_r_div_tau_p,-0.17189266559716554
+FULL,2,u_r_div_tau_r tau_p_div_u_r,0.984398985851121
+FULL,2,u_r_div_tau_r u_r_mm,-0.5562478132655542
+FULL,2,u_p_div_u_r^2,0.14159618800655413
+FULL,2,u_p_div_u_r tau_r_div_tau_p,-0.7402533969554342
+FULL,2,u_p_div_u_r tau_p_div_u_r,-0.15356559592156024
+FULL,2,u_p_div_u_r u_r_mm,-0.1254105699272637
+FULL,2,tau_r_div_tau_p^2,-0.10475193354570124
+FULL,2,tau_r_div_tau_p tau_p_div_u_r,0.18260630608716671
+FULL,2,tau_r_div_tau_p u_r_mm,0.06351236246739655
+FULL,2,tau_p_div_u_r^2,-0.5461589827220221
+FULL,2,tau_p_div_u_r u_r_mm,0.19611903801797348
+FULL,2,u_r_mm^2,-0.0876264580007878
+FULL,3,u_r_div_tau_r,-2.5046247954323806
+FULL,3,u_p_div_u_r,1.6226986224085223
+FULL,3,u_r_mm,0.6578119773316907
+FULL,3,tau_r_div_tau_p,-1.0605579366046063
+FULL,3,tau_p_div_u_p,2.403582735051337
+FULL,3,u_r_div_tau_r^2,0.5652552293524586
+FULL,3,u_r_div_tau_r u_p_div_u_r,-1.6314297578619392
+FULL,3,u_r_div_tau_r u_r_mm,-0.6020473457098949
+FULL,3,u_r_div_tau_r tau_r_div_tau_p,-0.15799979810699094
+FULL,3,u_r_div_tau_r tau_p_div_u_p,0.892550673974045
+FULL,3,u_p_div_u_r^2,0.06596558993485957
+FULL,3,u_p_div_u_r u_r_mm,-0.18327123316573085
+FULL,3,u_p_div_u_r tau_r_div_tau_p,-0.7755563760312854
+FULL,3,u_p_div_u_r tau_p_div_u_p,0.43068312788291446
+FULL,3,u_r_mm^2,-0.09088001482997897
+FULL,3,u_r_mm tau_r_div_tau_p,0.05311094484933416
+FULL,3,u_r_mm tau_p_div_u_p,0.08803616864240435
+FULL,3,tau_r_div_tau_p^2,-0.04417527717406286
+FULL,3,tau_r_div_tau_p tau_p_div_u_p,0.15845378394093187
+FULL,3,tau_p_div_u_p^2,-0.32842760223926437
+FULL,4,tau_r_div_tau_p,-1.275222019248202
+FULL,4,u_r_mm,0.5355008087987313
+FULL,4,tau_r_div_u_r,2.1845737393998084
+FULL,4,u_p_div_u_r,1.1496608646343836
+FULL,4,u_p_div_tau_r,-1.9742872100080173
+FULL,4,u_r_x_u_p,0.47302549387549436
+FULL,4,tau_r_div_tau_p^2,-0.011789673203503428
+FULL,4,tau_r_div_tau_p u_r_mm,0.3177235801067628
+FULL,4,tau_r_div_tau_p tau_r_div_u_r,0.11376008645617726
+FULL,4,tau_r_div_tau_p u_p_div_u_r,-0.6781492567939741
+FULL,4,tau_r_div_tau_p u_p_div_tau_r,0.04554806589795448
+FULL,4,tau_r_div_tau_p u_r_x_u_p,-0.6554743512969975
+FULL,4,u_r_mm^2,0.01265652641952741
+FULL,4,u_r_mm tau_r_div_u_r,0.3768392316720264
+FULL,4,u_r_mm u_p_div_u_r,0.03571623295831101
+FULL,4,u_r_mm u_p_div_tau_r,-0.2172095038377094
+FULL,4,u_r_mm u_r_x_u_p,-0.37820599941170574
+FULL,4,tau_r_div_u_r^2,-0.5286499136200185
+FULL,4,tau_r_div_u_r u_p_div_u_r,-0.11039870818038129
+FULL,4,tau_r_div_u_r u_p_div_tau_r,0.7690460556206123
+FULL,4,tau_r_div_u_r u_r_x_u_p,-0.41239096642360296
+FULL,4,u_p_div_u_r^2,0.27285082344212597
+FULL,4,u_p_div_u_r u_p_div_tau_r,0.12029602599875458
+FULL,4,u_p_div_u_r u_r_x_u_p,-0.5375036513687473
+FULL,4,u_p_div_tau_r^2,0.7130007493119491
+FULL,4,u_p_div_tau_r u_r_x_u_p,-0.7554600187345532
+FULL,4,u_r_x_u_p^2,0.17584474453164414
+FULL,5,tau_r_div_tau_p,-1.2022529794362287
+FULL,5,u_r_mm,0.6979183807138456
+FULL,5,tau_r_div_u_r,1.3843504996464255
+FULL,5,u_p_div_u_r,1.640692846048087
+FULL,5,u_p_div_tau_r,-1.3015843057200769
+FULL,5,tau_p_div_u_p,0.9270314799143008
+FULL,5,tau_r_div_tau_p^2,-0.06242826626275319
+FULL,5,tau_r_div_tau_p u_r_mm,0.1130809289589142
+FULL,5,tau_r_div_tau_p tau_r_div_u_r,0.23235301706131764
+FULL,5,tau_r_div_tau_p u_p_div_u_r,-0.9569116905455088
+FULL,5,tau_r_div_tau_p u_p_div_tau_r,-0.12323314667444805
+FULL,5,tau_r_div_tau_p tau_p_div_u_p,-0.02108234117006895
+FULL,5,u_r_mm^2,-0.10599758626675045
+FULL,5,u_r_mm tau_r_div_u_r,-0.10483021327022662
+FULL,5,u_r_mm u_p_div_u_r,-0.08346047990312531
+FULL,5,u_r_mm u_p_div_tau_r,-0.5722619484977473
+FULL,5,u_r_mm tau_p_div_u_p,0.16409961367035444
+FULL,5,tau_r_div_u_r^2,-0.31711463681320856
+FULL,5,tau_r_div_u_r u_p_div_u_r,-0.004124054260051102
+FULL,5,tau_r_div_u_r u_p_div_tau_r,0.5355375192304248
+FULL,5,tau_r_div_u_r tau_p_div_u_p,-0.04578070401475243
+FULL,5,u_p_div_u_r^2,0.027983866180060105
+FULL,5,u_p_div_u_r u_p_div_tau_r,-0.021707424628464426
+FULL,5,u_p_div_u_r tau_p_div_u_p,-0.4202452664386314
+FULL,5,u_p_div_tau_r^2,0.5743721734404807
+FULL,5,u_p_div_tau_r tau_p_div_u_p,0.6812842447433722
+FULL,5,tau_p_div_u_p^2,-0.19068809045334684

@@ -11,6 +11,7 @@ import seaborn as sns
 # ================================
 BASE_DIR = Path(__file__).resolve().parent.parent
 INPUT_FILE = BASE_DIR / "data" / "interim" / "csds_tau_peak_low.csv"
+CONVERGED_FILE = BASE_DIR / "data" / "processed" / "csds_parameters_converged_only.csv"
 
 OUTPUT_LOW_1 = BASE_DIR / "data" / "interim" / "csds_tau_peak_low_1.csv"
 OUTPUT_LOW_2 = BASE_DIR / "data" / "interim" / "csds_tau_peak_low_2.csv"
@@ -19,6 +20,16 @@ OUTPUT_DIR = BASE_DIR / "figures" / "splits" / "tau_peak_low_subgroups"
 OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 
 df = pd.read_csv(INPUT_FILE)
+df_converged = pd.read_csv(CONVERGED_FILE)
+
+if "sample_id" not in df.columns:
+    raise ValueError("Column sample_id not found in LOW file.")
+if "sample_id" not in df_converged.columns:
+    raise ValueError("Column sample_id not found in converged file.")
+if df["sample_id"].duplicated().any():
+    raise ValueError("Duplicate sample_id values found in LOW file.")
+if df_converged["sample_id"].duplicated().any():
+    raise ValueError("Duplicate sample_id values found in converged file.")
 
 # Vérifier que la colonne de découpage est disponible.
 if "tau_peak_MPa_csds" not in df.columns:
@@ -37,6 +48,19 @@ SPLIT = 3.5  # MPa
 # Définir les deux sous-groupes issus de LOW.
 df_low_1 = df[df["tau_peak_MPa_csds"] < SPLIT].copy()
 df_low_2 = df[df["tau_peak_MPa_csds"] >= SPLIT].copy()
+
+# Reconstruire les sous-groupes depuis le fichier convergé pour garder
+# exactement le même ordre que la base convergée de référence.
+low_1_ids = df_low_1["sample_id"].tolist()
+low_2_ids = df_low_2["sample_id"].tolist()
+
+df_low_1 = df_converged[df_converged["sample_id"].isin(low_1_ids)].copy().reset_index(drop=True)
+df_low_2 = df_converged[df_converged["sample_id"].isin(low_2_ids)].copy().reset_index(drop=True)
+
+if len(df_low_1) != len(low_1_ids):
+    raise ValueError("Mismatch while rebuilding LOW_1 from converged sample_id values.")
+if len(df_low_2) != len(low_2_ids):
+    raise ValueError("Mismatch while rebuilding LOW_2 from converged sample_id values.")
 
 # Calculer la taille de chaque groupe.
 count_low_1 = len(df_low_1)

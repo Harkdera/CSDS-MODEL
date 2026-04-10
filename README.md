@@ -86,19 +86,50 @@ The final comparison is based on:
 - reconstructed `tau(u)` curve accuracy
 - physical admissibility of the predicted parameters
 
-## Data Source and Reference Paper
+## Genetic Heuristic for Variable Selection
 
-The database used in this project comes from the reference work associated with Simon's CSDS formulation. Local copies of the reference material are stored in:
+The regression stages in both `direct_d` and `direct_e` use a genetic heuristic to explore combinations of candidate variables instead of testing every possible subset exhaustively.
 
-- [docs/NQ50263.pdf](/Users/hariderarako/Desktop/python/docs/NQ50263.pdf)
-- [docs/reference_paper.pdf](/Users/hariderarako/Desktop/python/docs/reference_paper.pdf)
+In this project, the candidate predictors include not only the original measured variables, but also engineered variables such as products, ratios, and transformed terms. Because the number of possible combinations becomes very large, a full combinatorial search would be impractical.
 
-These documents are used as references for:
+In the genetic heuristic, each individual represents one candidate subset of predictors. The algorithm then:
+
+- generates an initial population of feature combinations
+- fits a regularized regression model for each combination
+- evaluates each candidate using validation performance and cross-validation stability
+- keeps the strongest candidates through selection
+- generates new candidates through crossover and mutation
+- repeats the process over several generations
+
+This procedure is used to identify strong and diverse subsets of variables for:
+
+- search for predictor combinations for `d` in the indirect branch
+- search for predictor combinations for `log(e-c)` in the direct constrained branch
+
+The retained models are then ranked, summarized, and re-evaluated in later stages of the workflow. Final comparisons are not based only on regression performance, but also on reconstructed parameter accuracy and on the quality of the reconstructed `tau(u)` curves.
+
+## Data Source and Reference Documents
+
+The data used in this project come primarily from the paper by Deiminiat, Aubertin, and Ethier (2024), which presents an updated calibration procedure for the CSDS model, and from Richard Simon's doctoral thesis (1999), *Analysis of fault-slip mechanisms in hard rock mining*, where the original CSDS formulation was introduced.
+
+These documents are used as the main references for:
 
 - the CSDS model formulation
 - the interpretation of parameters `a`, `b`, `c`, `d`, and `e`
-- the Simon relation used in the indirect branch to reconstruct `e`
-- the physical constraint `e > c` used in the direct constrained branch
+- the indirect calibration route based on estimating `d` and reconstructing `e`
+- the direct constrained route based on estimating `log(e-c)`
+
+### Main references
+
+- Deiminiat, A., Aubertin, J. D., & Ethier, Y. (2024). *On the calibration of a shear stress criterion for rock joints to represent the full stress-strain profile*. *Journal of Rock Mechanics and Geotechnical Engineering, 16*, 379-392. [https://doi.org/10.1016/j.jrmge.2023.07.019](https://doi.org/10.1016/j.jrmge.2023.07.019)
+- Simon, R. (1999). *Analysis of fault-slip mechanisms in hard rock mining* [Doctoral dissertation, McGill University].
+- Asadollahi, P., & Tonon, F. (2010). *Constitutive model for rock fractures: Revisiting Barton's empirical model*. *Engineering Geology, 113*(1-4), 11-32. [https://doi.org/10.1016/j.enggeo.2010.01.007](https://doi.org/10.1016/j.enggeo.2010.01.007)
+
+Local working copies are kept in `docs/` under descriptive filenames:
+
+- `docs/Deiminiat_Aubertin_Ethier_2024_On_the_calibration_of_a_shear_stress_criterion_for_rock_joints_to_represent_the_full_stress_strain_profile.pdf`
+- `docs/Simon_1999_Analysis_of_fault_slip_mechanisms_in_hard_rock_mining_McGill_University.pdf`
+- `docs/Asadollahi_Tonon_2010_Constitutive_model_for_rock_fractures_Revisiting_Bartons_empirical_model.pdf`
 
 ## Project Structure
 

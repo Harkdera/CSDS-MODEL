@@ -10,6 +10,11 @@ import pandas as pd
 
 BASE_DIR = Path(__file__).resolve().parent.parent.parent
 CONVERGED_FILE = BASE_DIR / "data" / "processed" / "csds_parameters_converged_only.csv"
+RESULTS_DIR = BASE_DIR / "results"
+DIRECT_E_ROOT = RESULTS_DIR / "direct_e"
+DIRECT_E_FIGURES_DIR = DIRECT_E_ROOT / "figures"
+DIRECT_E_CURVES_FIG_DIR = DIRECT_E_FIGURES_DIR / "curves"
+DIRECT_E_MODEL_FIGURES_DIR = DIRECT_E_FIGURES_DIR / "models"
 SPLIT_FILES = {
     "FULL": CONVERGED_FILE,
     "LOW_1": BASE_DIR / "data" / "interim" / "csds_tau_peak_low_1.csv",
@@ -22,7 +27,6 @@ GROUP_DIR = {
     "LOW_2": "low",
     "HIGH": "high",
 }
-DIRECT_E_ROOT = BASE_DIR / "data" / "processed" / "direct_e"
 DATASET_DIR = DIRECT_E_ROOT / "datasets"
 EDA_DIR = DIRECT_E_ROOT / "eda"
 REGRESSION_DIR = DIRECT_E_ROOT / "regressions"
@@ -56,7 +60,19 @@ RAW_FEATURE_COLS = [
 
 def ensure_output_dirs() -> None:
     """Crée les dossiers de sortie utilisés par la nouvelle branche de recherche."""
-    for path in [DIRECT_E_ROOT, DATASET_DIR, EDA_DIR, REGRESSION_DIR, TOP5_DIR, EVALUATION_DIR, COMPARISON_DIR]:
+    for path in [
+        RESULTS_DIR,
+        DIRECT_E_ROOT,
+        DIRECT_E_FIGURES_DIR,
+        DIRECT_E_CURVES_FIG_DIR,
+        DIRECT_E_MODEL_FIGURES_DIR,
+        DATASET_DIR,
+        EDA_DIR,
+        REGRESSION_DIR,
+        TOP5_DIR,
+        EVALUATION_DIR,
+        COMPARISON_DIR,
+    ]:
         path.mkdir(parents=True, exist_ok=True)
 
 

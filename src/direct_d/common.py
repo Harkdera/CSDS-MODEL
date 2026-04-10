@@ -10,6 +10,11 @@ import pandas as pd
 
 BASE_DIR = Path(__file__).resolve().parent.parent.parent
 CONVERGED_FILE = BASE_DIR / "data" / "processed" / "csds_parameters_converged_only.csv"
+RESULTS_DIR = BASE_DIR / "results"
+DIRECT_D_RESULTS_DIR = RESULTS_DIR / "direct_d"
+DIRECT_D_FIGURES_DIR = DIRECT_D_RESULTS_DIR / "figures"
+DIRECT_D_CURVES_FIG_DIR = DIRECT_D_FIGURES_DIR / "curves"
+DIRECT_D_MODEL_FIGURES_DIR = DIRECT_D_FIGURES_DIR / "models"
 SPLIT_FILES = {
     "FULL": CONVERGED_FILE,
     "LOW_1": BASE_DIR / "data" / "interim" / "csds_tau_peak_low_1.csv",
@@ -22,11 +27,11 @@ GROUP_DIR = {
     "LOW_2": "low",
     "HIGH": "high",
 }
-REGRESSION_DIR = BASE_DIR / "data" / "processed" / "regressions"
+REGRESSION_DIR = DIRECT_D_RESULTS_DIR / "regressions"
 TOP5_DIR = REGRESSION_DIR / "top5"
-E_FROM_D_DIR = BASE_DIR / "data" / "processed" / "e_from_all_retained_d_models"
-B_FROM_D_DIR = BASE_DIR / "data" / "processed" / "b_from_all_retained_d_models"
-COMPARE_DIR = BASE_DIR / "data" / "processed" / "compare_d_b_e_tau_u"
+E_FROM_D_DIR = DIRECT_D_RESULTS_DIR / "e_from_all_retained_d_models"
+B_FROM_D_DIR = DIRECT_D_RESULTS_DIR / "b_from_all_retained_d_models"
+COMPARE_DIR = DIRECT_D_RESULTS_DIR / "compare_d_b_e_tau_u"
 N_CURVE_POINTS = 100
 RANDOM_SEED = 42
 CV_FOLDS_BY_DATASET = {
@@ -53,7 +58,18 @@ RAW_FEATURE_COLS = [
 
 def ensure_output_dirs() -> None:
     """Crée les dossiers utilisés par les sorties du workflow `direct_d`."""
-    for path in [REGRESSION_DIR, TOP5_DIR, E_FROM_D_DIR, B_FROM_D_DIR, COMPARE_DIR]:
+    for path in [
+        RESULTS_DIR,
+        DIRECT_D_RESULTS_DIR,
+        DIRECT_D_FIGURES_DIR,
+        DIRECT_D_CURVES_FIG_DIR,
+        DIRECT_D_MODEL_FIGURES_DIR,
+        REGRESSION_DIR,
+        TOP5_DIR,
+        E_FROM_D_DIR,
+        B_FROM_D_DIR,
+        COMPARE_DIR,
+    ]:
         path.mkdir(parents=True, exist_ok=True)
 
 

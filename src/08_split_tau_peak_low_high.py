@@ -15,7 +15,7 @@ INPUT_FILE = BASE_DIR / "data" / "processed" / "csds_parameters_converged_only.c
 OUTPUT_LOW = BASE_DIR / "data" / "interim" / "csds_tau_peak_low.csv"
 OUTPUT_HIGH = BASE_DIR / "data" / "interim" / "csds_tau_peak_high.csv"
 
-OUTPUT_DIR = BASE_DIR / "figures" / "splits" / "tau_peak_low_high"
+OUTPUT_DIR = BASE_DIR / "results" / "figures" / "splits" / "tau_peak_low_high"
 OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 
 df = pd.read_csv(INPUT_FILE)

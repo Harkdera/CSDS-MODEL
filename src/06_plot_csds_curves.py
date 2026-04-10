@@ -23,7 +23,7 @@ import matplotlib.pyplot as plt
 #   data/processed/csds_parameters_converged_only.csv
 #
 # Output folder:
-#   figures/curves/csds_tau_vs_u/
+#   results/figures/curves/csds_tau_vs_u/
 #
 # Note:
 #   This script keeps sigma_n_MPa from the input file because it does
@@ -35,7 +35,7 @@ import matplotlib.pyplot as plt
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 INPUT_CSV = BASE_DIR / "data" / "processed" / "csds_parameters_converged_only.csv"
-OUTPUT_DIR = BASE_DIR / "figures" / "curves" / "csds_tau_vs_u"
+OUTPUT_DIR = BASE_DIR / "results" / "direct_d" / "figures" / "curves" / "csds_tau_vs_u"
 
 
 def csds_tau_simon(u, tau_r, u_r, d, e):

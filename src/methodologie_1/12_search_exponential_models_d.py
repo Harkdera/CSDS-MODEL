@@ -88,11 +88,12 @@ def build_exponential_model(ridge_alpha=1.0):
     ])
 
 
-def fit_and_evaluate_exponential(train_df, val_df, feature_cols, ridge_alpha=1.0, cv_folds=5):
-    """Ajuste le modèle exponentiel puis retourne les métriques sur `log(d)` et `d`."""
+def fit_and_evaluate_exponential(train_df, val_df, test_df, feature_cols, ridge_alpha=1.0, cv_folds=5):
+    """Ajuste le modèle exponentiel puis retourne les métriques train/validation/test/CV."""
     result = fit_and_evaluate_model(
         train_df=train_df,
         val_df=val_df,
+        test_df=test_df,
         feature_cols=feature_cols,
         model_builder=lambda: build_exponential_model(ridge_alpha=ridge_alpha),
         target_col="log_d_csds",
@@ -109,10 +110,14 @@ def fit_and_evaluate_exponential(train_df, val_df, feature_cols, ridge_alpha=1.0
         "RMSE_val_log": result["RMSE_val_target"],
         "R2_cv_mean_log": result["R2_cv_mean_target"],
         "R2_cv_std_log": result["R2_cv_std_target"],
+        "R2_test_log": result["R2_test_target"],
+        "RMSE_test_log": result["RMSE_test_target"],
         "R2_train_d": result["R2_train_metric"],
         "RMSE_train_d": result["RMSE_train_metric"],
         "R2_val_d": result["R2_val_metric"],
         "RMSE_val_d": result["RMSE_val_metric"],
+        "R2_test_d": result["R2_test_metric"],
+        "RMSE_test_d": result["RMSE_test_metric"],
     }
 
 
@@ -161,7 +166,7 @@ if not hasattr(creator, "IndividualExp"):
     creator.create("IndividualExp", list, fitness=creator.FitnessMaxExp)
 
 
-def setup_genetic_algorithm(train_df, val_df, all_features, cv_folds, selection_mode="log"):
+def setup_genetic_algorithm(train_df, val_df, test_df, all_features, cv_folds, selection_mode="log"):
     """Configure l'algorithme génétique chargé d'explorer les combinaisons de variables."""
     """
     selection_mode:
@@ -196,6 +201,7 @@ def setup_genetic_algorithm(train_df, val_df, all_features, cv_folds, selection_
             result = fit_and_evaluate_exponential(
                 train_df=train_df,
                 val_df=val_df,
+                test_df=test_df,
                 feature_cols=feature_list,
                 ridge_alpha=MODEL_PARAMS["ridge_alpha"],
                 cv_folds=cv_folds
@@ -301,7 +307,7 @@ def run_genetic_algorithm(toolbox):
     return pop, logbook, hof
 
 
-def evaluate_diverse_models(train_df, val_df, hof, cv_folds, selection_mode):
+def evaluate_diverse_models(train_df, val_df, test_df, hof, cv_folds, selection_mode):
     """Réévalue les meilleurs individus du hall of fame et ne garde qu'un ensemble diversifié."""
     """
     Build a diversified shortlist from the hall of fame.
@@ -336,6 +342,7 @@ def evaluate_diverse_models(train_df, val_df, hof, cv_folds, selection_mode):
         result = fit_and_evaluate_exponential(
             train_df=train_df,
             val_df=val_df,
+            test_df=test_df,
             feature_cols=feature_list,
             ridge_alpha=MODEL_PARAMS["ridge_alpha"],
             cv_folds=cv_folds
@@ -367,6 +374,8 @@ def evaluate_diverse_models(train_df, val_df, hof, cv_folds, selection_mode):
             "RMSE_train_log": result["RMSE_train_log"],
             "R2_val_log": result["R2_val_log"],
             "RMSE_val_log": result["RMSE_val_log"],
+            "R2_test_log": result["R2_test_log"],
+            "RMSE_test_log": result["RMSE_test_log"],
             "R2_cv_mean_log": result["R2_cv_mean_log"],
             "R2_cv_std_log": result["R2_cv_std_log"],
 
@@ -375,6 +384,8 @@ def evaluate_diverse_models(train_df, val_df, hof, cv_folds, selection_mode):
             "RMSE_train_d": result["RMSE_train_d"],
             "R2_val_d": result["R2_val_d"],
             "RMSE_val_d": result["RMSE_val_d"],
+            "R2_test_d": result["R2_test_d"],
+            "RMSE_test_d": result["RMSE_test_d"],
 
             "Selection_Mode": selection_mode,
             "Selection_Score": score_used,
@@ -403,13 +414,21 @@ for dataset_name in SPLIT_FILES:
     print(f"Nombre de lignes utilisables: {len(data)}")
     print(f"Validation croisee utilisee: {cv_folds} folds")
 
-    train_df, val_df = train_test_split(
+    train_val_df, test_df = train_test_split(
         data,
+        test_size=0.2,
+        random_state=GENETIC_PARAMS["random_seed"]
+    )
+    train_df, val_df = train_test_split(
+        train_val_df,
         test_size=0.2,
         random_state=GENETIC_PARAMS["random_seed"]
     )
     train_df = train_df.reset_index(drop=True)
     val_df = val_df.reset_index(drop=True)
+    test_df = test_df.reset_index(drop=True)
+
+    print(f"Split utilise: train={len(train_df)}, validation={len(val_df)}, test_externe={len(test_df)}")
 
     # ========================================================
     # A) Exponential regression - selection in log-space
@@ -418,12 +437,13 @@ for dataset_name in SPLIT_FILES:
     print(f"EXPONENTIAL REGRESSION - SELECTION ON log(d) - {dataset_name}")
     print("=" * 100)
 
-    toolbox_log = setup_genetic_algorithm(train_df, val_df, all_features, cv_folds, selection_mode="log")
+    toolbox_log = setup_genetic_algorithm(train_df, val_df, test_df, all_features, cv_folds, selection_mode="log")
     pop_log, logbook_log, hof_log = run_genetic_algorithm(toolbox_log)
 
     best_models_log = evaluate_diverse_models(
         train_df=train_df,
         val_df=val_df,
+        test_df=test_df,
         hof=hof_log,
         cv_folds=cv_folds,
         selection_mode="log"
@@ -440,7 +460,7 @@ for dataset_name in SPLIT_FILES:
         print(summary_log_df[[
             "Features", "N_Features",
             "R2_val_log", "R2_cv_mean_log", "R2_cv_std_log",
-            "R2_val_d", "RMSE_val_d", "Selection_Score"
+            "R2_val_d", "RMSE_val_d", "R2_test_d", "RMSE_test_d", "Selection_Score"
         ]].head(10).to_string(index=False))
 
         output_log = REGRESSION_DIR / f"exp_regression_log_selection_{dataset_name.lower()}.csv"
@@ -454,12 +474,13 @@ for dataset_name in SPLIT_FILES:
     print(f"EXPONENTIAL REGRESSION - SELECTION ON d - {dataset_name}")
     print("=" * 100)
 
-    toolbox_d = setup_genetic_algorithm(train_df, val_df, all_features, cv_folds, selection_mode="d")
+    toolbox_d = setup_genetic_algorithm(train_df, val_df, test_df, all_features, cv_folds, selection_mode="d")
     pop_d, logbook_d, hof_d = run_genetic_algorithm(toolbox_d)
 
     best_models_d = evaluate_diverse_models(
         train_df=train_df,
         val_df=val_df,
+        test_df=test_df,
         hof=hof_d,
         cv_folds=cv_folds,
         selection_mode="d"
@@ -475,7 +496,7 @@ for dataset_name in SPLIT_FILES:
         print("\nTOP MODELS - selection on d")
         print(summary_d_df[[
             "Features", "N_Features",
-            "R2_val_d", "RMSE_val_d",
+            "R2_val_d", "RMSE_val_d", "R2_test_d", "RMSE_test_d",
             "R2_val_log", "R2_cv_mean_log", "R2_cv_std_log",
             "Selection_Score"
         ]].head(10).to_string(index=False))

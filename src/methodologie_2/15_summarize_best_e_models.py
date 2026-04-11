@@ -152,6 +152,14 @@ def main() -> None:
                     "Saved_R2_cv_mean_z": row.get("R2_cv_mean_z", np.nan),
                     "Saved_R2_val_e": row.get("R2_val_e", np.nan),
                     "Saved_RMSE_val_e": row.get("RMSE_val_e", np.nan),
+                    "Saved_R2_test_z": row.get("R2_test_z", np.nan),
+                    "Saved_RMSE_test_z": row.get("RMSE_test_z", np.nan),
+                    "Saved_R2_test_e_gap": row.get("R2_test_e_gap", np.nan),
+                    "Saved_RMSE_test_e_gap": row.get("RMSE_test_e_gap", np.nan),
+                    "Saved_R2_test_e": row.get("R2_test_e", np.nan),
+                    "Saved_RMSE_test_e": row.get("RMSE_test_e", np.nan),
+                    "Saved_R2_test_tau_u": row.get("R2_test_tau_u", np.nan),
+                    "Saved_RMSE_test_tau_u": row.get("RMSE_test_tau_u", np.nan),
                     "Saved_Selection_Score": row.get("Selection_Score", np.nan),
                 })
 
@@ -184,6 +192,14 @@ def main() -> None:
                     "Saved_R2_cv_mean_z": row.get("R2_cv_mean_z", np.nan),
                     "Saved_R2_val_e": row.get("R2_val_e", np.nan),
                     "Saved_RMSE_val_e": row.get("RMSE_val_e", np.nan),
+                    "Saved_R2_test_z": row.get("R2_test_z", np.nan),
+                    "Saved_RMSE_test_z": row.get("RMSE_test_z", np.nan),
+                    "Saved_R2_test_e_gap": row.get("R2_test_e_gap", np.nan),
+                    "Saved_RMSE_test_e_gap": row.get("RMSE_test_e_gap", np.nan),
+                    "Saved_R2_test_e": row.get("R2_test_e", np.nan),
+                    "Saved_RMSE_test_e": row.get("RMSE_test_e", np.nan),
+                    "Saved_R2_test_tau_u": row.get("R2_test_tau_u", np.nan),
+                    "Saved_RMSE_test_tau_u": row.get("RMSE_test_tau_u", np.nan),
                     "Saved_Selection_Score": row.get("Selection_Score", np.nan),
                 })
 

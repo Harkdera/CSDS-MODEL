@@ -1,0 +1,81 @@
+methodologie,dataset,target,target_label,feature,feature_label,pearson_r,output_file
+methodologie_1,FULL,d_csds,d,tau_p_div_u_r,$\tau_p/u_r$,0.3083725713596704,/Users/hariderarako/Desktop/python/results/interpretation/scatter_plots/methodologie_1/full/d_vs_tau_p_div_u_r.png
+methodologie_1,FULL,e_csds,e,tau_p_div_u_r,$\tau_p/u_r$,-0.08084335464966194,/Users/hariderarako/Desktop/python/results/interpretation/scatter_plots/methodologie_1/full/e_vs_tau_p_div_u_r.png
+methodologie_1,FULL,d_csds,d,tau_r_div_tau_p,$\tau_r/\tau_p$,0.09278162250750838,/Users/hariderarako/Desktop/python/results/interpretation/scatter_plots/methodologie_1/full/d_vs_tau_r_div_tau_p.png
+methodologie_1,FULL,e_csds,e,tau_r_div_tau_p,$\tau_r/\tau_p$,-0.15410434194351277,/Users/hariderarako/Desktop/python/results/interpretation/scatter_plots/methodologie_1/full/e_vs_tau_r_div_tau_p.png
+methodologie_1,FULL,d_csds,d,u_p_div_u_r,$u_p/u_r$,0.39359236750910087,/Users/hariderarako/Desktop/python/results/interpretation/scatter_plots/methodologie_1/full/d_vs_u_p_div_u_r.png
+methodologie_1,FULL,e_csds,e,u_p_div_u_r,$u_p/u_r$,-0.3893080743184069,/Users/hariderarako/Desktop/python/results/interpretation/scatter_plots/methodologie_1/full/e_vs_u_p_div_u_r.png
+methodologie_1,FULL,d_csds,d,u_r_mm,$u_r$ (mm),0.0017594439565278238,/Users/hariderarako/Desktop/python/results/interpretation/scatter_plots/methodologie_1/full/d_vs_u_r_mm.png
+methodologie_1,FULL,e_csds,e,u_r_mm,$u_r$ (mm),-0.2912674529376129,/Users/hariderarako/Desktop/python/results/interpretation/scatter_plots/methodologie_1/full/e_vs_u_r_mm.png
+methodologie_1,FULL,d_csds,d,u_p_div_tau_r,$u_p/\tau_r$,-0.11112153929020141,/Users/hariderarako/Desktop/python/results/interpretation/scatter_plots/methodologie_1/full/d_vs_u_p_div_tau_r.png
+methodologie_1,FULL,e_csds,e,u_p_div_tau_r,$u_p/\tau_r$,-0.20680780977352445,/Users/hariderarako/Desktop/python/results/interpretation/scatter_plots/methodologie_1/full/e_vs_u_p_div_tau_r.png
+methodologie_1,LOW_1,d_csds,d,tau_peak_MPa_csds,$\tau_p$ (MPa),0.4279529926708527,/Users/hariderarako/Desktop/python/results/interpretation/scatter_plots/methodologie_1/low_1/d_vs_tau_peak_MPa_csds.png
+methodologie_1,LOW_1,e_csds,e,tau_peak_MPa_csds,$\tau_p$ (MPa),0.09630490721338184,/Users/hariderarako/Desktop/python/results/interpretation/scatter_plots/methodologie_1/low_1/e_vs_tau_peak_MPa_csds.png
+methodologie_1,LOW_1,d_csds,d,tau_r_div_tau_p,$\tau_r/\tau_p$,0.11729726189117334,/Users/hariderarako/Desktop/python/results/interpretation/scatter_plots/methodologie_1/low_1/d_vs_tau_r_div_tau_p.png
+methodologie_1,LOW_1,e_csds,e,tau_r_div_tau_p,$\tau_r/\tau_p$,-0.0991194678120379,/Users/hariderarako/Desktop/python/results/interpretation/scatter_plots/methodologie_1/low_1/e_vs_tau_r_div_tau_p.png
+methodologie_1,LOW_1,d_csds,d,u_p_div_tau_p,$u_p/\tau_p$,-0.18619712513947373,/Users/hariderarako/Desktop/python/results/interpretation/scatter_plots/methodologie_1/low_1/d_vs_u_p_div_tau_p.png
+methodologie_1,LOW_1,e_csds,e,u_p_div_tau_p,$u_p/\tau_p$,-0.31912943507244057,/Users/hariderarako/Desktop/python/results/interpretation/scatter_plots/methodologie_1/low_1/e_vs_u_p_div_tau_p.png
+methodologie_1,LOW_1,d_csds,d,u_p_div_u_r,$u_p/u_r$,0.48828623147344763,/Users/hariderarako/Desktop/python/results/interpretation/scatter_plots/methodologie_1/low_1/d_vs_u_p_div_u_r.png
+methodologie_1,LOW_1,e_csds,e,u_p_div_u_r,$u_p/u_r$,-0.3832011277602398,/Users/hariderarako/Desktop/python/results/interpretation/scatter_plots/methodologie_1/low_1/e_vs_u_p_div_u_r.png
+methodologie_1,LOW_1,d_csds,d,tau_p_div_sigma_n,$\tau_p/\sigma_n$,0.045398693103852195,/Users/hariderarako/Desktop/python/results/interpretation/scatter_plots/methodologie_1/low_1/d_vs_tau_p_div_sigma_n.png
+methodologie_1,LOW_1,e_csds,e,tau_p_div_sigma_n,$\tau_p/\sigma_n$,0.15081345980824068,/Users/hariderarako/Desktop/python/results/interpretation/scatter_plots/methodologie_1/low_1/e_vs_tau_p_div_sigma_n.png
+methodologie_1,LOW_2,d_csds,d,tau_r_div_tau_p,$\tau_r/\tau_p$,0.18547589761869746,/Users/hariderarako/Desktop/python/results/interpretation/scatter_plots/methodologie_1/low_2/d_vs_tau_r_div_tau_p.png
+methodologie_1,LOW_2,e_csds,e,tau_r_div_tau_p,$\tau_r/\tau_p$,-0.06973760281524623,/Users/hariderarako/Desktop/python/results/interpretation/scatter_plots/methodologie_1/low_2/e_vs_tau_r_div_tau_p.png
+methodologie_1,LOW_2,d_csds,d,u_p_div_u_r,$u_p/u_r$,0.7559792221019126,/Users/hariderarako/Desktop/python/results/interpretation/scatter_plots/methodologie_1/low_2/d_vs_u_p_div_u_r.png
+methodologie_1,LOW_2,e_csds,e,u_p_div_u_r,$u_p/u_r$,-0.5967763234848731,/Users/hariderarako/Desktop/python/results/interpretation/scatter_plots/methodologie_1/low_2/e_vs_u_p_div_u_r.png
+methodologie_1,LOW_2,d_csds,d,u_r_div_u_p,$u_r/u_p$,-0.499315395910683,/Users/hariderarako/Desktop/python/results/interpretation/scatter_plots/methodologie_1/low_2/d_vs_u_r_div_u_p.png
+methodologie_1,LOW_2,e_csds,e,u_r_div_u_p,$u_r/u_p$,0.6626149020557149,/Users/hariderarako/Desktop/python/results/interpretation/scatter_plots/methodologie_1/low_2/e_vs_u_r_div_u_p.png
+methodologie_1,LOW_2,d_csds,d,tau_p_x_tau_r,$\tau_p \tau_r$,0.1321654903153999,/Users/hariderarako/Desktop/python/results/interpretation/scatter_plots/methodologie_1/low_2/d_vs_tau_p_x_tau_r.png
+methodologie_1,LOW_2,e_csds,e,tau_p_x_tau_r,$\tau_p \tau_r$,0.4412271709672055,/Users/hariderarako/Desktop/python/results/interpretation/scatter_plots/methodologie_1/low_2/e_vs_tau_p_x_tau_r.png
+methodologie_1,LOW_2,d_csds,d,tau_peak_MPa_csds,$\tau_p$ (MPa),0.01123629666456891,/Users/hariderarako/Desktop/python/results/interpretation/scatter_plots/methodologie_1/low_2/d_vs_tau_peak_MPa_csds.png
+methodologie_1,LOW_2,e_csds,e,tau_peak_MPa_csds,$\tau_p$ (MPa),0.48830443338996793,/Users/hariderarako/Desktop/python/results/interpretation/scatter_plots/methodologie_1/low_2/e_vs_tau_peak_MPa_csds.png
+methodologie_1,HIGH,d_csds,d,tau_p_div_u_p,$\tau_p/u_p$,-0.22431000761369255,/Users/hariderarako/Desktop/python/results/interpretation/scatter_plots/methodologie_1/high/d_vs_tau_p_div_u_p.png
+methodologie_1,HIGH,e_csds,e,tau_p_div_u_p,$\tau_p/u_p$,0.8884824838589401,/Users/hariderarako/Desktop/python/results/interpretation/scatter_plots/methodologie_1/high/e_vs_tau_p_div_u_p.png
+methodologie_1,HIGH,d_csds,d,tau_p_div_u_r,$\tau_p/u_r$,0.033146996712400435,/Users/hariderarako/Desktop/python/results/interpretation/scatter_plots/methodologie_1/high/d_vs_tau_p_div_u_r.png
+methodologie_1,HIGH,e_csds,e,tau_p_div_u_r,$\tau_p/u_r$,0.2683395096560528,/Users/hariderarako/Desktop/python/results/interpretation/scatter_plots/methodologie_1/high/e_vs_tau_p_div_u_r.png
+methodologie_1,HIGH,d_csds,d,tau_r_div_u_r,$\tau_r/u_r$,-0.04738772757063034,/Users/hariderarako/Desktop/python/results/interpretation/scatter_plots/methodologie_1/high/d_vs_tau_r_div_u_r.png
+methodologie_1,HIGH,e_csds,e,tau_r_div_u_r,$\tau_r/u_r$,0.2716960375135753,/Users/hariderarako/Desktop/python/results/interpretation/scatter_plots/methodologie_1/high/e_vs_tau_r_div_u_r.png
+methodologie_1,HIGH,d_csds,d,u_p_div_tau_p,$u_p/\tau_p$,0.20535587784391324,/Users/hariderarako/Desktop/python/results/interpretation/scatter_plots/methodologie_1/high/d_vs_u_p_div_tau_p.png
+methodologie_1,HIGH,e_csds,e,u_p_div_tau_p,$u_p/\tau_p$,-0.6150332092199113,/Users/hariderarako/Desktop/python/results/interpretation/scatter_plots/methodologie_1/high/e_vs_u_p_div_tau_p.png
+methodologie_1,HIGH,d_csds,d,tau_r_MPa,$\tau_r$ (MPa),-0.06077434476511364,/Users/hariderarako/Desktop/python/results/interpretation/scatter_plots/methodologie_1/high/d_vs_tau_r_MPa.png
+methodologie_1,HIGH,e_csds,e,tau_r_MPa,$\tau_r$ (MPa),0.10642855710782047,/Users/hariderarako/Desktop/python/results/interpretation/scatter_plots/methodologie_1/high/e_vs_tau_r_MPa.png
+methodologie_2,FULL,d_csds,d,tau_r_div_tau_p,$\tau_r/\tau_p$,0.09278162250750838,/Users/hariderarako/Desktop/python/results/interpretation/scatter_plots/methodologie_2/full/d_vs_tau_r_div_tau_p.png
+methodologie_2,FULL,e_csds,e,tau_r_div_tau_p,$\tau_r/\tau_p$,-0.15410434194351277,/Users/hariderarako/Desktop/python/results/interpretation/scatter_plots/methodologie_2/full/e_vs_tau_r_div_tau_p.png
+methodologie_2,FULL,d_csds,d,u_p_div_u_r,$u_p/u_r$,0.39359236750910087,/Users/hariderarako/Desktop/python/results/interpretation/scatter_plots/methodologie_2/full/d_vs_u_p_div_u_r.png
+methodologie_2,FULL,e_csds,e,u_p_div_u_r,$u_p/u_r$,-0.3893080743184069,/Users/hariderarako/Desktop/python/results/interpretation/scatter_plots/methodologie_2/full/e_vs_u_p_div_u_r.png
+methodologie_2,FULL,d_csds,d,u_r_mm,$u_r$ (mm),0.0017594439565278238,/Users/hariderarako/Desktop/python/results/interpretation/scatter_plots/methodologie_2/full/d_vs_u_r_mm.png
+methodologie_2,FULL,e_csds,e,u_r_mm,$u_r$ (mm),-0.2912674529376129,/Users/hariderarako/Desktop/python/results/interpretation/scatter_plots/methodologie_2/full/e_vs_u_r_mm.png
+methodologie_2,FULL,d_csds,d,u_r_x_u_p,$u_r u_p$,0.07730428125675665,/Users/hariderarako/Desktop/python/results/interpretation/scatter_plots/methodologie_2/full/d_vs_u_r_x_u_p.png
+methodologie_2,FULL,e_csds,e,u_r_x_u_p,$u_r u_p$,-0.23626523336523983,/Users/hariderarako/Desktop/python/results/interpretation/scatter_plots/methodologie_2/full/e_vs_u_r_x_u_p.png
+methodologie_2,FULL,d_csds,d,u_r_div_tau_r,$u_r/\tau_r$,-0.10644463832778758,/Users/hariderarako/Desktop/python/results/interpretation/scatter_plots/methodologie_2/full/d_vs_u_r_div_tau_r.png
+methodologie_2,FULL,e_csds,e,u_r_div_tau_r,$u_r/\tau_r$,-0.18274765034178803,/Users/hariderarako/Desktop/python/results/interpretation/scatter_plots/methodologie_2/full/e_vs_u_r_div_tau_r.png
+methodologie_2,LOW_1,d_csds,d,delta_peak_mm,$u_p$ (mm),0.7186017383761952,/Users/hariderarako/Desktop/python/results/interpretation/scatter_plots/methodologie_2/low_1/d_vs_delta_peak_mm.png
+methodologie_2,LOW_1,e_csds,e,delta_peak_mm,$u_p$ (mm),-0.33585061698678115,/Users/hariderarako/Desktop/python/results/interpretation/scatter_plots/methodologie_2/low_1/e_vs_delta_peak_mm.png
+methodologie_2,LOW_1,d_csds,d,tau_p_div_u_r,$\tau_p/u_r$,0.11838409667306185,/Users/hariderarako/Desktop/python/results/interpretation/scatter_plots/methodologie_2/low_1/d_vs_tau_p_div_u_r.png
+methodologie_2,LOW_1,e_csds,e,tau_p_div_u_r,$\tau_p/u_r$,0.3586325479500328,/Users/hariderarako/Desktop/python/results/interpretation/scatter_plots/methodologie_2/low_1/e_vs_tau_p_div_u_r.png
+methodologie_2,LOW_1,d_csds,d,tau_r_MPa,$\tau_r$ (MPa),0.5045345000774057,/Users/hariderarako/Desktop/python/results/interpretation/scatter_plots/methodologie_2/low_1/d_vs_tau_r_MPa.png
+methodologie_2,LOW_1,e_csds,e,tau_r_MPa,$\tau_r$ (MPa),0.035967207079256165,/Users/hariderarako/Desktop/python/results/interpretation/scatter_plots/methodologie_2/low_1/e_vs_tau_r_MPa.png
+methodologie_2,LOW_1,d_csds,d,tau_r_div_tau_p,$\tau_r/\tau_p$,0.11729726189117334,/Users/hariderarako/Desktop/python/results/interpretation/scatter_plots/methodologie_2/low_1/d_vs_tau_r_div_tau_p.png
+methodologie_2,LOW_1,e_csds,e,tau_r_div_tau_p,$\tau_r/\tau_p$,-0.0991194678120379,/Users/hariderarako/Desktop/python/results/interpretation/scatter_plots/methodologie_2/low_1/e_vs_tau_r_div_tau_p.png
+methodologie_2,LOW_1,d_csds,d,u_p_div_u_r,$u_p/u_r$,0.48828623147344763,/Users/hariderarako/Desktop/python/results/interpretation/scatter_plots/methodologie_2/low_1/d_vs_u_p_div_u_r.png
+methodologie_2,LOW_1,e_csds,e,u_p_div_u_r,$u_p/u_r$,-0.3832011277602398,/Users/hariderarako/Desktop/python/results/interpretation/scatter_plots/methodologie_2/low_1/e_vs_u_p_div_u_r.png
+methodologie_2,LOW_2,d_csds,d,tau_r_div_tau_p,$\tau_r/\tau_p$,0.18547589761869746,/Users/hariderarako/Desktop/python/results/interpretation/scatter_plots/methodologie_2/low_2/d_vs_tau_r_div_tau_p.png
+methodologie_2,LOW_2,e_csds,e,tau_r_div_tau_p,$\tau_r/\tau_p$,-0.06973760281524623,/Users/hariderarako/Desktop/python/results/interpretation/scatter_plots/methodologie_2/low_2/e_vs_tau_r_div_tau_p.png
+methodologie_2,LOW_2,d_csds,d,tau_r_div_u_p,$\tau_r/u_p$,-0.3535118751903884,/Users/hariderarako/Desktop/python/results/interpretation/scatter_plots/methodologie_2/low_2/d_vs_tau_r_div_u_p.png
+methodologie_2,LOW_2,e_csds,e,tau_r_div_u_p,$\tau_r/u_p$,0.9726211367917179,/Users/hariderarako/Desktop/python/results/interpretation/scatter_plots/methodologie_2/low_2/e_vs_tau_r_div_u_p.png
+methodologie_2,LOW_2,d_csds,d,u_p_div_u_r,$u_p/u_r$,0.7559792221019126,/Users/hariderarako/Desktop/python/results/interpretation/scatter_plots/methodologie_2/low_2/d_vs_u_p_div_u_r.png
+methodologie_2,LOW_2,e_csds,e,u_p_div_u_r,$u_p/u_r$,-0.5967763234848731,/Users/hariderarako/Desktop/python/results/interpretation/scatter_plots/methodologie_2/low_2/e_vs_u_p_div_u_r.png
+methodologie_2,LOW_2,d_csds,d,u_r_div_u_p,$u_r/u_p$,-0.499315395910683,/Users/hariderarako/Desktop/python/results/interpretation/scatter_plots/methodologie_2/low_2/d_vs_u_r_div_u_p.png
+methodologie_2,LOW_2,e_csds,e,u_r_div_u_p,$u_r/u_p$,0.6626149020557149,/Users/hariderarako/Desktop/python/results/interpretation/scatter_plots/methodologie_2/low_2/e_vs_u_r_div_u_p.png
+methodologie_2,LOW_2,d_csds,d,u_p_x_tau_p,$u_p \tau_p$,0.48674031208362295,/Users/hariderarako/Desktop/python/results/interpretation/scatter_plots/methodologie_2/low_2/d_vs_u_p_x_tau_p.png
+methodologie_2,LOW_2,e_csds,e,u_p_x_tau_p,$u_p \tau_p$,-0.7145319249878379,/Users/hariderarako/Desktop/python/results/interpretation/scatter_plots/methodologie_2/low_2/e_vs_u_p_x_tau_p.png
+methodologie_2,HIGH,d_csds,d,delta_peak_mm,$u_p$ (mm),0.30758633095085025,/Users/hariderarako/Desktop/python/results/interpretation/scatter_plots/methodologie_2/high/d_vs_delta_peak_mm.png
+methodologie_2,HIGH,e_csds,e,delta_peak_mm,$u_p$ (mm),-0.7094611155307309,/Users/hariderarako/Desktop/python/results/interpretation/scatter_plots/methodologie_2/high/e_vs_delta_peak_mm.png
+methodologie_2,HIGH,d_csds,d,tau_r_div_tau_p,$\tau_r/\tau_p$,-0.1439818953356695,/Users/hariderarako/Desktop/python/results/interpretation/scatter_plots/methodologie_2/high/d_vs_tau_r_div_tau_p.png
+methodologie_2,HIGH,e_csds,e,tau_r_div_tau_p,$\tau_r/\tau_p$,0.10816818444865385,/Users/hariderarako/Desktop/python/results/interpretation/scatter_plots/methodologie_2/high/e_vs_tau_r_div_tau_p.png
+methodologie_2,HIGH,d_csds,d,u_r_div_u_p,$u_r/u_p$,-0.2548524082423615,/Users/hariderarako/Desktop/python/results/interpretation/scatter_plots/methodologie_2/high/d_vs_u_r_div_u_p.png
+methodologie_2,HIGH,e_csds,e,u_r_div_u_p,$u_r/u_p$,0.6868761535125467,/Users/hariderarako/Desktop/python/results/interpretation/scatter_plots/methodologie_2/high/e_vs_u_r_div_u_p.png
+methodologie_2,HIGH,d_csds,d,tau_r_estimated,$\tau_r$ estimé (MPa),-0.06265812910937361,/Users/hariderarako/Desktop/python/results/interpretation/scatter_plots/methodologie_2/high/d_vs_tau_r_estimated.png
+methodologie_2,HIGH,e_csds,e,tau_r_estimated,$\tau_r$ estimé (MPa),-0.14993236671187452,/Users/hariderarako/Desktop/python/results/interpretation/scatter_plots/methodologie_2/high/e_vs_tau_r_estimated.png
+methodologie_2,HIGH,d_csds,d,u_r_estimated,$u_r$ estimé (mm),-0.06265812910937361,/Users/hariderarako/Desktop/python/results/interpretation/scatter_plots/methodologie_2/high/d_vs_u_r_estimated.png
+methodologie_2,HIGH,e_csds,e,u_r_estimated,$u_r$ estimé (mm),-0.14993236671187452,/Users/hariderarako/Desktop/python/results/interpretation/scatter_plots/methodologie_2/high/e_vs_u_r_estimated.png

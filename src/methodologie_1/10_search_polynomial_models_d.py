@@ -90,11 +90,12 @@ def build_model(degree=2, ridge_alpha=1.0):
     ])
 
 
-def fit_and_evaluate(train_df, val_df, feature_cols, degree=2, ridge_alpha=1.0, cv_folds=5):
-    """Ajuste un modèle, l'évalue sur validation et calcule une validation croisée."""
+def fit_and_evaluate(train_df, val_df, test_df, feature_cols, degree=2, ridge_alpha=1.0, cv_folds=5):
+    """Ajuste un modèle, puis l'évalue sur train/validation/test et validation croisée."""
     result = fit_and_evaluate_model(
         train_df=train_df,
         val_df=val_df,
+        test_df=test_df,
         feature_cols=feature_cols,
         model_builder=lambda: build_model(degree=degree, ridge_alpha=ridge_alpha),
         target_col="d_csds",
@@ -109,6 +110,8 @@ def fit_and_evaluate(train_df, val_df, feature_cols, degree=2, ridge_alpha=1.0, 
         "RMSE_train": result["RMSE_train_target"],
         "R2_val": result["R2_val_target"],
         "RMSE_val": result["RMSE_val_target"],
+        "R2_test": result["R2_test_target"],
+        "RMSE_test": result["RMSE_test_target"],
         "R2_cv_mean": result["R2_cv_mean_target"],
         "R2_cv_std": result["R2_cv_std_target"],
     }
@@ -159,7 +162,7 @@ if not hasattr(creator, "IndividualCSDS"):
     creator.create("IndividualCSDS", list, fitness=creator.FitnessMaxCSDS)
 
 
-def setup_genetic_algorithm(train_df, val_df, all_features, cv_folds):
+def setup_genetic_algorithm(train_df, val_df, test_df, all_features, cv_folds):
     """Configure l'algorithme génétique chargé d'explorer les sous-ensembles de variables."""
     """
     Configure the genetic algorithm.
@@ -192,6 +195,7 @@ def setup_genetic_algorithm(train_df, val_df, all_features, cv_folds):
             result = fit_and_evaluate(
                 train_df=train_df,
                 val_df=val_df,
+                test_df=test_df,
                 feature_cols=feature_list,
                 degree=MODEL_PARAMS["degree"],
                 ridge_alpha=MODEL_PARAMS["ridge_alpha"],
@@ -303,15 +307,23 @@ for dataset_name in SPLIT_FILES:
     print(f"Nombre de lignes utilisables: {len(data)}")
     print(f"Validation croisee utilisee: {cv_folds} folds")
 
-    train_df, val_df = train_test_split(
+    train_val_df, test_df = train_test_split(
         data,
+        test_size=0.2,
+        random_state=GENETIC_PARAMS["random_seed"]
+    )
+    train_df, val_df = train_test_split(
+        train_val_df,
         test_size=0.2,
         random_state=GENETIC_PARAMS["random_seed"]
     )
     train_df = train_df.reset_index(drop=True)
     val_df = val_df.reset_index(drop=True)
+    test_df = test_df.reset_index(drop=True)
 
-    toolbox = setup_genetic_algorithm(train_df, val_df, all_features, cv_folds)
+    print(f"Split utilise: train={len(train_df)}, validation={len(val_df)}, test_externe={len(test_df)}")
+
+    toolbox = setup_genetic_algorithm(train_df, val_df, test_df, all_features, cv_folds)
     pop, logbook, hof = run_genetic_algorithm(toolbox)
 
     print("\n" + "=" * 100)
@@ -348,6 +360,7 @@ for dataset_name in SPLIT_FILES:
         result = fit_and_evaluate(
             train_df=train_df,
             val_df=val_df,
+            test_df=test_df,
             feature_cols=feature_list,
             degree=MODEL_PARAMS["degree"],
             ridge_alpha=MODEL_PARAMS["ridge_alpha"],
@@ -372,6 +385,8 @@ for dataset_name in SPLIT_FILES:
             "RMSE_train": result["RMSE_train"],
             "R2_val": result["R2_val"],
             "RMSE_val": result["RMSE_val"],
+            "R2_test": result["R2_test"],
+            "RMSE_test": result["RMSE_test"],
             "R2_cv_mean": result["R2_cv_mean"],
             "R2_cv_std": result["R2_cv_std"],
             "Selection_Score": score_used,
@@ -384,9 +399,11 @@ for dataset_name in SPLIT_FILES:
         print(f"Branche         = {branch_signature}")
         print(f"R2_train        = {result['R2_train']:.6f}")
         print(f"R2_val          = {result['R2_val']:.6f}")
+        print(f"R2_test         = {result['R2_test']:.6f}")
         print(f"R2_cv_mean      = {result['R2_cv_mean']:.6f}")
         print(f"R2_cv_std       = {result['R2_cv_std']:.6f}")
         print(f"RMSE_val        = {result['RMSE_val']:.6f}")
+        print(f"RMSE_test       = {result['RMSE_test']:.6f}")
         print(f"Selection_Score = {score_used:.6f}")
 
         if len(best_models) >= DIVERSITY_PARAMS["max_selected_models"]:

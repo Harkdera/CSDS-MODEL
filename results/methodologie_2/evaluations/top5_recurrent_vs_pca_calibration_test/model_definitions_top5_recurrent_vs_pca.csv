@@ -1,0 +1,3 @@
+model_id,model_label,model_family,degree,best_lambda,feature_cols,n_components
+top5_recurrent_ridge,Top 5 recurrentes + Ridge,PolynomialFeatures + Ridge,2,0.46415888336127775,tau_r_div_tau_p + u_p_div_u_r + u_r_mm + u_r_x_u_p + tau_p_div_u_p,
+top5_pca_full,PCA 5 composantes,StandardScaler + PCA(5) + PolynomialFeatures + Ridge,2,0.0001,tau_r_div_tau_p + u_p_div_u_r + u_r_mm + u_r_x_u_p + tau_p_div_u_p + tau_r_MPa + tau_r_div_u_p + tau_p_div_u_r + tau_p_x_tau_r + tau_r_div_u_r,5.0

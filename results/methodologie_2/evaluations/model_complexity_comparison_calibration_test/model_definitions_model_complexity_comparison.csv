@@ -1,0 +1,4 @@
+model_id,model_label,feature_origin,n_features,feature_cols
+base5_only,Base 5 variables,5 variables de base uniquement,5,sigma_n_MPa + delta_peak_mm + tau_peak_MPa_csds + u_r_mm + tau_r_MPa
+base5_plus_engineered,Base 5 + variables combinees,toutes les variables candidates autorisées,33,sigma_n_MPa + delta_peak_mm + tau_peak_MPa_csds + u_r_mm + tau_r_MPa + sigma_n_x_u_r + sigma_n_x_u_p + sigma_n_x_tau_p + sigma_n_x_tau_r + u_r_x_u_p + u_r_x_tau_p + u_r_x_tau_r + u_p_x_tau_p + u_p_x_tau_r + tau_p_x_tau_r + u_p_div_u_r + u_r_div_u_p + tau_p_div_tau_r + tau_r_div_tau_p + u_r_div_tau_p + u_r_div_tau_r + u_p_div_tau_p + u_p_div_tau_r + tau_p_div_u_r + tau_p_div_u_p + tau_r_div_u_r + tau_r_div_u_p + tau_p_div_sigma_n + tau_r_div_sigma_n + sigma_n_div_tau_p + sigma_n_div_tau_r + sigma_n_div_u_r + sigma_n_div_u_p
+best_full_retained,Meilleur modele FULL retenu,top-1 FULL retenu (1),4,u_r_mm + u_r_x_u_p + u_p_div_u_r + tau_r_div_tau_p

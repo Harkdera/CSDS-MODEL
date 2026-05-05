@@ -14,10 +14,10 @@ from sklearn.linear_model import Ridge
 
 try:
     from methodologie_1.common import CV_FOLDS_BY_DATASET, REGRESSION_DIR, SPLIT_FILES, RANDOM_SEED, build_d_dataset, get_candidate_feature_names
-    from methodologie_1.search_utils import has_exact_redundancy, jaccard_similarity, is_diverse_enough, fit_and_evaluate_model
+    from methodologie_1.search_utils import build_random_individual, has_exact_redundancy, jaccard_similarity, is_diverse_enough, fit_and_evaluate_model
 except ModuleNotFoundError:
     from common import CV_FOLDS_BY_DATASET, REGRESSION_DIR, SPLIT_FILES, RANDOM_SEED, build_d_dataset, get_candidate_feature_names
-    from search_utils import has_exact_redundancy, jaccard_similarity, is_diverse_enough, fit_and_evaluate_model
+    from search_utils import build_random_individual, has_exact_redundancy, jaccard_similarity, is_diverse_enough, fit_and_evaluate_model
 
 warnings.filterwarnings("ignore")
 
@@ -176,17 +176,18 @@ def setup_genetic_algorithm(train_df, val_df, test_df, all_features, cv_folds, s
     toolbox = base.Toolbox()
 
     def create_individual():
-        n_features = random.randint(
+        return build_random_individual(
+            creator.IndividualExp,
+            len(all_features),
             GENETIC_PARAMS["min_features"],
-            GENETIC_PARAMS["max_features"]
+            GENETIC_PARAMS["max_features"],
         )
-        return creator.IndividualExp(random.sample(all_features, n_features))
 
     toolbox.register("individual", create_individual)
     toolbox.register("population", tools.initRepeat, list, toolbox.individual)
 
     def eval_features(individual):
-        feature_list = list(dict.fromkeys(individual))
+        feature_list = [all_features[idx] for idx, bit in enumerate(individual) if bit == 1]
 
         if len(feature_list) < GENETIC_PARAMS["min_features"]:
             return (-9999.0,)
@@ -231,49 +232,9 @@ def setup_genetic_algorithm(train_df, val_df, test_df, all_features, cv_folds, s
         except Exception:
             return (-9999.0,)
 
-    def mate_features(ind1, ind2):
-        set1 = list(dict.fromkeys(ind1))
-        set2 = list(dict.fromkeys(ind2))
-
-        union = list(dict.fromkeys(set1 + set2))
-        if len(union) == 0:
-            return ind1, ind2
-
-        size1 = random.randint(
-            GENETIC_PARAMS["min_features"],
-            min(GENETIC_PARAMS["max_features"], len(union))
-        )
-        size2 = random.randint(
-            GENETIC_PARAMS["min_features"],
-            min(GENETIC_PARAMS["max_features"], len(union))
-        )
-
-        child1 = random.sample(union, size1)
-        child2 = random.sample(union, size2)
-
-        ind1[:] = child1
-        ind2[:] = child2
-        return ind1, ind2
-
-    def mutate_features(individual):
-        current = list(dict.fromkeys(individual))
-        current_set = set(current)
-        all_set = set(all_features)
-
-        if random.random() < 0.5 and len(current) < GENETIC_PARAMS["max_features"]:
-            available = list(all_set - current_set)
-            if available:
-                current.append(random.choice(available))
-        elif len(current) > GENETIC_PARAMS["min_features"]:
-            idx = random.randrange(len(current))
-            current.pop(idx)
-
-        individual[:] = current
-        return (individual,)
-
     toolbox.register("evaluate", eval_features)
-    toolbox.register("mate", mate_features)
-    toolbox.register("mutate", mutate_features)
+    toolbox.register("mate", tools.cxTwoPoint)
+    toolbox.register("mutate", tools.mutFlipBit, indpb=0.08)
     toolbox.register("select", tools.selTournament, tournsize=GENETIC_PARAMS["tournament_size"])
 
     return toolbox
@@ -307,7 +268,7 @@ def run_genetic_algorithm(toolbox):
     return pop, logbook, hof
 
 
-def evaluate_diverse_models(train_df, val_df, test_df, hof, cv_folds, selection_mode):
+def evaluate_diverse_models(train_df, val_df, test_df, hof, cv_folds, selection_mode, all_features):
     """Réévalue les meilleurs individus du hall of fame et ne garde qu'un ensemble diversifié."""
     """
     Build a diversified shortlist from the hall of fame.
@@ -317,7 +278,7 @@ def evaluate_diverse_models(train_df, val_df, test_df, hof, cv_folds, selection_
     branch_count = {}
 
     for indiv in hof:
-        feature_list = list(dict.fromkeys(indiv))
+        feature_list = [all_features[idx] for idx, bit in enumerate(indiv) if bit == 1]
         exact_key = tuple(sorted(feature_list))
 
         if exact_key in seen_exact_sets:
@@ -446,7 +407,8 @@ for dataset_name in SPLIT_FILES:
         test_df=test_df,
         hof=hof_log,
         cv_folds=cv_folds,
-        selection_mode="log"
+        selection_mode="log",
+        all_features=all_features,
     )
 
     if best_models_log:
@@ -483,7 +445,8 @@ for dataset_name in SPLIT_FILES:
         test_df=test_df,
         hof=hof_d,
         cv_folds=cv_folds,
-        selection_mode="d"
+        selection_mode="d",
+        all_features=all_features,
     )
 
     if best_models_d:

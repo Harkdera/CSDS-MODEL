@@ -1,0 +1,632 @@
+model_id,model_label,term,coefficient
+base5_only,Base 5 variables,intercept,0.3732373379285694
+base5_only,Base 5 variables,sigma_n_MPa,0.07963579812220753
+base5_only,Base 5 variables,delta_peak_mm,-2.331127944428208
+base5_only,Base 5 variables,tau_peak_MPa_csds,-0.22071473064827282
+base5_only,Base 5 variables,u_r_mm,0.34499479183360043
+base5_only,Base 5 variables,tau_r_MPa,0.3496618723814278
+base5_only,Base 5 variables,sigma_n_MPa^2,-0.00954155269124807
+base5_only,Base 5 variables,sigma_n_MPa delta_peak_mm,0.06260136912065652
+base5_only,Base 5 variables,sigma_n_MPa tau_peak_MPa_csds,0.29719652964124005
+base5_only,Base 5 variables,sigma_n_MPa u_r_mm,-0.007858516719761791
+base5_only,Base 5 variables,sigma_n_MPa tau_r_MPa,-0.16525417833757391
+base5_only,Base 5 variables,delta_peak_mm^2,0.1757623940558401
+base5_only,Base 5 variables,delta_peak_mm tau_peak_MPa_csds,-0.23638671662239988
+base5_only,Base 5 variables,delta_peak_mm u_r_mm,0.2721609880072669
+base5_only,Base 5 variables,delta_peak_mm tau_r_MPa,0.4500544903920526
+base5_only,Base 5 variables,tau_peak_MPa_csds^2,-0.2150288075920501
+base5_only,Base 5 variables,tau_peak_MPa_csds u_r_mm,-0.13949488764708853
+base5_only,Base 5 variables,tau_peak_MPa_csds tau_r_MPa,-0.17711301636005042
+base5_only,Base 5 variables,u_r_mm^2,-0.049117568520776776
+base5_only,Base 5 variables,u_r_mm tau_r_MPa,0.04397030463756421
+base5_only,Base 5 variables,tau_r_MPa^2,0.2838001715755729
+base5_plus_engineered,Base 5 + variables combinees,intercept,0.5251704625193073
+base5_plus_engineered,Base 5 + variables combinees,sigma_n_MPa,-0.008812312235575338
+base5_plus_engineered,Base 5 + variables combinees,delta_peak_mm,-0.17852015914263442
+base5_plus_engineered,Base 5 + variables combinees,tau_peak_MPa_csds,-0.05983878723828017
+base5_plus_engineered,Base 5 + variables combinees,u_r_mm,-0.07711774306109359
+base5_plus_engineered,Base 5 + variables combinees,tau_r_MPa,-0.025458921646422644
+base5_plus_engineered,Base 5 + variables combinees,sigma_n_x_u_r,-0.005076746763984046
+base5_plus_engineered,Base 5 + variables combinees,sigma_n_x_u_p,-0.01270484264650123
+base5_plus_engineered,Base 5 + variables combinees,sigma_n_x_tau_p,-0.001559008875480322
+base5_plus_engineered,Base 5 + variables combinees,sigma_n_x_tau_r,-0.003464795562191876
+base5_plus_engineered,Base 5 + variables combinees,u_r_x_u_p,-0.06071719909658642
+base5_plus_engineered,Base 5 + variables combinees,u_r_x_tau_p,-0.028507620401415197
+base5_plus_engineered,Base 5 + variables combinees,u_r_x_tau_r,-0.012911587557360996
+base5_plus_engineered,Base 5 + variables combinees,u_p_x_tau_p,-0.09247568085001841
+base5_plus_engineered,Base 5 + variables combinees,u_p_x_tau_r,-0.06268394385741698
+base5_plus_engineered,Base 5 + variables combinees,tau_p_x_tau_r,-0.01964839022393799
+base5_plus_engineered,Base 5 + variables combinees,u_p_div_u_r,-0.27801336960290335
+base5_plus_engineered,Base 5 + variables combinees,u_r_div_u_p,0.1532648886940196
+base5_plus_engineered,Base 5 + variables combinees,tau_p_div_tau_r,-0.054150707000979154
+base5_plus_engineered,Base 5 + variables combinees,tau_r_div_tau_p,0.14977488402748274
+base5_plus_engineered,Base 5 + variables combinees,u_r_div_tau_p,0.026986322349183575
+base5_plus_engineered,Base 5 + variables combinees,u_r_div_tau_r,0.007843891994157384
+base5_plus_engineered,Base 5 + variables combinees,u_p_div_tau_p,-0.004336826478668973
+base5_plus_engineered,Base 5 + variables combinees,u_p_div_tau_r,-0.013585294412736948
+base5_plus_engineered,Base 5 + variables combinees,tau_p_div_u_r,-0.044490506389911325
+base5_plus_engineered,Base 5 + variables combinees,tau_p_div_u_p,0.1065636738495834
+base5_plus_engineered,Base 5 + variables combinees,tau_r_div_u_r,-0.008852742024188877
+base5_plus_engineered,Base 5 + variables combinees,tau_r_div_u_p,0.11693296093471885
+base5_plus_engineered,Base 5 + variables combinees,tau_p_div_sigma_n,-0.024710807915371794
+base5_plus_engineered,Base 5 + variables combinees,tau_r_div_sigma_n,0.048281021967474955
+base5_plus_engineered,Base 5 + variables combinees,sigma_n_div_tau_p,-0.0023339168716437573
+base5_plus_engineered,Base 5 + variables combinees,sigma_n_div_tau_r,-0.004332757799495019
+base5_plus_engineered,Base 5 + variables combinees,sigma_n_div_u_r,-0.01640693450729848
+base5_plus_engineered,Base 5 + variables combinees,sigma_n_div_u_p,0.007245396258251702
+base5_plus_engineered,Base 5 + variables combinees,sigma_n_MPa^2,-0.0026694618561891067
+base5_plus_engineered,Base 5 + variables combinees,sigma_n_MPa delta_peak_mm,0.028523269204424134
+base5_plus_engineered,Base 5 + variables combinees,sigma_n_MPa tau_peak_MPa_csds,0.014637786712225459
+base5_plus_engineered,Base 5 + variables combinees,sigma_n_MPa u_r_mm,0.01224163653797846
+base5_plus_engineered,Base 5 + variables combinees,sigma_n_MPa tau_r_MPa,0.010456058457279553
+base5_plus_engineered,Base 5 + variables combinees,sigma_n_MPa sigma_n_x_u_r,0.006618838616427421
+base5_plus_engineered,Base 5 + variables combinees,sigma_n_MPa sigma_n_x_u_p,-0.005644045969383924
+base5_plus_engineered,Base 5 + variables combinees,sigma_n_MPa sigma_n_x_tau_p,-0.002079876071127377
+base5_plus_engineered,Base 5 + variables combinees,sigma_n_MPa sigma_n_x_tau_r,0.00018943898789150568
+base5_plus_engineered,Base 5 + variables combinees,sigma_n_MPa u_r_x_u_p,0.006510036604534289
+base5_plus_engineered,Base 5 + variables combinees,sigma_n_MPa u_r_x_tau_p,0.005111456554114381
+base5_plus_engineered,Base 5 + variables combinees,sigma_n_MPa u_r_x_tau_r,0.006491730717816944
+base5_plus_engineered,Base 5 + variables combinees,sigma_n_MPa u_p_x_tau_p,0.01859003817270918
+base5_plus_engineered,Base 5 + variables combinees,sigma_n_MPa u_p_x_tau_r,0.015268030650251466
+base5_plus_engineered,Base 5 + variables combinees,sigma_n_MPa tau_p_x_tau_r,0.008321163174744767
+base5_plus_engineered,Base 5 + variables combinees,sigma_n_MPa u_p_div_u_r,0.05137674450199859
+base5_plus_engineered,Base 5 + variables combinees,sigma_n_MPa u_r_div_u_p,-0.02088726282089493
+base5_plus_engineered,Base 5 + variables combinees,sigma_n_MPa tau_p_div_tau_r,0.00584925629146108
+base5_plus_engineered,Base 5 + variables combinees,sigma_n_MPa tau_r_div_tau_p,-0.01864811460727943
+base5_plus_engineered,Base 5 + variables combinees,sigma_n_MPa u_r_div_tau_p,-0.002349765765943066
+base5_plus_engineered,Base 5 + variables combinees,sigma_n_MPa u_r_div_tau_r,0.001773087693538157
+base5_plus_engineered,Base 5 + variables combinees,sigma_n_MPa u_p_div_tau_p,0.004122732827290334
+base5_plus_engineered,Base 5 + variables combinees,sigma_n_MPa u_p_div_tau_r,0.006073703937209743
+base5_plus_engineered,Base 5 + variables combinees,sigma_n_MPa tau_p_div_u_r,0.014765629857860205
+base5_plus_engineered,Base 5 + variables combinees,sigma_n_MPa tau_p_div_u_p,-0.016667688093006488
+base5_plus_engineered,Base 5 + variables combinees,sigma_n_MPa tau_r_div_u_r,0.00800231143678351
+base5_plus_engineered,Base 5 + variables combinees,sigma_n_MPa tau_r_div_u_p,-0.01838102101632115
+base5_plus_engineered,Base 5 + variables combinees,sigma_n_MPa tau_p_div_sigma_n,0.01962036017410203
+base5_plus_engineered,Base 5 + variables combinees,sigma_n_MPa tau_r_div_sigma_n,0.008010802411871683
+base5_plus_engineered,Base 5 + variables combinees,sigma_n_MPa sigma_n_div_tau_p,0.0007782714011828206
+base5_plus_engineered,Base 5 + variables combinees,sigma_n_MPa sigma_n_div_tau_r,-0.014504242968567513
+base5_plus_engineered,Base 5 + variables combinees,sigma_n_MPa sigma_n_div_u_r,-0.009010905001876275
+base5_plus_engineered,Base 5 + variables combinees,sigma_n_MPa sigma_n_div_u_p,0.0038407190055683724
+base5_plus_engineered,Base 5 + variables combinees,delta_peak_mm^2,0.012957644954310179
+base5_plus_engineered,Base 5 + variables combinees,delta_peak_mm tau_peak_MPa_csds,0.03182896182040624
+base5_plus_engineered,Base 5 + variables combinees,delta_peak_mm u_r_mm,0.056082409832623345
+base5_plus_engineered,Base 5 + variables combinees,delta_peak_mm tau_r_MPa,0.04715524509992959
+base5_plus_engineered,Base 5 + variables combinees,delta_peak_mm sigma_n_x_u_r,0.027686644435777973
+base5_plus_engineered,Base 5 + variables combinees,delta_peak_mm sigma_n_x_u_p,0.022542996350290216
+base5_plus_engineered,Base 5 + variables combinees,delta_peak_mm sigma_n_x_tau_p,0.01577396631057319
+base5_plus_engineered,Base 5 + variables combinees,delta_peak_mm sigma_n_x_tau_r,0.02770826013429088
+base5_plus_engineered,Base 5 + variables combinees,delta_peak_mm u_r_x_u_p,-0.008314389835926684
+base5_plus_engineered,Base 5 + variables combinees,delta_peak_mm u_r_x_tau_p,0.01553219981991907
+base5_plus_engineered,Base 5 + variables combinees,delta_peak_mm u_r_x_tau_r,0.023272684552705522
+base5_plus_engineered,Base 5 + variables combinees,delta_peak_mm u_p_x_tau_p,0.01469707440479375
+base5_plus_engineered,Base 5 + variables combinees,delta_peak_mm u_p_x_tau_r,0.04388861730206582
+base5_plus_engineered,Base 5 + variables combinees,delta_peak_mm tau_p_x_tau_r,0.0449505890453976
+base5_plus_engineered,Base 5 + variables combinees,delta_peak_mm u_p_div_u_r,0.04393869542935653
+base5_plus_engineered,Base 5 + variables combinees,delta_peak_mm u_r_div_u_p,-0.041878956768947
+base5_plus_engineered,Base 5 + variables combinees,delta_peak_mm tau_p_div_tau_r,0.03878824835352942
+base5_plus_engineered,Base 5 + variables combinees,delta_peak_mm tau_r_div_tau_p,-0.02732518595855419
+base5_plus_engineered,Base 5 + variables combinees,delta_peak_mm u_r_div_tau_p,0.036382861002721
+base5_plus_engineered,Base 5 + variables combinees,delta_peak_mm u_r_div_tau_r,0.04743920154172993
+base5_plus_engineered,Base 5 + variables combinees,delta_peak_mm u_p_div_tau_p,0.052014823761618575
+base5_plus_engineered,Base 5 + variables combinees,delta_peak_mm u_p_div_tau_r,0.05715006321772186
+base5_plus_engineered,Base 5 + variables combinees,delta_peak_mm tau_p_div_u_r,0.030242766365481604
+base5_plus_engineered,Base 5 + variables combinees,delta_peak_mm tau_p_div_u_p,0.018246871079475924
+base5_plus_engineered,Base 5 + variables combinees,delta_peak_mm tau_r_div_u_r,0.04204796296309572
+base5_plus_engineered,Base 5 + variables combinees,delta_peak_mm tau_r_div_u_p,0.019998636885337186
+base5_plus_engineered,Base 5 + variables combinees,delta_peak_mm tau_p_div_sigma_n,0.007371813293735626
+base5_plus_engineered,Base 5 + variables combinees,delta_peak_mm tau_r_div_sigma_n,-0.019869666131347854
+base5_plus_engineered,Base 5 + variables combinees,delta_peak_mm sigma_n_div_tau_p,0.02254258511393535
+base5_plus_engineered,Base 5 + variables combinees,delta_peak_mm sigma_n_div_tau_r,0.023512037850091226
+base5_plus_engineered,Base 5 + variables combinees,delta_peak_mm sigma_n_div_u_r,0.025770422723795473
+base5_plus_engineered,Base 5 + variables combinees,delta_peak_mm sigma_n_div_u_p,0.028378704992914436
+base5_plus_engineered,Base 5 + variables combinees,tau_peak_MPa_csds^2,-0.013327567547628528
+base5_plus_engineered,Base 5 + variables combinees,tau_peak_MPa_csds u_r_mm,0.06586839737773584
+base5_plus_engineered,Base 5 + variables combinees,tau_peak_MPa_csds tau_r_MPa,0.016190138450248956
+base5_plus_engineered,Base 5 + variables combinees,tau_peak_MPa_csds sigma_n_x_u_r,0.012446451070307946
+base5_plus_engineered,Base 5 + variables combinees,tau_peak_MPa_csds sigma_n_x_u_p,0.013097205996471233
+base5_plus_engineered,Base 5 + variables combinees,tau_peak_MPa_csds sigma_n_x_tau_p,0.0049377291638027865
+base5_plus_engineered,Base 5 + variables combinees,tau_peak_MPa_csds sigma_n_x_tau_r,0.00933590577483771
+base5_plus_engineered,Base 5 + variables combinees,tau_peak_MPa_csds u_r_x_u_p,0.021564425187099424
+base5_plus_engineered,Base 5 + variables combinees,tau_peak_MPa_csds u_r_x_tau_p,-0.0007609176689850209
+base5_plus_engineered,Base 5 + variables combinees,tau_peak_MPa_csds u_r_x_tau_r,0.016063746118679195
+base5_plus_engineered,Base 5 + variables combinees,tau_peak_MPa_csds u_p_x_tau_p,-0.06203835712386407
+base5_plus_engineered,Base 5 + variables combinees,tau_peak_MPa_csds u_p_x_tau_r,-0.026483986694900565
+base5_plus_engineered,Base 5 + variables combinees,tau_peak_MPa_csds tau_p_x_tau_r,-0.004498046242212829
+base5_plus_engineered,Base 5 + variables combinees,tau_peak_MPa_csds u_p_div_u_r,0.019964801230182724
+base5_plus_engineered,Base 5 + variables combinees,tau_peak_MPa_csds u_r_div_u_p,-0.047804426070160104
+base5_plus_engineered,Base 5 + variables combinees,tau_peak_MPa_csds tau_p_div_tau_r,0.005103672237442371
+base5_plus_engineered,Base 5 + variables combinees,tau_peak_MPa_csds tau_r_div_tau_p,0.011748278448074932
+base5_plus_engineered,Base 5 + variables combinees,tau_peak_MPa_csds u_r_div_tau_p,0.004856379790323936
+base5_plus_engineered,Base 5 + variables combinees,tau_peak_MPa_csds u_r_div_tau_r,0.017621409004829107
+base5_plus_engineered,Base 5 + variables combinees,tau_peak_MPa_csds u_p_div_tau_p,0.028575770543690013
+base5_plus_engineered,Base 5 + variables combinees,tau_peak_MPa_csds u_p_div_tau_r,0.03420266251746074
+base5_plus_engineered,Base 5 + variables combinees,tau_peak_MPa_csds tau_p_div_u_r,-0.024950541592215908
+base5_plus_engineered,Base 5 + variables combinees,tau_peak_MPa_csds tau_p_div_u_p,0.0029563404534192596
+base5_plus_engineered,Base 5 + variables combinees,tau_peak_MPa_csds tau_r_div_u_r,0.006326899994530476
+base5_plus_engineered,Base 5 + variables combinees,tau_peak_MPa_csds tau_r_div_u_p,0.018582141449336897
+base5_plus_engineered,Base 5 + variables combinees,tau_peak_MPa_csds tau_p_div_sigma_n,-0.0064127237368654215
+base5_plus_engineered,Base 5 + variables combinees,tau_peak_MPa_csds tau_r_div_sigma_n,-0.0016217093054927759
+base5_plus_engineered,Base 5 + variables combinees,tau_peak_MPa_csds sigma_n_div_tau_p,0.01570342771160675
+base5_plus_engineered,Base 5 + variables combinees,tau_peak_MPa_csds sigma_n_div_tau_r,0.015162543183261427
+base5_plus_engineered,Base 5 + variables combinees,tau_peak_MPa_csds sigma_n_div_u_r,0.01987900945795738
+base5_plus_engineered,Base 5 + variables combinees,tau_peak_MPa_csds sigma_n_div_u_p,0.00934946179627341
+base5_plus_engineered,Base 5 + variables combinees,u_r_mm^2,0.09873029580745525
+base5_plus_engineered,Base 5 + variables combinees,u_r_mm tau_r_MPa,0.06853153939982673
+base5_plus_engineered,Base 5 + variables combinees,u_r_mm sigma_n_x_u_r,0.011575508285534629
+base5_plus_engineered,Base 5 + variables combinees,u_r_mm sigma_n_x_u_p,0.0035456095864501427
+base5_plus_engineered,Base 5 + variables combinees,u_r_mm sigma_n_x_tau_p,0.006450742138094251
+base5_plus_engineered,Base 5 + variables combinees,u_r_mm sigma_n_x_tau_r,0.015799887868104795
+base5_plus_engineered,Base 5 + variables combinees,u_r_mm u_r_x_u_p,0.002394296466641542
+base5_plus_engineered,Base 5 + variables combinees,u_r_mm u_r_x_tau_p,0.028745024765965046
+base5_plus_engineered,Base 5 + variables combinees,u_r_mm u_r_x_tau_r,0.04340159404588658
+base5_plus_engineered,Base 5 + variables combinees,u_r_mm u_p_x_tau_p,0.038520963721469986
+base5_plus_engineered,Base 5 + variables combinees,u_r_mm u_p_x_tau_r,0.03822553877287999
+base5_plus_engineered,Base 5 + variables combinees,u_r_mm tau_p_x_tau_r,0.05047637378389759
+base5_plus_engineered,Base 5 + variables combinees,u_r_mm u_p_div_u_r,0.1403282887208827
+base5_plus_engineered,Base 5 + variables combinees,u_r_mm u_r_div_u_p,-0.013009630699184578
+base5_plus_engineered,Base 5 + variables combinees,u_r_mm tau_p_div_tau_r,0.006821623461642936
+base5_plus_engineered,Base 5 + variables combinees,u_r_mm tau_r_div_tau_p,-0.012300613025903472
+base5_plus_engineered,Base 5 + variables combinees,u_r_mm u_r_div_tau_p,-0.0006278827916604765
+base5_plus_engineered,Base 5 + variables combinees,u_r_mm u_r_div_tau_r,0.009121275331209782
+base5_plus_engineered,Base 5 + variables combinees,u_r_mm u_p_div_tau_p,0.010132710736339092
+base5_plus_engineered,Base 5 + variables combinees,u_r_mm u_p_div_tau_r,0.014482728485627074
+base5_plus_engineered,Base 5 + variables combinees,u_r_mm tau_p_div_u_r,0.06269183761201264
+base5_plus_engineered,Base 5 + variables combinees,u_r_mm tau_p_div_u_p,-0.0042783609165615265
+base5_plus_engineered,Base 5 + variables combinees,u_r_mm tau_r_div_u_r,0.054186123446524403
+base5_plus_engineered,Base 5 + variables combinees,u_r_mm tau_r_div_u_p,0.0006783398109469832
+base5_plus_engineered,Base 5 + variables combinees,u_r_mm tau_p_div_sigma_n,-0.04429371834451008
+base5_plus_engineered,Base 5 + variables combinees,u_r_mm tau_r_div_sigma_n,-0.04229780063682318
+base5_plus_engineered,Base 5 + variables combinees,u_r_mm sigma_n_div_tau_p,0.02237094769213855
+base5_plus_engineered,Base 5 + variables combinees,u_r_mm sigma_n_div_tau_r,0.02623849637193414
+base5_plus_engineered,Base 5 + variables combinees,u_r_mm sigma_n_div_u_r,0.01806419038859089
+base5_plus_engineered,Base 5 + variables combinees,u_r_mm sigma_n_div_u_p,0.03337481751863867
+base5_plus_engineered,Base 5 + variables combinees,tau_r_MPa^2,0.05039616527747827
+base5_plus_engineered,Base 5 + variables combinees,tau_r_MPa sigma_n_x_u_r,0.008444687813302565
+base5_plus_engineered,Base 5 + variables combinees,tau_r_MPa sigma_n_x_u_p,0.010483743355623493
+base5_plus_engineered,Base 5 + variables combinees,tau_r_MPa sigma_n_x_tau_p,0.002879374435655584
+base5_plus_engineered,Base 5 + variables combinees,tau_r_MPa sigma_n_x_tau_r,0.006938069080472465
+base5_plus_engineered,Base 5 + variables combinees,tau_r_MPa u_r_x_u_p,0.021180721515017778
+base5_plus_engineered,Base 5 + variables combinees,tau_r_MPa u_r_x_tau_p,0.013733405190971564
+base5_plus_engineered,Base 5 + variables combinees,tau_r_MPa u_r_x_tau_r,0.037357662863599615
+base5_plus_engineered,Base 5 + variables combinees,tau_r_MPa u_p_x_tau_p,-0.026931732759288004
+base5_plus_engineered,Base 5 + variables combinees,tau_r_MPa u_p_x_tau_r,0.015474850175364235
+base5_plus_engineered,Base 5 + variables combinees,tau_r_MPa tau_p_x_tau_r,0.025275295770262766
+base5_plus_engineered,Base 5 + variables combinees,tau_r_MPa u_p_div_u_r,0.04166906897808275
+base5_plus_engineered,Base 5 + variables combinees,tau_r_MPa u_r_div_u_p,-0.05956321854598712
+base5_plus_engineered,Base 5 + variables combinees,tau_r_MPa tau_p_div_tau_r,0.010674332319772635
+base5_plus_engineered,Base 5 + variables combinees,tau_r_MPa tau_r_div_tau_p,0.01626215085786
+base5_plus_engineered,Base 5 + variables combinees,tau_r_MPa u_r_div_tau_p,-0.010045591603596006
+base5_plus_engineered,Base 5 + variables combinees,tau_r_MPa u_r_div_tau_r,0.003907658974521745
+base5_plus_engineered,Base 5 + variables combinees,tau_r_MPa u_p_div_tau_p,0.013285023017456496
+base5_plus_engineered,Base 5 + variables combinees,tau_r_MPa u_p_div_tau_r,0.01994116355184142
+base5_plus_engineered,Base 5 + variables combinees,tau_r_MPa tau_p_div_u_r,-0.00013573756494542327
+base5_plus_engineered,Base 5 + variables combinees,tau_r_MPa tau_p_div_u_p,0.0018020928346365065
+base5_plus_engineered,Base 5 + variables combinees,tau_r_MPa tau_r_div_u_r,0.033883593300478215
+base5_plus_engineered,Base 5 + variables combinees,tau_r_MPa tau_r_div_u_p,0.017805450530531848
+base5_plus_engineered,Base 5 + variables combinees,tau_r_MPa tau_p_div_sigma_n,-0.002038735899489382
+base5_plus_engineered,Base 5 + variables combinees,tau_r_MPa tau_r_div_sigma_n,-0.004006846506802008
+base5_plus_engineered,Base 5 + variables combinees,tau_r_MPa sigma_n_div_tau_p,0.007376354916543953
+base5_plus_engineered,Base 5 + variables combinees,tau_r_MPa sigma_n_div_tau_r,0.007792177381719761
+base5_plus_engineered,Base 5 + variables combinees,tau_r_MPa sigma_n_div_u_r,0.01510053544734333
+base5_plus_engineered,Base 5 + variables combinees,tau_r_MPa sigma_n_div_u_p,0.0028252015235910627
+base5_plus_engineered,Base 5 + variables combinees,sigma_n_x_u_r^2,0.016021130543734004
+base5_plus_engineered,Base 5 + variables combinees,sigma_n_x_u_r sigma_n_x_u_p,0.002587128316027101
+base5_plus_engineered,Base 5 + variables combinees,sigma_n_x_u_r sigma_n_x_tau_p,-0.0001961179574591133
+base5_plus_engineered,Base 5 + variables combinees,sigma_n_x_u_r sigma_n_x_tau_r,0.011233604474264086
+base5_plus_engineered,Base 5 + variables combinees,sigma_n_x_u_r u_r_x_u_p,0.005459466192588279
+base5_plus_engineered,Base 5 + variables combinees,sigma_n_x_u_r u_r_x_tau_p,0.004626441792156718
+base5_plus_engineered,Base 5 + variables combinees,sigma_n_x_u_r u_r_x_tau_r,0.006049760042888698
+base5_plus_engineered,Base 5 + variables combinees,sigma_n_x_u_r u_p_x_tau_p,0.016688378073152772
+base5_plus_engineered,Base 5 + variables combinees,sigma_n_x_u_r u_p_x_tau_r,0.013444514090681533
+base5_plus_engineered,Base 5 + variables combinees,sigma_n_x_u_r tau_p_x_tau_r,0.006257656715367482
+base5_plus_engineered,Base 5 + variables combinees,sigma_n_x_u_r u_p_div_u_r,0.053055473657588045
+base5_plus_engineered,Base 5 + variables combinees,sigma_n_x_u_r u_r_div_u_p,-0.017924059114921655
+base5_plus_engineered,Base 5 + variables combinees,sigma_n_x_u_r tau_p_div_tau_r,0.004591959806859205
+base5_plus_engineered,Base 5 + variables combinees,sigma_n_x_u_r tau_r_div_tau_p,-0.017295092168705475
+base5_plus_engineered,Base 5 + variables combinees,sigma_n_x_u_r u_r_div_tau_p,-0.003259638216919226
+base5_plus_engineered,Base 5 + variables combinees,sigma_n_x_u_r u_r_div_tau_r,0.0005185065247556168
+base5_plus_engineered,Base 5 + variables combinees,sigma_n_x_u_r u_p_div_tau_p,0.002630565374018035
+base5_plus_engineered,Base 5 + variables combinees,sigma_n_x_u_r u_p_div_tau_r,0.004396098857967101
+base5_plus_engineered,Base 5 + variables combinees,sigma_n_x_u_r tau_p_div_u_r,0.011903083516181072
+base5_plus_engineered,Base 5 + variables combinees,sigma_n_x_u_r tau_p_div_u_p,-0.016840623955338578
+base5_plus_engineered,Base 5 + variables combinees,sigma_n_x_u_r tau_r_div_u_r,0.005556148935988585
+base5_plus_engineered,Base 5 + variables combinees,sigma_n_x_u_r tau_r_div_u_p,-0.018426221400202784
+base5_plus_engineered,Base 5 + variables combinees,sigma_n_x_u_r tau_p_div_sigma_n,0.013275237445787708
+base5_plus_engineered,Base 5 + variables combinees,sigma_n_x_u_r tau_r_div_sigma_n,0.0012888304666142467
+base5_plus_engineered,Base 5 + variables combinees,sigma_n_x_u_r sigma_n_div_tau_p,0.0020563684546545512
+base5_plus_engineered,Base 5 + variables combinees,sigma_n_x_u_r sigma_n_div_tau_r,-0.011717740585034617
+base5_plus_engineered,Base 5 + variables combinees,sigma_n_x_u_r sigma_n_div_u_r,-0.0005774491828497074
+base5_plus_engineered,Base 5 + variables combinees,sigma_n_x_u_r sigma_n_div_u_p,0.01220558409589476
+base5_plus_engineered,Base 5 + variables combinees,sigma_n_x_u_p^2,-0.019609389346692756
+base5_plus_engineered,Base 5 + variables combinees,sigma_n_x_u_p sigma_n_x_tau_p,-0.0019503307917608879
+base5_plus_engineered,Base 5 + variables combinees,sigma_n_x_u_p sigma_n_x_tau_r,-0.0007111062977915718
+base5_plus_engineered,Base 5 + variables combinees,sigma_n_x_u_p u_r_x_u_p,0.003954897055827368
+base5_plus_engineered,Base 5 + variables combinees,sigma_n_x_u_p u_r_x_tau_p,0.0032801170949709234
+base5_plus_engineered,Base 5 + variables combinees,sigma_n_x_u_p u_r_x_tau_r,0.005016638114078828
+base5_plus_engineered,Base 5 + variables combinees,sigma_n_x_u_p u_p_x_tau_p,0.014891440169552073
+base5_plus_engineered,Base 5 + variables combinees,sigma_n_x_u_p u_p_x_tau_r,0.013120867456354258
+base5_plus_engineered,Base 5 + variables combinees,sigma_n_x_u_p tau_p_x_tau_r,0.008837912092292023
+base5_plus_engineered,Base 5 + variables combinees,sigma_n_x_u_p u_p_div_u_r,0.04399783317510691
+base5_plus_engineered,Base 5 + variables combinees,sigma_n_x_u_p u_r_div_u_p,-0.022944182497576918
+base5_plus_engineered,Base 5 + variables combinees,sigma_n_x_u_p tau_p_div_tau_r,0.004411668914293966
+base5_plus_engineered,Base 5 + variables combinees,sigma_n_x_u_p tau_r_div_tau_p,-0.013767231900210331
+base5_plus_engineered,Base 5 + variables combinees,sigma_n_x_u_p u_r_div_tau_p,-9.189059873334238e-05
+base5_plus_engineered,Base 5 + variables combinees,sigma_n_x_u_p u_r_div_tau_r,0.003147825189553333
+base5_plus_engineered,Base 5 + variables combinees,sigma_n_x_u_p u_p_div_tau_p,0.005653783183036057
+base5_plus_engineered,Base 5 + variables combinees,sigma_n_x_u_p u_p_div_tau_r,0.007157827692688709
+base5_plus_engineered,Base 5 + variables combinees,sigma_n_x_u_p tau_p_div_u_r,0.015136577721172757
+base5_plus_engineered,Base 5 + variables combinees,sigma_n_x_u_p tau_p_div_u_p,-0.011254300810070894
+base5_plus_engineered,Base 5 + variables combinees,sigma_n_x_u_p tau_r_div_u_r,0.009735886951401134
+base5_plus_engineered,Base 5 + variables combinees,sigma_n_x_u_p tau_r_div_u_p,-0.012500853288400636
+base5_plus_engineered,Base 5 + variables combinees,sigma_n_x_u_p tau_p_div_sigma_n,0.02457277843752779
+base5_plus_engineered,Base 5 + variables combinees,sigma_n_x_u_p tau_r_div_sigma_n,0.017727426983372083
+base5_plus_engineered,Base 5 + variables combinees,sigma_n_x_u_p sigma_n_div_tau_p,-0.009204715205080892
+base5_plus_engineered,Base 5 + variables combinees,sigma_n_x_u_p sigma_n_div_tau_r,-0.020753429096556253
+base5_plus_engineered,Base 5 + variables combinees,sigma_n_x_u_p sigma_n_div_u_r,-0.013064150281093347
+base5_plus_engineered,Base 5 + variables combinees,sigma_n_x_u_p sigma_n_div_u_p,-0.0023565946869428213
+base5_plus_engineered,Base 5 + variables combinees,sigma_n_x_tau_p^2,0.000632791548896056
+base5_plus_engineered,Base 5 + variables combinees,sigma_n_x_tau_p sigma_n_x_tau_r,-0.002121175140832525
+base5_plus_engineered,Base 5 + variables combinees,sigma_n_x_tau_p u_r_x_u_p,0.004801765845532793
+base5_plus_engineered,Base 5 + variables combinees,sigma_n_x_tau_p u_r_x_tau_p,0.0017133800239013536
+base5_plus_engineered,Base 5 + variables combinees,sigma_n_x_tau_p u_r_x_tau_r,0.001225529661877015
+base5_plus_engineered,Base 5 + variables combinees,sigma_n_x_tau_p u_p_x_tau_p,0.0071974286933936555
+base5_plus_engineered,Base 5 + variables combinees,sigma_n_x_tau_p u_p_x_tau_r,0.005740410386662059
+base5_plus_engineered,Base 5 + variables combinees,sigma_n_x_tau_p tau_p_x_tau_r,0.0023105029763597065
+base5_plus_engineered,Base 5 + variables combinees,sigma_n_x_tau_p u_p_div_u_r,0.02630405221616387
+base5_plus_engineered,Base 5 + variables combinees,sigma_n_x_tau_p u_r_div_u_p,-0.013838549451473283
+base5_plus_engineered,Base 5 + variables combinees,sigma_n_x_tau_p tau_p_div_tau_r,0.0015808034049455179
+base5_plus_engineered,Base 5 + variables combinees,sigma_n_x_tau_p tau_r_div_tau_p,-0.011225130450410311
+base5_plus_engineered,Base 5 + variables combinees,sigma_n_x_tau_p u_r_div_tau_p,-0.0020232355701460605
+base5_plus_engineered,Base 5 + variables combinees,sigma_n_x_tau_p u_r_div_tau_r,-0.0001894155583299031
+base5_plus_engineered,Base 5 + variables combinees,sigma_n_x_tau_p u_p_div_tau_p,0.001077436445577068
+base5_plus_engineered,Base 5 + variables combinees,sigma_n_x_tau_p u_p_div_tau_r,0.0019401531798362885
+base5_plus_engineered,Base 5 + variables combinees,sigma_n_x_tau_p tau_p_div_u_r,0.004495636160629851
+base5_plus_engineered,Base 5 + variables combinees,sigma_n_x_tau_p tau_p_div_u_p,-0.009488308055482104
+base5_plus_engineered,Base 5 + variables combinees,sigma_n_x_tau_p tau_r_div_u_r,0.001694575122289931
+base5_plus_engineered,Base 5 + variables combinees,sigma_n_x_tau_p tau_r_div_u_p,-0.010199638887838999
+base5_plus_engineered,Base 5 + variables combinees,sigma_n_x_tau_p tau_p_div_sigma_n,0.004688366757016957
+base5_plus_engineered,Base 5 + variables combinees,sigma_n_x_tau_p tau_r_div_sigma_n,-0.0016022927523309137
+base5_plus_engineered,Base 5 + variables combinees,sigma_n_x_tau_p sigma_n_div_tau_p,-0.00013223951389517265
+base5_plus_engineered,Base 5 + variables combinees,sigma_n_x_tau_p sigma_n_div_tau_r,-0.0023642972411974427
+base5_plus_engineered,Base 5 + variables combinees,sigma_n_x_tau_p sigma_n_div_u_r,-0.0025792774703279637
+base5_plus_engineered,Base 5 + variables combinees,sigma_n_x_tau_p sigma_n_div_u_p,-0.003399787804583945
+base5_plus_engineered,Base 5 + variables combinees,sigma_n_x_tau_r^2,-0.0030163903612496
+base5_plus_engineered,Base 5 + variables combinees,sigma_n_x_tau_r u_r_x_u_p,0.008654651415776772
+base5_plus_engineered,Base 5 + variables combinees,sigma_n_x_tau_r u_r_x_tau_p,0.0031910489926246766
+base5_plus_engineered,Base 5 + variables combinees,sigma_n_x_tau_r u_r_x_tau_r,0.004084007012062846
+base5_plus_engineered,Base 5 + variables combinees,sigma_n_x_tau_r u_p_x_tau_p,0.011932931146484886
+base5_plus_engineered,Base 5 + variables combinees,sigma_n_x_tau_r u_p_x_tau_r,0.01076950124182524
+base5_plus_engineered,Base 5 + variables combinees,sigma_n_x_tau_r tau_p_x_tau_r,0.00468386313766032
+base5_plus_engineered,Base 5 + variables combinees,sigma_n_x_tau_r u_p_div_u_r,0.04627505921383387
+base5_plus_engineered,Base 5 + variables combinees,sigma_n_x_tau_r u_r_div_u_p,-0.02365168807677553
+base5_plus_engineered,Base 5 + variables combinees,sigma_n_x_tau_r tau_p_div_tau_r,0.005161662562785192
+base5_plus_engineered,Base 5 + variables combinees,sigma_n_x_tau_r tau_r_div_tau_p,-0.015198550068433524
+base5_plus_engineered,Base 5 + variables combinees,sigma_n_x_tau_r u_r_div_tau_p,-0.00381959677273729
+base5_plus_engineered,Base 5 + variables combinees,sigma_n_x_tau_r u_r_div_tau_r,-0.00023917783994367627
+base5_plus_engineered,Base 5 + variables combinees,sigma_n_x_tau_r u_p_div_tau_p,0.0021686880341949865
+base5_plus_engineered,Base 5 + variables combinees,sigma_n_x_tau_r u_p_div_tau_r,0.00386957786727519
+base5_plus_engineered,Base 5 + variables combinees,sigma_n_x_tau_r tau_p_div_u_r,0.008429067881422732
+base5_plus_engineered,Base 5 + variables combinees,sigma_n_x_tau_r tau_p_div_u_p,-0.016943982294866867
+base5_plus_engineered,Base 5 + variables combinees,sigma_n_x_tau_r tau_r_div_u_r,0.004395061836205822
+base5_plus_engineered,Base 5 + variables combinees,sigma_n_x_tau_r tau_r_div_u_p,-0.017797038931177706
+base5_plus_engineered,Base 5 + variables combinees,sigma_n_x_tau_r tau_p_div_sigma_n,0.009596489337094219
+base5_plus_engineered,Base 5 + variables combinees,sigma_n_x_tau_r tau_r_div_sigma_n,-0.0014192870219263964
+base5_plus_engineered,Base 5 + variables combinees,sigma_n_x_tau_r sigma_n_div_tau_p,0.008691402632434427
+base5_plus_engineered,Base 5 + variables combinees,sigma_n_x_tau_r sigma_n_div_tau_r,-0.0020011793406122984
+base5_plus_engineered,Base 5 + variables combinees,sigma_n_x_tau_r sigma_n_div_u_r,-0.007342666866321291
+base5_plus_engineered,Base 5 + variables combinees,sigma_n_x_tau_r sigma_n_div_u_p,-0.00872485146007753
+base5_plus_engineered,Base 5 + variables combinees,u_r_x_u_p^2,-0.045307848934240606
+base5_plus_engineered,Base 5 + variables combinees,u_r_x_u_p u_r_x_tau_p,-0.017493730708940405
+base5_plus_engineered,Base 5 + variables combinees,u_r_x_u_p u_r_x_tau_r,-0.031102108091544404
+base5_plus_engineered,Base 5 + variables combinees,u_r_x_u_p u_p_x_tau_p,0.008633897107318106
+base5_plus_engineered,Base 5 + variables combinees,u_r_x_u_p u_p_x_tau_r,0.012434004516545433
+base5_plus_engineered,Base 5 + variables combinees,u_r_x_u_p tau_p_x_tau_r,0.017817135767751416
+base5_plus_engineered,Base 5 + variables combinees,u_r_x_u_p u_p_div_u_r,0.07095778059121267
+base5_plus_engineered,Base 5 + variables combinees,u_r_x_u_p u_r_div_u_p,-0.03388490018736772
+base5_plus_engineered,Base 5 + variables combinees,u_r_x_u_p tau_p_div_tau_r,0.015930939856988766
+base5_plus_engineered,Base 5 + variables combinees,u_r_x_u_p tau_r_div_tau_p,-0.023521783227603354
+base5_plus_engineered,Base 5 + variables combinees,u_r_x_u_p u_r_div_tau_p,-0.020725088696122024
+base5_plus_engineered,Base 5 + variables combinees,u_r_x_u_p u_r_div_tau_r,-0.00966624662439447
+base5_plus_engineered,Base 5 + variables combinees,u_r_x_u_p u_p_div_tau_p,-0.010790839547990372
+base5_plus_engineered,Base 5 + variables combinees,u_r_x_u_p u_p_div_tau_r,-0.004590428244264328
+base5_plus_engineered,Base 5 + variables combinees,u_r_x_u_p tau_p_div_u_r,0.031844203056152966
+base5_plus_engineered,Base 5 + variables combinees,u_r_x_u_p tau_p_div_u_p,-0.006849138557152373
+base5_plus_engineered,Base 5 + variables combinees,u_r_x_u_p tau_r_div_u_r,0.02764657742954014
+base5_plus_engineered,Base 5 + variables combinees,u_r_x_u_p tau_r_div_u_p,-0.007846453734204494
+base5_plus_engineered,Base 5 + variables combinees,u_r_x_u_p tau_p_div_sigma_n,-0.005289917853238301
+base5_plus_engineered,Base 5 + variables combinees,u_r_x_u_p tau_r_div_sigma_n,-0.02295895663218506
+base5_plus_engineered,Base 5 + variables combinees,u_r_x_u_p sigma_n_div_tau_p,0.0011653906354944783
+base5_plus_engineered,Base 5 + variables combinees,u_r_x_u_p sigma_n_div_tau_r,0.0004999142706876882
+base5_plus_engineered,Base 5 + variables combinees,u_r_x_u_p sigma_n_div_u_r,0.010008927571523177
+base5_plus_engineered,Base 5 + variables combinees,u_r_x_u_p sigma_n_div_u_p,0.007346295908777904
+base5_plus_engineered,Base 5 + variables combinees,u_r_x_tau_p^2,-0.013294191146263186
+base5_plus_engineered,Base 5 + variables combinees,u_r_x_tau_p u_r_x_tau_r,-0.01001459215380433
+base5_plus_engineered,Base 5 + variables combinees,u_r_x_tau_p u_p_x_tau_p,-0.035224951740197866
+base5_plus_engineered,Base 5 + variables combinees,u_r_x_tau_p u_p_x_tau_r,-0.018945175430591845
+base5_plus_engineered,Base 5 + variables combinees,u_r_x_tau_p tau_p_x_tau_r,-0.004468472890078938
+base5_plus_engineered,Base 5 + variables combinees,u_r_x_tau_p u_p_div_u_r,0.04092455484555209
+base5_plus_engineered,Base 5 + variables combinees,u_r_x_tau_p u_r_div_u_p,-0.02094862918780352
+base5_plus_engineered,Base 5 + variables combinees,u_r_x_tau_p tau_p_div_tau_r,-0.003877791743127904
+base5_plus_engineered,Base 5 + variables combinees,u_r_x_tau_p tau_r_div_tau_p,0.008375189514968795
+base5_plus_engineered,Base 5 + variables combinees,u_r_x_tau_p u_r_div_tau_p,0.0006948187019179472
+base5_plus_engineered,Base 5 + variables combinees,u_r_x_tau_p u_r_div_tau_r,0.00785322845191308
+base5_plus_engineered,Base 5 + variables combinees,u_r_x_tau_p u_p_div_tau_p,0.01367341444389281
+base5_plus_engineered,Base 5 + variables combinees,u_r_x_tau_p u_p_div_tau_r,0.016873589938576666
+base5_plus_engineered,Base 5 + variables combinees,u_r_x_tau_p tau_p_div_u_r,-0.00402198815068878
+base5_plus_engineered,Base 5 + variables combinees,u_r_x_tau_p tau_p_div_u_p,-0.0024265808401544974
+base5_plus_engineered,Base 5 + variables combinees,u_r_x_tau_p tau_r_div_u_r,0.00744576384205603
+base5_plus_engineered,Base 5 + variables combinees,u_r_x_tau_p tau_r_div_u_p,0.005389413203375865
+base5_plus_engineered,Base 5 + variables combinees,u_r_x_tau_p tau_p_div_sigma_n,-0.01270615684967982
+base5_plus_engineered,Base 5 + variables combinees,u_r_x_tau_p tau_r_div_sigma_n,-0.005487844603453277
+base5_plus_engineered,Base 5 + variables combinees,u_r_x_tau_p sigma_n_div_tau_p,0.0062474936442117315
+base5_plus_engineered,Base 5 + variables combinees,u_r_x_tau_p sigma_n_div_tau_r,0.004170030211679674
+base5_plus_engineered,Base 5 + variables combinees,u_r_x_tau_p sigma_n_div_u_r,0.008151038015070227
+base5_plus_engineered,Base 5 + variables combinees,u_r_x_tau_p sigma_n_div_u_p,0.005231033050776362
+base5_plus_engineered,Base 5 + variables combinees,u_r_x_tau_r^2,-0.0069098334900117
+base5_plus_engineered,Base 5 + variables combinees,u_r_x_tau_r u_p_x_tau_p,-0.03184276846599355
+base5_plus_engineered,Base 5 + variables combinees,u_r_x_tau_r u_p_x_tau_r,-0.00642291595413469
+base5_plus_engineered,Base 5 + variables combinees,u_r_x_tau_r tau_p_x_tau_r,0.007919167455956326
+base5_plus_engineered,Base 5 + variables combinees,u_r_x_tau_r u_p_div_u_r,0.05428584272936021
+base5_plus_engineered,Base 5 + variables combinees,u_r_x_tau_r u_r_div_u_p,-0.02698886415596126
+base5_plus_engineered,Base 5 + variables combinees,u_r_x_tau_r tau_p_div_tau_r,0.0035638502121556406
+base5_plus_engineered,Base 5 + variables combinees,u_r_x_tau_r tau_r_div_tau_p,0.013461459349610433
+base5_plus_engineered,Base 5 + variables combinees,u_r_x_tau_r u_r_div_tau_p,-0.00927011223599795
+base5_plus_engineered,Base 5 + variables combinees,u_r_x_tau_r u_r_div_tau_r,0.000705016526192803
+base5_plus_engineered,Base 5 + variables combinees,u_r_x_tau_r u_p_div_tau_p,0.0069640365988026115
+base5_plus_engineered,Base 5 + variables combinees,u_r_x_tau_r u_p_div_tau_r,0.011812261462420596
+base5_plus_engineered,Base 5 + variables combinees,u_r_x_tau_r tau_p_div_u_r,0.0037790347876669756
+base5_plus_engineered,Base 5 + variables combinees,u_r_x_tau_r tau_p_div_u_p,-0.0006593582869734551
+base5_plus_engineered,Base 5 + variables combinees,u_r_x_tau_r tau_r_div_u_r,0.022601730824131465
+base5_plus_engineered,Base 5 + variables combinees,u_r_x_tau_r tau_r_div_u_p,0.009903686669402462
+base5_plus_engineered,Base 5 + variables combinees,u_r_x_tau_r tau_p_div_sigma_n,-0.00891655161634675
+base5_plus_engineered,Base 5 + variables combinees,u_r_x_tau_r tau_r_div_sigma_n,-0.0066179516704574035
+base5_plus_engineered,Base 5 + variables combinees,u_r_x_tau_r sigma_n_div_tau_p,0.003730866144047557
+base5_plus_engineered,Base 5 + variables combinees,u_r_x_tau_r sigma_n_div_tau_r,0.002617002632583995
+base5_plus_engineered,Base 5 + variables combinees,u_r_x_tau_r sigma_n_div_u_r,0.009095235126343859
+base5_plus_engineered,Base 5 + variables combinees,u_r_x_tau_r sigma_n_div_u_p,0.0038134396719338073
+base5_plus_engineered,Base 5 + variables combinees,u_p_x_tau_p^2,-0.07614225454338237
+base5_plus_engineered,Base 5 + variables combinees,u_p_x_tau_p u_p_x_tau_r,-0.019710362428619857
+base5_plus_engineered,Base 5 + variables combinees,u_p_x_tau_p tau_p_x_tau_r,-0.03434375487645952
+base5_plus_engineered,Base 5 + variables combinees,u_p_x_tau_p u_p_div_u_r,0.0007289999173331466
+base5_plus_engineered,Base 5 + variables combinees,u_p_x_tau_p u_r_div_u_p,-0.029275937944809535
+base5_plus_engineered,Base 5 + variables combinees,u_p_x_tau_p tau_p_div_tau_r,0.01832868367020629
+base5_plus_engineered,Base 5 + variables combinees,u_p_x_tau_p tau_r_div_tau_p,0.004206467994344341
+base5_plus_engineered,Base 5 + variables combinees,u_p_x_tau_p u_r_div_tau_p,0.025187082446299972
+base5_plus_engineered,Base 5 + variables combinees,u_p_x_tau_p u_r_div_tau_r,0.03263194084334897
+base5_plus_engineered,Base 5 + variables combinees,u_p_x_tau_p u_p_div_tau_p,0.042525162817559414
+base5_plus_engineered,Base 5 + variables combinees,u_p_x_tau_p u_p_div_tau_r,0.0451358883151932
+base5_plus_engineered,Base 5 + variables combinees,u_p_x_tau_p tau_p_div_u_r,-0.06797680285332805
+base5_plus_engineered,Base 5 + variables combinees,u_p_x_tau_p tau_p_div_u_p,-0.014682415708187947
+base5_plus_engineered,Base 5 + variables combinees,u_p_x_tau_p tau_r_div_u_r,-0.028908434105393517
+base5_plus_engineered,Base 5 + variables combinees,u_p_x_tau_p tau_r_div_u_p,-0.005727552671399427
+base5_plus_engineered,Base 5 + variables combinees,u_p_x_tau_p tau_p_div_sigma_n,0.028229683420280063
+base5_plus_engineered,Base 5 + variables combinees,u_p_x_tau_p tau_r_div_sigma_n,0.028190584895322193
+base5_plus_engineered,Base 5 + variables combinees,u_p_x_tau_p sigma_n_div_tau_p,0.023628321718353537
+base5_plus_engineered,Base 5 + variables combinees,u_p_x_tau_p sigma_n_div_tau_r,0.02303018551823938
+base5_plus_engineered,Base 5 + variables combinees,u_p_x_tau_p sigma_n_div_u_r,0.022281336139905353
+base5_plus_engineered,Base 5 + variables combinees,u_p_x_tau_p sigma_n_div_u_p,0.015447519864071897
+base5_plus_engineered,Base 5 + variables combinees,u_p_x_tau_r^2,0.045041496125624386
+base5_plus_engineered,Base 5 + variables combinees,u_p_x_tau_r tau_p_x_tau_r,0.007907884933953594
+base5_plus_engineered,Base 5 + variables combinees,u_p_x_tau_r u_p_div_u_r,0.04261728616278559
+base5_plus_engineered,Base 5 + variables combinees,u_p_x_tau_r u_r_div_u_p,-0.04005771337050171
+base5_plus_engineered,Base 5 + variables combinees,u_p_x_tau_r tau_p_div_tau_r,0.017179158718843724
+base5_plus_engineered,Base 5 + variables combinees,u_p_x_tau_r tau_r_div_tau_p,0.019177604040393134
+base5_plus_engineered,Base 5 + variables combinees,u_p_x_tau_r u_r_div_tau_p,0.012716350150106873
+base5_plus_engineered,Base 5 + variables combinees,u_p_x_tau_r u_r_div_tau_r,0.02085078405704817
+base5_plus_engineered,Base 5 + variables combinees,u_p_x_tau_r u_p_div_tau_p,0.02930926710313414
+base5_plus_engineered,Base 5 + variables combinees,u_p_x_tau_r u_p_div_tau_r,0.03257529626481865
+base5_plus_engineered,Base 5 + variables combinees,u_p_x_tau_r tau_p_div_u_r,-0.037773757257985194
+base5_plus_engineered,Base 5 + variables combinees,u_p_x_tau_r tau_p_div_u_p,-0.018725082993641014
+base5_plus_engineered,Base 5 + variables combinees,u_p_x_tau_r tau_r_div_u_r,0.0053328103121182795
+base5_plus_engineered,Base 5 + variables combinees,u_p_x_tau_r tau_r_div_u_p,-0.008076828938160158
+base5_plus_engineered,Base 5 + variables combinees,u_p_x_tau_r tau_p_div_sigma_n,0.024549036257879957
+base5_plus_engineered,Base 5 + variables combinees,u_p_x_tau_r tau_r_div_sigma_n,0.02629475068090906
+base5_plus_engineered,Base 5 + variables combinees,u_p_x_tau_r sigma_n_div_tau_p,0.016630299689496447
+base5_plus_engineered,Base 5 + variables combinees,u_p_x_tau_r sigma_n_div_tau_r,0.01699455073781592
+base5_plus_engineered,Base 5 + variables combinees,u_p_x_tau_r sigma_n_div_u_r,0.018431729229074104
+base5_plus_engineered,Base 5 + variables combinees,u_p_x_tau_r sigma_n_div_u_p,0.010338762871352741
+base5_plus_engineered,Base 5 + variables combinees,tau_p_x_tau_r^2,0.0011843384701333468
+base5_plus_engineered,Base 5 + variables combinees,tau_p_x_tau_r u_p_div_u_r,0.054486424816514854
+base5_plus_engineered,Base 5 + variables combinees,tau_p_x_tau_r u_r_div_u_p,-0.059134699021011275
+base5_plus_engineered,Base 5 + variables combinees,tau_p_x_tau_r tau_p_div_tau_r,0.012262749493142268
+base5_plus_engineered,Base 5 + variables combinees,tau_p_x_tau_r tau_r_div_tau_p,0.007359022108542515
+base5_plus_engineered,Base 5 + variables combinees,tau_p_x_tau_r u_r_div_tau_p,-0.007091855041090831
+base5_plus_engineered,Base 5 + variables combinees,tau_p_x_tau_r u_r_div_tau_r,0.0033332247151608234
+base5_plus_engineered,Base 5 + variables combinees,tau_p_x_tau_r u_p_div_tau_p,0.010967693413391629
+base5_plus_engineered,Base 5 + variables combinees,tau_p_x_tau_r u_p_div_tau_r,0.015774410968559763
+base5_plus_engineered,Base 5 + variables combinees,tau_p_x_tau_r tau_p_div_u_r,-0.01548633380510415
+base5_plus_engineered,Base 5 + variables combinees,tau_p_x_tau_r tau_p_div_u_p,-0.021764564913272676
+base5_plus_engineered,Base 5 + variables combinees,tau_p_x_tau_r tau_r_div_u_r,0.015015460484878678
+base5_plus_engineered,Base 5 + variables combinees,tau_p_x_tau_r tau_r_div_u_p,-0.013313173782807946
+base5_plus_engineered,Base 5 + variables combinees,tau_p_x_tau_r tau_p_div_sigma_n,0.007177395867476649
+base5_plus_engineered,Base 5 + variables combinees,tau_p_x_tau_r tau_r_div_sigma_n,0.002624730279173454
+base5_plus_engineered,Base 5 + variables combinees,tau_p_x_tau_r sigma_n_div_tau_p,0.006839229411679757
+base5_plus_engineered,Base 5 + variables combinees,tau_p_x_tau_r sigma_n_div_tau_r,0.007549841806953508
+base5_plus_engineered,Base 5 + variables combinees,tau_p_x_tau_r sigma_n_div_u_r,0.012641871986481113
+base5_plus_engineered,Base 5 + variables combinees,tau_p_x_tau_r sigma_n_div_u_p,0.0009818664408071827
+base5_plus_engineered,Base 5 + variables combinees,u_p_div_u_r^2,-0.08530153196636092
+base5_plus_engineered,Base 5 + variables combinees,u_p_div_u_r u_r_div_u_p,-0.017946786882192232
+base5_plus_engineered,Base 5 + variables combinees,u_p_div_u_r tau_p_div_tau_r,0.06431094894605546
+base5_plus_engineered,Base 5 + variables combinees,u_p_div_u_r tau_r_div_tau_p,-0.023480425817464762
+base5_plus_engineered,Base 5 + variables combinees,u_p_div_u_r u_r_div_tau_p,0.08083897882658304
+base5_plus_engineered,Base 5 + variables combinees,u_p_div_u_r u_r_div_tau_r,0.09134462663795107
+base5_plus_engineered,Base 5 + variables combinees,u_p_div_u_r u_p_div_tau_p,0.09770710501197347
+base5_plus_engineered,Base 5 + variables combinees,u_p_div_u_r u_p_div_tau_r,0.10260234587514709
+base5_plus_engineered,Base 5 + variables combinees,u_p_div_u_r tau_p_div_u_r,-0.011623698940472929
+base5_plus_engineered,Base 5 + variables combinees,u_p_div_u_r tau_p_div_u_p,0.04757490877407718
+base5_plus_engineered,Base 5 + variables combinees,u_p_div_u_r tau_r_div_u_r,0.01795730997301945
+base5_plus_engineered,Base 5 + variables combinees,u_p_div_u_r tau_r_div_u_p,0.050248881393568166
+base5_plus_engineered,Base 5 + variables combinees,u_p_div_u_r tau_p_div_sigma_n,-0.006095570819163256
+base5_plus_engineered,Base 5 + variables combinees,u_p_div_u_r tau_r_div_sigma_n,-0.05855425805890023
+base5_plus_engineered,Base 5 + variables combinees,u_p_div_u_r sigma_n_div_tau_p,0.042735057123886415
+base5_plus_engineered,Base 5 + variables combinees,u_p_div_u_r sigma_n_div_tau_r,0.04692341342991375
+base5_plus_engineered,Base 5 + variables combinees,u_p_div_u_r sigma_n_div_u_r,0.03091858434705865
+base5_plus_engineered,Base 5 + variables combinees,u_p_div_u_r sigma_n_div_u_p,0.04747584682790639
+base5_plus_engineered,Base 5 + variables combinees,u_r_div_u_p^2,-0.013482543330123432
+base5_plus_engineered,Base 5 + variables combinees,u_r_div_u_p tau_p_div_tau_r,-0.0061632492530610886
+base5_plus_engineered,Base 5 + variables combinees,u_r_div_u_p tau_r_div_tau_p,-0.05555547984719777
+base5_plus_engineered,Base 5 + variables combinees,u_r_div_u_p u_r_div_tau_p,-0.05020454075517409
+base5_plus_engineered,Base 5 + variables combinees,u_r_div_u_p u_r_div_tau_r,-0.050145502145919604
+base5_plus_engineered,Base 5 + variables combinees,u_r_div_u_p u_p_div_tau_p,-0.05164557851632799
+base5_plus_engineered,Base 5 + variables combinees,u_r_div_u_p u_p_div_tau_r,-0.052154432669684114
+base5_plus_engineered,Base 5 + variables combinees,u_r_div_u_p tau_p_div_u_r,-0.05324856530495752
+base5_plus_engineered,Base 5 + variables combinees,u_r_div_u_p tau_p_div_u_p,-0.04582712730445424
+base5_plus_engineered,Base 5 + variables combinees,u_r_div_u_p tau_r_div_u_r,-0.06571929236131428
+base5_plus_engineered,Base 5 + variables combinees,u_r_div_u_p tau_r_div_u_p,-0.04943193709032256
+base5_plus_engineered,Base 5 + variables combinees,u_r_div_u_p tau_p_div_sigma_n,0.041172893922479116
+base5_plus_engineered,Base 5 + variables combinees,u_r_div_u_p tau_r_div_sigma_n,0.044688227337018174
+base5_plus_engineered,Base 5 + variables combinees,u_r_div_u_p sigma_n_div_tau_p,-0.006423878702731597
+base5_plus_engineered,Base 5 + variables combinees,u_r_div_u_p sigma_n_div_tau_r,-0.00402054360108254
+base5_plus_engineered,Base 5 + variables combinees,u_r_div_u_p sigma_n_div_u_r,-0.02374423292157547
+base5_plus_engineered,Base 5 + variables combinees,u_r_div_u_p sigma_n_div_u_p,-0.027244990624680273
+base5_plus_engineered,Base 5 + variables combinees,tau_p_div_tau_r^2,-0.0242318845781572
+base5_plus_engineered,Base 5 + variables combinees,tau_p_div_tau_r tau_r_div_tau_p,0.006378566185382278
+base5_plus_engineered,Base 5 + variables combinees,tau_p_div_tau_r u_r_div_tau_p,0.0003416242321052955
+base5_plus_engineered,Base 5 + variables combinees,tau_p_div_tau_r u_r_div_tau_r,0.004902387111294235
+base5_plus_engineered,Base 5 + variables combinees,tau_p_div_tau_r u_p_div_tau_p,0.009283997428557898
+base5_plus_engineered,Base 5 + variables combinees,tau_p_div_tau_r u_p_div_tau_r,0.010421311621035441
+base5_plus_engineered,Base 5 + variables combinees,tau_p_div_tau_r tau_p_div_u_r,0.015943176744246296
+base5_plus_engineered,Base 5 + variables combinees,tau_p_div_tau_r tau_p_div_u_p,-0.004676697486803522
+base5_plus_engineered,Base 5 + variables combinees,tau_p_div_tau_r tau_r_div_u_r,0.015224597199711807
+base5_plus_engineered,Base 5 + variables combinees,tau_p_div_tau_r tau_r_div_u_p,-0.002476369741159258
+base5_plus_engineered,Base 5 + variables combinees,tau_p_div_tau_r tau_p_div_sigma_n,-0.004848047300355212
+base5_plus_engineered,Base 5 + variables combinees,tau_p_div_tau_r tau_r_div_sigma_n,0.01343642950848082
+base5_plus_engineered,Base 5 + variables combinees,tau_p_div_tau_r sigma_n_div_tau_p,0.013342650933020408
+base5_plus_engineered,Base 5 + variables combinees,tau_p_div_tau_r sigma_n_div_tau_r,0.014614295730149492
+base5_plus_engineered,Base 5 + variables combinees,tau_p_div_tau_r sigma_n_div_u_r,0.008806019821887962
+base5_plus_engineered,Base 5 + variables combinees,tau_p_div_tau_r sigma_n_div_u_p,0.008094136042042932
+base5_plus_engineered,Base 5 + variables combinees,tau_r_div_tau_p^2,0.061629053375878755
+base5_plus_engineered,Base 5 + variables combinees,tau_r_div_tau_p u_r_div_tau_p,-0.006403557106548108
+base5_plus_engineered,Base 5 + variables combinees,tau_r_div_tau_p u_r_div_tau_r,-0.019173788935413383
+base5_plus_engineered,Base 5 + variables combinees,tau_r_div_tau_p u_p_div_tau_p,-0.016740048049726626
+base5_plus_engineered,Base 5 + variables combinees,tau_r_div_tau_p u_p_div_tau_r,-0.024760235218274015
+base5_plus_engineered,Base 5 + variables combinees,tau_r_div_tau_p tau_p_div_u_r,-0.009571582898537406
+base5_plus_engineered,Base 5 + variables combinees,tau_r_div_tau_p tau_p_div_u_p,-0.03999968791258518
+base5_plus_engineered,Base 5 + variables combinees,tau_r_div_tau_p tau_r_div_u_r,0.0012304361022534224
+base5_plus_engineered,Base 5 + variables combinees,tau_r_div_tau_p tau_r_div_u_p,-0.028149776102389203
+base5_plus_engineered,Base 5 + variables combinees,tau_r_div_tau_p tau_p_div_sigma_n,-0.026079544762765788
+base5_plus_engineered,Base 5 + variables combinees,tau_r_div_tau_p tau_r_div_sigma_n,-0.04261496155273952
+base5_plus_engineered,Base 5 + variables combinees,tau_r_div_tau_p sigma_n_div_tau_p,-0.024022004780318493
+base5_plus_engineered,Base 5 + variables combinees,tau_r_div_tau_p sigma_n_div_tau_r,-0.03549998599374798
+base5_plus_engineered,Base 5 + variables combinees,tau_r_div_tau_p sigma_n_div_u_r,-0.017723152856198403
+base5_plus_engineered,Base 5 + variables combinees,tau_r_div_tau_p sigma_n_div_u_p,-0.02930037716920836
+base5_plus_engineered,Base 5 + variables combinees,u_r_div_tau_p^2,0.018608064812835015
+base5_plus_engineered,Base 5 + variables combinees,u_r_div_tau_p u_r_div_tau_r,-0.0072100201465183575
+base5_plus_engineered,Base 5 + variables combinees,u_r_div_tau_p u_p_div_tau_p,0.010690156903947458
+base5_plus_engineered,Base 5 + variables combinees,u_r_div_tau_p u_p_div_tau_r,-0.011443391502106721
+base5_plus_engineered,Base 5 + variables combinees,u_r_div_tau_p tau_p_div_u_r,-0.005956920224819477
+base5_plus_engineered,Base 5 + variables combinees,u_r_div_tau_p tau_p_div_u_p,-0.0665036694892584
+base5_plus_engineered,Base 5 + variables combinees,u_r_div_tau_p tau_r_div_u_r,-0.019266271042752817
+base5_plus_engineered,Base 5 + variables combinees,u_r_div_tau_p tau_r_div_u_p,-0.06962276771629343
+base5_plus_engineered,Base 5 + variables combinees,u_r_div_tau_p tau_p_div_sigma_n,0.003913368779684543
+base5_plus_engineered,Base 5 + variables combinees,u_r_div_tau_p tau_r_div_sigma_n,0.01713742696737583
+base5_plus_engineered,Base 5 + variables combinees,u_r_div_tau_p sigma_n_div_tau_p,0.00108056109325427
+base5_plus_engineered,Base 5 + variables combinees,u_r_div_tau_p sigma_n_div_tau_r,0.0007476822338477195
+base5_plus_engineered,Base 5 + variables combinees,u_r_div_tau_p sigma_n_div_u_r,-0.00012654798595479477
+base5_plus_engineered,Base 5 + variables combinees,u_r_div_tau_p sigma_n_div_u_p,-0.007970711876994665
+base5_plus_engineered,Base 5 + variables combinees,u_r_div_tau_r^2,-0.010664352325685508
+base5_plus_engineered,Base 5 + variables combinees,u_r_div_tau_r u_p_div_tau_p,-0.007153268836347426
+base5_plus_engineered,Base 5 + variables combinees,u_r_div_tau_r u_p_div_tau_r,-0.010725197854849135
+base5_plus_engineered,Base 5 + variables combinees,u_r_div_tau_r tau_p_div_u_r,0.01046922048040707
+base5_plus_engineered,Base 5 + variables combinees,u_r_div_tau_r tau_p_div_u_p,-0.048441188982637245
+base5_plus_engineered,Base 5 + variables combinees,u_r_div_tau_r tau_r_div_u_r,-0.0031937196206257026
+base5_plus_engineered,Base 5 + variables combinees,u_r_div_tau_r tau_r_div_u_p,-0.05224069498134314
+base5_plus_engineered,Base 5 + variables combinees,u_r_div_tau_r tau_p_div_sigma_n,0.0012216597195125701
+base5_plus_engineered,Base 5 + variables combinees,u_r_div_tau_r tau_r_div_sigma_n,0.0010053678008902014
+base5_plus_engineered,Base 5 + variables combinees,u_r_div_tau_r sigma_n_div_tau_p,0.004250172377312236
+base5_plus_engineered,Base 5 + variables combinees,u_r_div_tau_r sigma_n_div_tau_r,0.005138458429950365
+base5_plus_engineered,Base 5 + variables combinees,u_r_div_tau_r sigma_n_div_u_r,0.0044394580745388485
+base5_plus_engineered,Base 5 + variables combinees,u_r_div_tau_r sigma_n_div_u_p,-0.003412200567936668
+base5_plus_engineered,Base 5 + variables combinees,u_p_div_tau_p^2,0.010077623717881325
+base5_plus_engineered,Base 5 + variables combinees,u_p_div_tau_p u_p_div_tau_r,-0.009669803703343041
+base5_plus_engineered,Base 5 + variables combinees,u_p_div_tau_p tau_p_div_u_r,0.02225576361334011
+base5_plus_engineered,Base 5 + variables combinees,u_p_div_tau_p tau_p_div_u_p,-0.045393399676761814
+base5_plus_engineered,Base 5 + variables combinees,u_p_div_tau_p tau_r_div_u_r,0.00624606352374377
+base5_plus_engineered,Base 5 + variables combinees,u_p_div_tau_p tau_r_div_u_p,-0.050129673088320115
+base5_plus_engineered,Base 5 + variables combinees,u_p_div_tau_p tau_p_div_sigma_n,-0.0037129243274934796
+base5_plus_engineered,Base 5 + variables combinees,u_p_div_tau_p tau_r_div_sigma_n,-0.007797282348159349
+base5_plus_engineered,Base 5 + variables combinees,u_p_div_tau_p sigma_n_div_tau_p,0.004772846426895559
+base5_plus_engineered,Base 5 + variables combinees,u_p_div_tau_p sigma_n_div_tau_r,0.00393082825648294
+base5_plus_engineered,Base 5 + variables combinees,u_p_div_tau_p sigma_n_div_u_r,0.006833425407141267
+base5_plus_engineered,Base 5 + variables combinees,u_p_div_tau_p sigma_n_div_u_p,-0.0023414044810031905
+base5_plus_engineered,Base 5 + variables combinees,u_p_div_tau_r^2,-0.011332009853665129
+base5_plus_engineered,Base 5 + variables combinees,u_p_div_tau_r tau_p_div_u_r,0.029957463064055133
+base5_plus_engineered,Base 5 + variables combinees,u_p_div_tau_r tau_p_div_u_p,-0.03507483561185702
+base5_plus_engineered,Base 5 + variables combinees,u_p_div_tau_r tau_r_div_u_r,0.014176437138614852
+base5_plus_engineered,Base 5 + variables combinees,u_p_div_tau_r tau_r_div_u_p,-0.04001504222744717
+base5_plus_engineered,Base 5 + variables combinees,u_p_div_tau_r tau_p_div_sigma_n,-0.0033600633527733435
+base5_plus_engineered,Base 5 + variables combinees,u_p_div_tau_r tau_r_div_sigma_n,-0.01437623750280391
+base5_plus_engineered,Base 5 + variables combinees,u_p_div_tau_r sigma_n_div_tau_p,0.005636156808677248
+base5_plus_engineered,Base 5 + variables combinees,u_p_div_tau_r sigma_n_div_tau_r,0.005697961002053215
+base5_plus_engineered,Base 5 + variables combinees,u_p_div_tau_r sigma_n_div_u_r,0.009129231498879769
+base5_plus_engineered,Base 5 + variables combinees,u_p_div_tau_r sigma_n_div_u_p,5.8338626398058866e-05
+base5_plus_engineered,Base 5 + variables combinees,tau_p_div_u_r^2,-0.03924104285860696
+base5_plus_engineered,Base 5 + variables combinees,tau_p_div_u_r tau_p_div_u_p,0.004492385588231251
+base5_plus_engineered,Base 5 + variables combinees,tau_p_div_u_r tau_r_div_u_r,-0.004982060097270159
+base5_plus_engineered,Base 5 + variables combinees,tau_p_div_u_r tau_r_div_u_p,0.02140054461464443
+base5_plus_engineered,Base 5 + variables combinees,tau_p_div_u_r tau_p_div_sigma_n,0.007935553820215779
+base5_plus_engineered,Base 5 + variables combinees,tau_p_div_u_r tau_r_div_sigma_n,-0.0018243907012856254
+base5_plus_engineered,Base 5 + variables combinees,tau_p_div_u_r sigma_n_div_tau_p,0.012379060451538026
+base5_plus_engineered,Base 5 + variables combinees,tau_p_div_u_r sigma_n_div_tau_r,0.013513601872711771
+base5_plus_engineered,Base 5 + variables combinees,tau_p_div_u_r sigma_n_div_u_r,0.019934148685151042
+base5_plus_engineered,Base 5 + variables combinees,tau_p_div_u_r sigma_n_div_u_p,0.004788545139959077
+base5_plus_engineered,Base 5 + variables combinees,tau_p_div_u_p^2,-0.008593970017976097
+base5_plus_engineered,Base 5 + variables combinees,tau_p_div_u_p tau_r_div_u_r,0.003845771199920059
+base5_plus_engineered,Base 5 + variables combinees,tau_p_div_u_p tau_r_div_u_p,-0.0006825743248778846
+base5_plus_engineered,Base 5 + variables combinees,tau_p_div_u_p tau_p_div_sigma_n,0.026778832773430097
+base5_plus_engineered,Base 5 + variables combinees,tau_p_div_u_p tau_r_div_sigma_n,0.02313365399072572
+base5_plus_engineered,Base 5 + variables combinees,tau_p_div_u_p sigma_n_div_tau_p,-0.027962119601373073
+base5_plus_engineered,Base 5 + variables combinees,tau_p_div_u_p sigma_n_div_tau_r,-0.027220738433430817
+base5_plus_engineered,Base 5 + variables combinees,tau_p_div_u_p sigma_n_div_u_r,-0.013579060201687192
+base5_plus_engineered,Base 5 + variables combinees,tau_p_div_u_p sigma_n_div_u_p,-0.025655638759970133
+base5_plus_engineered,Base 5 + variables combinees,tau_r_div_u_r^2,0.027357177301776017
+base5_plus_engineered,Base 5 + variables combinees,tau_r_div_u_r tau_r_div_u_p,0.020321401734423008
+base5_plus_engineered,Base 5 + variables combinees,tau_r_div_u_r tau_p_div_sigma_n,0.0038981490795316313
+base5_plus_engineered,Base 5 + variables combinees,tau_r_div_u_r tau_r_div_sigma_n,-0.007059351398036011
+base5_plus_engineered,Base 5 + variables combinees,tau_r_div_u_r sigma_n_div_tau_p,0.0029684509315585812
+base5_plus_engineered,Base 5 + variables combinees,tau_r_div_u_r sigma_n_div_tau_r,0.004186060832043155
+base5_plus_engineered,Base 5 + variables combinees,tau_r_div_u_r sigma_n_div_u_r,0.012769319565919804
+base5_plus_engineered,Base 5 + variables combinees,tau_r_div_u_r sigma_n_div_u_p,-0.0023476487466125703
+base5_plus_engineered,Base 5 + variables combinees,tau_r_div_u_p^2,0.006741912164220981
+base5_plus_engineered,Base 5 + variables combinees,tau_r_div_u_p tau_p_div_sigma_n,0.013645842014655477
+base5_plus_engineered,Base 5 + variables combinees,tau_r_div_u_p tau_r_div_sigma_n,0.007394961190818736
+base5_plus_engineered,Base 5 + variables combinees,tau_r_div_u_p sigma_n_div_tau_p,-0.030909725576031367
+base5_plus_engineered,Base 5 + variables combinees,tau_r_div_u_p sigma_n_div_tau_r,-0.029954060021954037
+base5_plus_engineered,Base 5 + variables combinees,tau_r_div_u_p sigma_n_div_u_r,-0.015559599628543924
+base5_plus_engineered,Base 5 + variables combinees,tau_r_div_u_p sigma_n_div_u_p,-0.027524647242822095
+base5_plus_engineered,Base 5 + variables combinees,tau_p_div_sigma_n^2,0.0025100627249267093
+base5_plus_engineered,Base 5 + variables combinees,tau_p_div_sigma_n tau_r_div_sigma_n,-0.0015214669958055526
+base5_plus_engineered,Base 5 + variables combinees,tau_p_div_sigma_n sigma_n_div_tau_p,0.01130265711663709
+base5_plus_engineered,Base 5 + variables combinees,tau_p_div_sigma_n sigma_n_div_tau_r,0.014401215051787661
+base5_plus_engineered,Base 5 + variables combinees,tau_p_div_sigma_n sigma_n_div_u_r,0.03272227181449244
+base5_plus_engineered,Base 5 + variables combinees,tau_p_div_sigma_n sigma_n_div_u_p,-0.003911367299815505
+base5_plus_engineered,Base 5 + variables combinees,tau_r_div_sigma_n^2,-0.02027004862887206
+base5_plus_engineered,Base 5 + variables combinees,tau_r_div_sigma_n sigma_n_div_tau_p,-0.008957151211651736
+base5_plus_engineered,Base 5 + variables combinees,tau_r_div_sigma_n sigma_n_div_tau_r,-0.0048079445613141624
+base5_plus_engineered,Base 5 + variables combinees,tau_r_div_sigma_n sigma_n_div_u_r,0.022965065794510214
+base5_plus_engineered,Base 5 + variables combinees,tau_r_div_sigma_n sigma_n_div_u_p,-0.023780325468943115
+base5_plus_engineered,Base 5 + variables combinees,sigma_n_div_tau_p^2,0.037740347956222255
+base5_plus_engineered,Base 5 + variables combinees,sigma_n_div_tau_p sigma_n_div_tau_r,0.010306702402451823
+base5_plus_engineered,Base 5 + variables combinees,sigma_n_div_tau_p sigma_n_div_u_r,0.010030408275313272
+base5_plus_engineered,Base 5 + variables combinees,sigma_n_div_tau_p sigma_n_div_u_p,0.026626279264985505
+base5_plus_engineered,Base 5 + variables combinees,sigma_n_div_tau_r^2,-0.004207430604552343
+base5_plus_engineered,Base 5 + variables combinees,sigma_n_div_tau_r sigma_n_div_u_r,-0.012523617443742592
+base5_plus_engineered,Base 5 + variables combinees,sigma_n_div_tau_r sigma_n_div_u_p,0.012868584293371633
+base5_plus_engineered,Base 5 + variables combinees,sigma_n_div_u_r^2,-0.020909127863480297
+base5_plus_engineered,Base 5 + variables combinees,sigma_n_div_u_r sigma_n_div_u_p,0.001641967572726651
+base5_plus_engineered,Base 5 + variables combinees,sigma_n_div_u_p^2,0.023453283824680864
+best_full_retained,Meilleur modele FULL retenu,intercept,-0.03628607573095699
+best_full_retained,Meilleur modele FULL retenu,u_r_mm,-0.9363497438088495
+best_full_retained,Meilleur modele FULL retenu,u_r_x_u_p,-0.2799758988468631
+best_full_retained,Meilleur modele FULL retenu,u_p_div_u_r,-1.7460557975988573
+best_full_retained,Meilleur modele FULL retenu,tau_r_div_tau_p,0.729074856487805
+best_full_retained,Meilleur modele FULL retenu,u_r_mm^2,0.5799581309095985
+best_full_retained,Meilleur modele FULL retenu,u_r_mm u_r_x_u_p,-0.35659016878418903
+best_full_retained,Meilleur modele FULL retenu,u_r_mm u_p_div_u_r,0.3057134066279574
+best_full_retained,Meilleur modele FULL retenu,u_r_mm tau_r_div_tau_p,-0.07977935043773315
+best_full_retained,Meilleur modele FULL retenu,u_r_x_u_p^2,0.01710806469013195
+best_full_retained,Meilleur modele FULL retenu,u_r_x_u_p u_p_div_u_r,0.21044423341210491
+best_full_retained,Meilleur modele FULL retenu,u_r_x_u_p tau_r_div_tau_p,0.1845249644856932
+best_full_retained,Meilleur modele FULL retenu,u_p_div_u_r^2,0.03603443021758725
+best_full_retained,Meilleur modele FULL retenu,u_p_div_u_r tau_r_div_tau_p,0.5728016517366166
+best_full_retained,Meilleur modele FULL retenu,tau_r_div_tau_p^2,0.017443588674798543

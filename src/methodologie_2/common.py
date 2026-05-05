@@ -57,6 +57,47 @@ RAW_FEATURE_COLS = [
     "e_csds",
 ]
 
+BASE_PREDICTOR_COLS = [
+    "sigma_n_MPa",
+    "delta_peak_mm",
+    "tau_peak_MPa_csds",
+    "u_r_mm",
+    "tau_r_MPa",
+]
+
+ENGINEERED_PREDICTOR_COLS = [
+    "sigma_n_x_u_r",
+    "sigma_n_x_u_p",
+    "sigma_n_x_tau_p",
+    "sigma_n_x_tau_r",
+    "u_r_x_u_p",
+    "u_r_x_tau_p",
+    "u_r_x_tau_r",
+    "u_p_x_tau_p",
+    "u_p_x_tau_r",
+    "tau_p_x_tau_r",
+    "u_p_div_u_r",
+    "u_r_div_u_p",
+    "tau_p_div_tau_r",
+    "tau_r_div_tau_p",
+    "u_r_div_tau_p",
+    "u_r_div_tau_r",
+    "u_p_div_tau_p",
+    "u_p_div_tau_r",
+    "tau_p_div_u_r",
+    "tau_p_div_u_p",
+    "tau_r_div_u_r",
+    "tau_r_div_u_p",
+    "tau_p_div_sigma_n",
+    "tau_r_div_sigma_n",
+    "sigma_n_div_tau_p",
+    "sigma_n_div_tau_r",
+    "sigma_n_div_u_r",
+    "sigma_n_div_u_p",
+]
+
+ALLOWED_PREDICTOR_COLS = BASE_PREDICTOR_COLS + ENGINEERED_PREDICTOR_COLS
+
 
 def ensure_output_dirs() -> None:
     """Crée les dossiers de sortie utilisés par la nouvelle branche de recherche."""
@@ -224,26 +265,11 @@ def build_direct_e_dataset(dataset_name: str) -> pd.DataFrame:
 
 def get_candidate_feature_names(data: pd.DataFrame) -> list[str]:
     """Liste les variables explicatives autorisées pour la recherche."""
-    excluded = {
-        "sample_id",
-        "a_csds",
-        "b_csds",
-        "c_csds",
-        "d_csds",
-        "e_csds",
-        "c_target",
-        "e_minus_c_csds",
-        "log_e_minus_c_csds",
-        "log_d_csds",
-        "log_sigma_n_MPa",
-        "log_delta_peak_mm",
-        "log_u_r_mm",
-        "log_tau_peak_MPa_csds",
-        "log_tau_r_MPa",
-        "csds_converged",
-        "csds_iterations",
-    }
-    return [col for col in data.columns if col not in excluded and pd.api.types.is_numeric_dtype(data[col])]
+    return [
+        col
+        for col in ALLOWED_PREDICTOR_COLS
+        if col in data.columns and pd.api.types.is_numeric_dtype(data[col])
+    ]
 
 
 def parse_feature_list(value) -> list[str]:

@@ -39,6 +39,51 @@ METHODS = ["methodologie_1", "methodologie_2"]
 SCORE_VARIANTS = ["balanced", "performance_only", "stability_reinforced"]
 TOP_N_MODELS = 2
 TOP_N_FEATURES = 5
+TOP_N_COMBINED_FEATURES = 10
+TOP_N_METHOD_FEATURES = 10
+BASE_PREDICTOR_COLS = {
+    "sigma_n_MPa",
+    "delta_peak_mm",
+    "tau_peak_MPa_csds",
+    "u_r_mm",
+    "tau_r_MPa",
+}
+ENGINEERED_PREDICTOR_COLS = {
+    "sigma_n_x_u_r",
+    "sigma_n_x_u_p",
+    "sigma_n_x_tau_p",
+    "sigma_n_x_tau_r",
+    "u_r_x_u_p",
+    "u_r_x_tau_p",
+    "u_r_x_tau_r",
+    "u_p_x_tau_p",
+    "u_p_x_tau_r",
+    "tau_p_x_tau_r",
+    "u_p_div_u_r",
+    "u_r_div_u_p",
+    "tau_p_div_tau_r",
+    "tau_r_div_tau_p",
+    "u_r_div_tau_p",
+    "u_r_div_tau_r",
+    "u_p_div_tau_p",
+    "u_p_div_tau_r",
+    "tau_p_div_u_r",
+    "tau_p_div_u_p",
+    "tau_r_div_u_r",
+    "tau_r_div_u_p",
+    "tau_p_div_sigma_n",
+    "tau_r_div_sigma_n",
+    "sigma_n_div_tau_p",
+    "sigma_n_div_tau_r",
+    "sigma_n_div_u_r",
+    "sigma_n_div_u_p",
+}
+ALLOWED_PREDICTOR_COLS = BASE_PREDICTOR_COLS | ENGINEERED_PREDICTOR_COLS
+
+METHOD_TARGET_COLUMNS = {
+    "methodologie_1": "d_csds",
+    "methodologie_2": "e_csds",
+}
 
 TARGET_COLUMNS = {
     "d_csds": "d",
@@ -91,6 +136,17 @@ def parse_features(value: object) -> list[str]:
     """Split the stored model feature string into a clean feature list."""
     if pd.isna(value):
         return []
+    return [
+        part.strip()
+        for part in str(value).split("+")
+        if part.strip() and part.strip() in ALLOWED_PREDICTOR_COLS
+    ]
+
+
+def parse_features_raw(value: object) -> list[str]:
+    """Split the stored model feature string without applying predictor exclusions."""
+    if pd.isna(value):
+        return []
     return [part.strip() for part in str(value).split("+") if part.strip()]
 
 
@@ -118,6 +174,12 @@ def load_ranking() -> pd.DataFrame:
 def select_top_models(ranking: pd.DataFrame) -> pd.DataFrame:
     """Return the top two models per methodology, dataset and score variant."""
     rows: list[pd.DataFrame] = []
+    ranking = ranking.copy()
+    ranking["_has_only_allowed_predictors"] = ranking["features"].apply(
+        lambda value: all(feature in ALLOWED_PREDICTOR_COLS for feature in parse_features_raw(value))
+    )
+    ranking = ranking[ranking["_has_only_allowed_predictors"]].copy()
+
     for score_variant in SCORE_VARIANTS:
         score_col = f"score_{score_variant}"
         if score_col not in ranking.columns:
@@ -138,6 +200,7 @@ def select_top_models(ranking: pd.DataFrame) -> pd.DataFrame:
         top["rank_within_score_variant"] = (
             top.groupby(["methodologie", "dataset"]).cumcount() + 1
         )
+        top = top.drop(columns=["_has_only_allowed_predictors"], errors="ignore")
         rows.append(top)
 
     return pd.concat(rows, ignore_index=True)
@@ -280,6 +343,168 @@ def create_scatter_plots(feature_frequency: pd.DataFrame) -> pd.DataFrame:
     return pd.DataFrame(rows)
 
 
+def compute_combined_feature_frequency(feature_frequency: pd.DataFrame) -> pd.DataFrame:
+    """Aggregate feature frequency across both methodologies and all datasets."""
+    if feature_frequency.empty:
+        return feature_frequency
+
+    rows: list[dict] = []
+    for feature, group in feature_frequency.groupby("feature", sort=True):
+        rows.append({
+            "feature": feature,
+            "feature_label": label(feature),
+            "total_occurrences": int(group["total_occurrences"].sum()),
+            "models_containing_feature": int(group["models_containing_feature"].sum()),
+            "n_methodologies": int(group["methodologie"].nunique()),
+            "methodologies": ", ".join(sorted(group["methodologie"].unique())),
+            "n_datasets": int(group["dataset"].nunique()),
+            "datasets": ", ".join(sorted(group["dataset"].unique())),
+        })
+
+    out = pd.DataFrame(rows)
+    return out.sort_values(
+        [
+            "total_occurrences",
+            "models_containing_feature",
+            "n_methodologies",
+            "n_datasets",
+            "feature",
+        ],
+        ascending=[False, False, False, False, True],
+    ).reset_index(drop=True)
+
+
+def create_combined_top_feature_scatter_plots(combined_frequency: pd.DataFrame) -> pd.DataFrame:
+    """Create d/e scatter plots for the top combined variables from both methodologies."""
+    rows: list[dict] = []
+    if combined_frequency.empty:
+        return pd.DataFrame(rows)
+
+    top_features = combined_frequency["feature"].head(TOP_N_COMBINED_FEATURES).tolist()
+
+    for methodologie in METHODS:
+        for dataset in DATASETS:
+            data = load_dataset(methodologie, dataset)
+            available_features = [feature for feature in top_features if feature in data.columns]
+
+            for feature in available_features:
+                for target_col in TARGET_COLUMNS:
+                    if target_col not in data.columns:
+                        continue
+
+                    output_file = (
+                        SCATTER_ROOT
+                        / "top10_combined_variables"
+                        / methodologie
+                        / dataset.lower()
+                        / f"{TARGET_COLUMNS[target_col]}_vs_{safe_slug(feature)}.png"
+                    )
+                    plot_scatter(data, feature, target_col, methodologie, dataset, output_file)
+                    rows.append({
+                        "methodologie": methodologie,
+                        "dataset": dataset,
+                        "target": target_col,
+                        "target_label": TARGET_COLUMNS[target_col],
+                        "feature": feature,
+                        "feature_label": label(feature),
+                        "pearson_r": pearson_r(data[feature], data[target_col]),
+                        "abs_pearson_r": abs(pearson_r(data[feature], data[target_col])),
+                        "output_file": str(output_file),
+                    })
+
+    out = pd.DataFrame(rows)
+    if out.empty:
+        return out
+    return out.sort_values(
+        ["target_label", "abs_pearson_r", "methodologie", "dataset", "feature"],
+        ascending=[True, False, True, True, True],
+        na_position="last",
+    )
+
+
+def compute_method_feature_frequency(feature_frequency: pd.DataFrame) -> pd.DataFrame:
+    """Aggregate feature frequency separately for each methodology."""
+    if feature_frequency.empty:
+        return feature_frequency
+
+    rows: list[dict] = []
+    for (methodologie, feature), group in feature_frequency.groupby(["methodologie", "feature"], sort=True):
+        rows.append({
+            "methodologie": methodologie,
+            "feature": feature,
+            "feature_label": label(feature),
+            "total_occurrences": int(group["total_occurrences"].sum()),
+            "models_containing_feature": int(group["models_containing_feature"].sum()),
+            "n_datasets": int(group["dataset"].nunique()),
+            "datasets": ", ".join(sorted(group["dataset"].unique())),
+        })
+
+    out = pd.DataFrame(rows)
+    return out.sort_values(
+        ["methodologie", "total_occurrences", "models_containing_feature", "n_datasets", "feature"],
+        ascending=[True, False, False, False, True],
+    ).reset_index(drop=True)
+
+
+def create_method_target_scatter_plots(method_frequency: pd.DataFrame) -> pd.DataFrame:
+    """
+    Create target-specific scatter plots:
+    - methodology 1: recurrent variables against d
+    - methodology 2: recurrent variables against e
+    """
+    rows: list[dict] = []
+    if method_frequency.empty:
+        return pd.DataFrame(rows)
+
+    for methodologie in METHODS:
+        target_col = METHOD_TARGET_COLUMNS[methodologie]
+        method_features = (
+            method_frequency[method_frequency["methodologie"] == methodologie]
+            ["feature"]
+            .head(TOP_N_METHOD_FEATURES)
+            .tolist()
+        )
+        for dataset in DATASETS:
+            data = load_dataset(methodologie, dataset)
+            if target_col not in data.columns:
+                continue
+
+            for feature in method_features:
+                if feature not in data.columns:
+                    continue
+
+                target_label = TARGET_COLUMNS[target_col]
+                output_file = (
+                    SCATTER_ROOT
+                    / "method_specific_target"
+                    / methodologie
+                    / dataset.lower()
+                    / f"{target_label}_vs_{safe_slug(feature)}.png"
+                )
+                plot_scatter(data, feature, target_col, methodologie, dataset, output_file)
+                r_value = pearson_r(data[feature], data[target_col])
+                rows.append({
+                    "methodologie": methodologie,
+                    "dataset": dataset,
+                    "target": target_col,
+                    "target_label": target_label,
+                    "feature": feature,
+                    "feature_label": label(feature),
+                    "pearson_r": r_value,
+                    "abs_pearson_r": abs(r_value),
+                    "output_file": str(output_file),
+                })
+
+    out = pd.DataFrame(rows)
+    if out.empty:
+        return out
+    return out.sort_values(
+        ["methodologie", "abs_pearson_r", "dataset", "feature"],
+        ascending=[True, False, True, True],
+        na_position="last",
+    )
+
+
 def main() -> None:
     TABLE_ROOT.mkdir(parents=True, exist_ok=True)
     SCATTER_ROOT.mkdir(parents=True, exist_ok=True)
@@ -288,23 +513,32 @@ def main() -> None:
     top_models = select_top_models(ranking)
     feature_frequency = compute_feature_frequency(top_models)
     scatter_index = create_scatter_plots(feature_frequency)
+    method_frequency = compute_method_feature_frequency(feature_frequency)
+    method_target_scatter_index = create_method_target_scatter_plots(method_frequency)
 
     top_models_file = TABLE_ROOT / "top2_models_by_score_variant.csv"
     frequency_file = TABLE_ROOT / "top2_feature_frequency_by_method_dataset.csv"
+    method_frequency_file = TABLE_ROOT / "top10_feature_frequency_by_method.csv"
     scatter_index_file = SCATTER_ROOT / "scatter_plot_index.csv"
+    method_target_scatter_index_file = SCATTER_ROOT / "method_specific_target_scatter_plot_index.csv"
 
     top_models.to_csv(top_models_file, index=False)
     feature_frequency.to_csv(frequency_file, index=False)
+    method_frequency.to_csv(method_frequency_file, index=False)
     scatter_index.to_csv(scatter_index_file, index=False)
+    method_target_scatter_index.to_csv(method_target_scatter_index_file, index=False)
 
     print("=" * 100)
     print("INTERPRETATION SCATTER PLOTS")
     print("=" * 100)
     print(f"Top 2 models saved: {top_models_file}")
     print(f"Feature frequency saved: {frequency_file}")
+    print(f"Method-specific feature frequency saved: {method_frequency_file}")
     print(f"Scatter plot index saved: {scatter_index_file}")
+    print(f"Method-specific target scatter plot index saved: {method_target_scatter_index_file}")
     print(f"Scatter plot folder: {SCATTER_ROOT}")
     print(f"Figures generated: {len(scatter_index)}")
+    print(f"Method-specific target figures generated: {len(method_target_scatter_index)}")
 
 
 if __name__ == "__main__":

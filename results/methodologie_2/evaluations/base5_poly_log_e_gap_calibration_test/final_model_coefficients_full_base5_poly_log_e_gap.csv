@@ -1,0 +1,22 @@
+term,coefficient
+intercept,0.3732373379285694
+sigma_n_MPa,0.07963579812220753
+delta_peak_mm,-2.331127944428208
+tau_peak_MPa_csds,-0.22071473064827282
+u_r_mm,0.34499479183360043
+tau_r_MPa,0.3496618723814278
+sigma_n_MPa^2,-0.00954155269124807
+sigma_n_MPa delta_peak_mm,0.06260136912065652
+sigma_n_MPa tau_peak_MPa_csds,0.29719652964124005
+sigma_n_MPa u_r_mm,-0.007858516719761791
+sigma_n_MPa tau_r_MPa,-0.16525417833757391
+delta_peak_mm^2,0.1757623940558401
+delta_peak_mm tau_peak_MPa_csds,-0.23638671662239988
+delta_peak_mm u_r_mm,0.2721609880072669
+delta_peak_mm tau_r_MPa,0.4500544903920526
+tau_peak_MPa_csds^2,-0.2150288075920501
+tau_peak_MPa_csds u_r_mm,-0.13949488764708853
+tau_peak_MPa_csds tau_r_MPa,-0.17711301636005042
+u_r_mm^2,-0.049117568520776776
+u_r_mm tau_r_MPa,0.04397030463756421
+tau_r_MPa^2,0.2838001715755729

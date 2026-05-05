@@ -93,6 +93,8 @@ def compute_aicc_from_tau_rmse(rmse_tau_u: float, n_rows: int, n_parameters: int
 
     The constant term is omitted because only relative model ranking is needed.
     """
+    if not np.isfinite(n_rows) or not np.isfinite(n_parameters):
+        return np.nan
     n_obs = int(n_rows) * N_CURVE_POINTS
     k = int(n_parameters)
     if n_obs <= k + 1 or not np.isfinite(rmse_tau_u) or rmse_tau_u <= 0:
@@ -204,6 +206,8 @@ def load_compare_summary(methodologie: str) -> pd.DataFrame:
 def add_composite_score(df: pd.DataFrame) -> pd.DataFrame:
     out = df.copy()
     out["negative_r2_tau_u"] = -pd.to_numeric(out["r2_tau_u"], errors="coerce")
+    out["n_parameters_for_aicc"] = pd.to_numeric(out["n_parameters_for_aicc"], errors="coerce")
+    out["cv_std"] = pd.to_numeric(out["cv_std"], errors="coerce")
     out["aicc_tau_u"] = [
         compute_aicc_from_tau_rmse(rmse, n_rows, n_params)
         for rmse, n_rows, n_params in zip(
@@ -216,10 +220,10 @@ def add_composite_score(df: pd.DataFrame) -> pd.DataFrame:
     scored = []
     for (_, _), group in out.groupby(["methodologie", "dataset"], sort=True):
         g = group.copy()
-        g["rank_rmse_tau_u"] = g["rmse_tau_u"].rank(method="min", ascending=True)
-        g["rank_neg_r2_tau_u"] = g["negative_r2_tau_u"].rank(method="min", ascending=True)
-        g["rank_aicc_tau_u"] = g["aicc_tau_u"].rank(method="min", ascending=True)
-        g["rank_cv_std"] = g["cv_std"].rank(method="min", ascending=True)
+        g["rank_rmse_tau_u"] = g["rmse_tau_u"].rank(method="min", ascending=True, na_option="bottom")
+        g["rank_neg_r2_tau_u"] = g["negative_r2_tau_u"].rank(method="min", ascending=True, na_option="bottom")
+        g["rank_aicc_tau_u"] = g["aicc_tau_u"].rank(method="min", ascending=True, na_option="bottom")
+        g["rank_cv_std"] = g["cv_std"].rank(method="min", ascending=True, na_option="bottom")
         for score_name, weights in SCORE_VARIANTS.items():
             score_col = f"score_{score_name}"
             rank_col = f"rank_{score_name}"

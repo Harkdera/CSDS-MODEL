@@ -1,115 +1,136 @@
 Dataset,Rank_in_saved_results,Polynomial_Term,Coefficient_in_scaled_space
-FULL,1,u_p_div_tau_r,-1.6568827346402615
-FULL,1,tau_p_div_u_r,2.076225657587009
-FULL,1,u_r_mm,0.8303960018478486
-FULL,1,u_p_div_u_r,1.4674941804901789
-FULL,1,tau_r_div_tau_p,-1.1133420901002384
-FULL,1,u_p_div_tau_r^2,0.5441498680332891
-FULL,1,u_p_div_tau_r tau_p_div_u_r,0.6702278681387347
-FULL,1,u_p_div_tau_r u_r_mm,-0.51937368802161
-FULL,1,u_p_div_tau_r u_p_div_u_r,0.14901830358533816
-FULL,1,u_p_div_tau_r tau_r_div_tau_p,-0.1976451731558647
-FULL,1,tau_p_div_u_r^2,-0.5235733747909812
-FULL,1,tau_p_div_u_r u_r_mm,0.23621433065285105
-FULL,1,tau_p_div_u_r u_p_div_u_r,-0.16166668499666245
-FULL,1,tau_p_div_u_r tau_r_div_tau_p,0.13522358341102714
-FULL,1,u_r_mm^2,-0.09531036806580188
-FULL,1,u_r_mm u_p_div_u_r,-0.05367783891492962
-FULL,1,u_r_mm tau_r_div_tau_p,0.11083043205247492
-FULL,1,u_p_div_u_r^2,0.11933438843873148
-FULL,1,u_p_div_u_r tau_r_div_tau_p,-0.7960682015051099
-FULL,1,tau_r_div_tau_p^2,-0.09257543064969027
-FULL,2,u_r_div_tau_r,-2.0042477070792746
-FULL,2,u_p_div_u_r,0.8888218421962375
-FULL,2,tau_r_div_tau_p,-1.1043434506982688
-FULL,2,tau_p_div_u_r,2.210019203662666
-FULL,2,u_r_mm,0.7916147232460233
-FULL,2,u_r_div_tau_r^2,0.5420025788241991
-FULL,2,u_r_div_tau_r u_p_div_u_r,-1.0092671229361376
-FULL,2,u_r_div_tau_r tau_r_div_tau_p,-0.17189266559716554
-FULL,2,u_r_div_tau_r tau_p_div_u_r,0.984398985851121
-FULL,2,u_r_div_tau_r u_r_mm,-0.5562478132655542
-FULL,2,u_p_div_u_r^2,0.14159618800655413
-FULL,2,u_p_div_u_r tau_r_div_tau_p,-0.7402533969554342
-FULL,2,u_p_div_u_r tau_p_div_u_r,-0.15356559592156024
-FULL,2,u_p_div_u_r u_r_mm,-0.1254105699272637
-FULL,2,tau_r_div_tau_p^2,-0.10475193354570124
-FULL,2,tau_r_div_tau_p tau_p_div_u_r,0.18260630608716671
-FULL,2,tau_r_div_tau_p u_r_mm,0.06351236246739655
-FULL,2,tau_p_div_u_r^2,-0.5461589827220221
-FULL,2,tau_p_div_u_r u_r_mm,0.19611903801797348
-FULL,2,u_r_mm^2,-0.0876264580007878
-FULL,3,u_r_div_tau_r,-2.5046247954323806
-FULL,3,u_p_div_u_r,1.6226986224085223
-FULL,3,u_r_mm,0.6578119773316907
-FULL,3,tau_r_div_tau_p,-1.0605579366046063
-FULL,3,tau_p_div_u_p,2.403582735051337
-FULL,3,u_r_div_tau_r^2,0.5652552293524586
-FULL,3,u_r_div_tau_r u_p_div_u_r,-1.6314297578619392
-FULL,3,u_r_div_tau_r u_r_mm,-0.6020473457098949
-FULL,3,u_r_div_tau_r tau_r_div_tau_p,-0.15799979810699094
-FULL,3,u_r_div_tau_r tau_p_div_u_p,0.892550673974045
-FULL,3,u_p_div_u_r^2,0.06596558993485957
-FULL,3,u_p_div_u_r u_r_mm,-0.18327123316573085
-FULL,3,u_p_div_u_r tau_r_div_tau_p,-0.7755563760312854
-FULL,3,u_p_div_u_r tau_p_div_u_p,0.43068312788291446
-FULL,3,u_r_mm^2,-0.09088001482997897
-FULL,3,u_r_mm tau_r_div_tau_p,0.05311094484933416
-FULL,3,u_r_mm tau_p_div_u_p,0.08803616864240435
-FULL,3,tau_r_div_tau_p^2,-0.04417527717406286
-FULL,3,tau_r_div_tau_p tau_p_div_u_p,0.15845378394093187
-FULL,3,tau_p_div_u_p^2,-0.32842760223926437
-FULL,4,tau_r_div_tau_p,-1.275222019248202
-FULL,4,u_r_mm,0.5355008087987313
-FULL,4,tau_r_div_u_r,2.1845737393998084
-FULL,4,u_p_div_u_r,1.1496608646343836
-FULL,4,u_p_div_tau_r,-1.9742872100080173
-FULL,4,u_r_x_u_p,0.47302549387549436
-FULL,4,tau_r_div_tau_p^2,-0.011789673203503428
-FULL,4,tau_r_div_tau_p u_r_mm,0.3177235801067628
-FULL,4,tau_r_div_tau_p tau_r_div_u_r,0.11376008645617726
-FULL,4,tau_r_div_tau_p u_p_div_u_r,-0.6781492567939741
-FULL,4,tau_r_div_tau_p u_p_div_tau_r,0.04554806589795448
-FULL,4,tau_r_div_tau_p u_r_x_u_p,-0.6554743512969975
-FULL,4,u_r_mm^2,0.01265652641952741
-FULL,4,u_r_mm tau_r_div_u_r,0.3768392316720264
-FULL,4,u_r_mm u_p_div_u_r,0.03571623295831101
-FULL,4,u_r_mm u_p_div_tau_r,-0.2172095038377094
-FULL,4,u_r_mm u_r_x_u_p,-0.37820599941170574
-FULL,4,tau_r_div_u_r^2,-0.5286499136200185
-FULL,4,tau_r_div_u_r u_p_div_u_r,-0.11039870818038129
-FULL,4,tau_r_div_u_r u_p_div_tau_r,0.7690460556206123
-FULL,4,tau_r_div_u_r u_r_x_u_p,-0.41239096642360296
-FULL,4,u_p_div_u_r^2,0.27285082344212597
-FULL,4,u_p_div_u_r u_p_div_tau_r,0.12029602599875458
-FULL,4,u_p_div_u_r u_r_x_u_p,-0.5375036513687473
-FULL,4,u_p_div_tau_r^2,0.7130007493119491
-FULL,4,u_p_div_tau_r u_r_x_u_p,-0.7554600187345532
-FULL,4,u_r_x_u_p^2,0.17584474453164414
-FULL,5,tau_r_div_tau_p,-1.2022529794362287
-FULL,5,u_r_mm,0.6979183807138456
-FULL,5,tau_r_div_u_r,1.3843504996464255
-FULL,5,u_p_div_u_r,1.640692846048087
-FULL,5,u_p_div_tau_r,-1.3015843057200769
-FULL,5,tau_p_div_u_p,0.9270314799143008
-FULL,5,tau_r_div_tau_p^2,-0.06242826626275319
-FULL,5,tau_r_div_tau_p u_r_mm,0.1130809289589142
-FULL,5,tau_r_div_tau_p tau_r_div_u_r,0.23235301706131764
-FULL,5,tau_r_div_tau_p u_p_div_u_r,-0.9569116905455088
-FULL,5,tau_r_div_tau_p u_p_div_tau_r,-0.12323314667444805
-FULL,5,tau_r_div_tau_p tau_p_div_u_p,-0.02108234117006895
-FULL,5,u_r_mm^2,-0.10599758626675045
-FULL,5,u_r_mm tau_r_div_u_r,-0.10483021327022662
-FULL,5,u_r_mm u_p_div_u_r,-0.08346047990312531
-FULL,5,u_r_mm u_p_div_tau_r,-0.5722619484977473
-FULL,5,u_r_mm tau_p_div_u_p,0.16409961367035444
-FULL,5,tau_r_div_u_r^2,-0.31711463681320856
-FULL,5,tau_r_div_u_r u_p_div_u_r,-0.004124054260051102
-FULL,5,tau_r_div_u_r u_p_div_tau_r,0.5355375192304248
-FULL,5,tau_r_div_u_r tau_p_div_u_p,-0.04578070401475243
-FULL,5,u_p_div_u_r^2,0.027983866180060105
-FULL,5,u_p_div_u_r u_p_div_tau_r,-0.021707424628464426
-FULL,5,u_p_div_u_r tau_p_div_u_p,-0.4202452664386314
-FULL,5,u_p_div_tau_r^2,0.5743721734404807
-FULL,5,u_p_div_tau_r tau_p_div_u_p,0.6812842447433722
-FULL,5,tau_p_div_u_p^2,-0.19068809045334684
+FULL,1,u_p_div_u_r,0.7620574973656121
+FULL,1,delta_peak_mm,0.5892959608701752
+FULL,1,tau_r_MPa,1.2160116296707708
+FULL,1,tau_p_div_u_r,1.2942726249017584
+FULL,1,u_p_div_tau_p,-1.106911939952991
+FULL,1,tau_r_div_tau_p,-1.0899557057104932
+FULL,1,u_p_div_u_r^2,0.3447968200068068
+FULL,1,u_p_div_u_r delta_peak_mm,-0.2550394198640451
+FULL,1,u_p_div_u_r tau_r_MPa,-0.359728563283476
+FULL,1,u_p_div_u_r tau_p_div_u_r,0.30400400039725073
+FULL,1,u_p_div_u_r u_p_div_tau_p,0.265562327510265
+FULL,1,u_p_div_u_r tau_r_div_tau_p,-0.3321574020736334
+FULL,1,delta_peak_mm^2,0.03394825607838693
+FULL,1,delta_peak_mm tau_r_MPa,-0.16939445345031226
+FULL,1,delta_peak_mm tau_p_div_u_r,0.04315843858904218
+FULL,1,delta_peak_mm u_p_div_tau_p,-0.4421208398021731
+FULL,1,delta_peak_mm tau_r_div_tau_p,-0.35573167188813243
+FULL,1,tau_r_MPa^2,-0.3070727186169033
+FULL,1,tau_r_MPa tau_p_div_u_r,0.2206161012933949
+FULL,1,tau_r_MPa u_p_div_tau_p,0.29837654074104764
+FULL,1,tau_r_MPa tau_r_div_tau_p,0.10736289659374504
+FULL,1,tau_p_div_u_r^2,-0.6093166743330738
+FULL,1,tau_p_div_u_r u_p_div_tau_p,0.4462956950904539
+FULL,1,tau_p_div_u_r tau_r_div_tau_p,-0.20526243670012762
+FULL,1,u_p_div_tau_p^2,0.2965692904396028
+FULL,1,u_p_div_tau_p tau_r_div_tau_p,0.018869797950746007
+FULL,1,tau_r_div_tau_p^2,-0.18900041296109535
+FULL,2,delta_peak_mm,0.5709328710740257
+FULL,2,tau_p_div_u_r,1.487249261793221
+FULL,2,u_r_div_tau_r,-1.491163257585739
+FULL,2,tau_r_MPa,1.359577418472105
+FULL,2,u_p_div_u_r,0.28472776146871087
+FULL,2,tau_r_div_tau_p,-1.1769658258580555
+FULL,2,delta_peak_mm^2,0.05676750027500985
+FULL,2,delta_peak_mm tau_p_div_u_r,0.3414336526047189
+FULL,2,delta_peak_mm u_r_div_tau_r,-0.7889444405617224
+FULL,2,delta_peak_mm tau_r_MPa,-0.22908360112340134
+FULL,2,delta_peak_mm u_p_div_u_r,-0.37397489954319396
+FULL,2,delta_peak_mm tau_r_div_tau_p,-0.2234663199408209
+FULL,2,tau_p_div_u_r^2,-0.47316523897030105
+FULL,2,tau_p_div_u_r u_r_div_tau_r,0.7947315062019901
+FULL,2,tau_p_div_u_r tau_r_MPa,0.023551367046663146
+FULL,2,tau_p_div_u_r u_p_div_u_r,0.18839346803870483
+FULL,2,tau_p_div_u_r tau_r_div_tau_p,0.02747463692019691
+FULL,2,u_r_div_tau_r^2,0.42430502818832555
+FULL,2,u_r_div_tau_r tau_r_MPa,0.6245589907451489
+FULL,2,u_r_div_tau_r u_p_div_u_r,-0.642720219726745
+FULL,2,u_r_div_tau_r tau_r_div_tau_p,-0.14235072941016236
+FULL,2,tau_r_MPa^2,-0.33070461588635486
+FULL,2,tau_r_MPa u_p_div_u_r,-0.3685825247533983
+FULL,2,tau_r_MPa tau_r_div_tau_p,0.03675762381572918
+FULL,2,u_p_div_u_r^2,0.4244698534570797
+FULL,2,u_p_div_u_r tau_r_div_tau_p,-0.3964357093665639
+FULL,2,tau_r_div_tau_p^2,-0.15169288344467863
+FULL,3,delta_peak_mm,1.2401955995504828
+FULL,3,u_p_div_u_r,0.6131899351848503
+FULL,3,u_p_div_tau_p,-1.0962198564043724
+FULL,3,tau_r_div_tau_p,-0.9068314171553038
+FULL,3,tau_p_div_u_r,1.3758448313130691
+FULL,3,tau_p_div_u_p,0.8818211331479393
+FULL,3,delta_peak_mm^2,0.0007567608657097011
+FULL,3,delta_peak_mm u_p_div_u_r,-0.3108075961169992
+FULL,3,delta_peak_mm u_p_div_tau_p,-0.5801840517198698
+FULL,3,delta_peak_mm tau_r_div_tau_p,-0.28118216398018325
+FULL,3,delta_peak_mm tau_p_div_u_r,-0.5643048799830496
+FULL,3,delta_peak_mm tau_p_div_u_p,1.078337926989731
+FULL,3,u_p_div_u_r^2,0.3838341227153101
+FULL,3,u_p_div_u_r u_p_div_tau_p,0.2596469115261126
+FULL,3,u_p_div_u_r tau_r_div_tau_p,-0.4491541158558107
+FULL,3,u_p_div_u_r tau_p_div_u_r,0.1049157577410492
+FULL,3,u_p_div_u_r tau_p_div_u_p,-0.4550350594936525
+FULL,3,u_p_div_tau_p^2,0.33895536849437036
+FULL,3,u_p_div_tau_p tau_r_div_tau_p,0.01907294216839019
+FULL,3,u_p_div_tau_p tau_p_div_u_r,0.39762050270413396
+FULL,3,u_p_div_tau_p tau_p_div_u_p,0.4969671412792618
+FULL,3,tau_r_div_tau_p^2,-0.17280202193653696
+FULL,3,tau_r_div_tau_p tau_p_div_u_r,-0.061967655732284646
+FULL,3,tau_r_div_tau_p tau_p_div_u_p,0.23500312892887645
+FULL,3,tau_p_div_u_r^2,-0.1830993788413083
+FULL,3,tau_p_div_u_r tau_p_div_u_p,-0.38479920531361134
+FULL,3,tau_p_div_u_p^2,0.027308474127475245
+FULL,4,u_p_x_tau_r,1.2026608123111209
+FULL,4,delta_peak_mm,0.6087869218957401
+FULL,4,tau_p_div_u_r,1.5808395580708978
+FULL,4,u_p_div_tau_p,-1.288776880614596
+FULL,4,tau_r_div_tau_p,-1.0454282413970362
+FULL,4,u_p_div_u_r,0.5581622505180328
+FULL,4,u_p_x_tau_r^2,-0.17503226446779518
+FULL,4,u_p_x_tau_r delta_peak_mm,0.023517205360999417
+FULL,4,u_p_x_tau_r tau_p_div_u_r,0.056221402631029045
+FULL,4,u_p_x_tau_r u_p_div_tau_p,0.11296913231948937
+FULL,4,u_p_x_tau_r tau_r_div_tau_p,-0.26628838123332804
+FULL,4,u_p_x_tau_r u_p_div_u_r,-0.12092670340450053
+FULL,4,delta_peak_mm^2,-0.03041046588260702
+FULL,4,delta_peak_mm tau_p_div_u_r,-0.1558230559938846
+FULL,4,delta_peak_mm u_p_div_tau_p,-0.44112342115135383
+FULL,4,delta_peak_mm tau_r_div_tau_p,-0.3756049818812112
+FULL,4,delta_peak_mm u_p_div_u_r,-0.182759300702615
+FULL,4,tau_p_div_u_r^2,-0.49710451432587127
+FULL,4,tau_p_div_u_r u_p_div_tau_p,0.4830064063831541
+FULL,4,tau_p_div_u_r tau_r_div_tau_p,0.070411885857165
+FULL,4,tau_p_div_u_r u_p_div_u_r,-0.14737793431245647
+FULL,4,u_p_div_tau_p^2,0.30390960119702315
+FULL,4,u_p_div_tau_p tau_r_div_tau_p,0.020702251442608188
+FULL,4,u_p_div_tau_p u_p_div_u_r,0.25027396614562253
+FULL,4,tau_r_div_tau_p^2,-0.1382676041365175
+FULL,4,tau_r_div_tau_p u_p_div_u_r,-0.47280951679119115
+FULL,4,u_p_div_u_r^2,0.474245570707486
+FULL,5,tau_r_MPa,1.6153217107399458
+FULL,5,u_p_div_u_r,1.127692189085456
+FULL,5,tau_p_div_u_p,0.9013491462616009
+FULL,5,tau_r_div_tau_p,-1.0748271927890845
+FULL,5,u_p_div_tau_p,-1.181192178137606
+FULL,5,delta_peak_mm,0.46982346561894756
+FULL,5,tau_r_MPa^2,-0.5071516241110569
+FULL,5,tau_r_MPa u_p_div_u_r,-0.01451504803015841
+FULL,5,tau_r_MPa tau_p_div_u_p,-0.10540790614452586
+FULL,5,tau_r_MPa tau_r_div_tau_p,0.2280339175224882
+FULL,5,tau_r_MPa u_p_div_tau_p,0.170726595971969
+FULL,5,tau_r_MPa delta_peak_mm,-0.20997430596604894
+FULL,5,u_p_div_u_r^2,0.35901096437180297
+FULL,5,u_p_div_u_r tau_p_div_u_p,-0.08194182413057467
+FULL,5,u_p_div_u_r tau_r_div_tau_p,-0.54734267634254
+FULL,5,u_p_div_u_r u_p_div_tau_p,0.14923854230487807
+FULL,5,u_p_div_u_r delta_peak_mm,-0.32693879799517095
+FULL,5,tau_p_div_u_p^2,-0.13034182868810829
+FULL,5,tau_p_div_u_p tau_r_div_tau_p,-0.04918285104533387
+FULL,5,tau_p_div_u_p u_p_div_tau_p,0.5579226454819549
+FULL,5,tau_p_div_u_p delta_peak_mm,0.11282058964345174
+FULL,5,tau_r_div_tau_p^2,-0.17311953244904202
+FULL,5,tau_r_div_tau_p u_p_div_tau_p,0.10804771613320678
+FULL,5,tau_r_div_tau_p delta_peak_mm,-0.4067826509764125
+FULL,5,u_p_div_tau_p^2,0.28748095208120134
+FULL,5,u_p_div_tau_p delta_peak_mm,-0.36046773448195313
+FULL,5,delta_peak_mm^2,0.05519386894522893

@@ -1,0 +1,56 @@
+Dataset,Rank_in_saved_results,Polynomial_Term,Coefficient_in_scaled_space
+HIGH,1,u_r_x_tau_p,-0.14414883038265902
+HIGH,1,u_p_div_u_r,-1.262854986626661
+HIGH,1,tau_r_div_tau_p,0.9591463740564762
+HIGH,1,tau_r_div_u_p,0.585218956299673
+HIGH,1,u_r_x_tau_p^2,0.05298003999695901
+HIGH,1,u_r_x_tau_p u_p_div_u_r,0.2844079219179587
+HIGH,1,u_r_x_tau_p tau_r_div_tau_p,-0.008810073023397782
+HIGH,1,u_r_x_tau_p tau_r_div_u_p,0.09593638288133757
+HIGH,1,u_p_div_u_r^2,0.13661264194116432
+HIGH,1,u_p_div_u_r tau_r_div_tau_p,0.4564635886390976
+HIGH,1,u_p_div_u_r tau_r_div_u_p,0.17758374736123472
+HIGH,1,tau_r_div_tau_p^2,0.1116689332981291
+HIGH,1,tau_r_div_tau_p tau_r_div_u_p,-0.17998889091978798
+HIGH,1,tau_r_div_u_p^2,-0.0313154069460937
+HIGH,2,u_p_x_tau_r,-0.47315210340047453
+HIGH,2,u_p_div_u_r,-0.9591557482904207
+HIGH,2,tau_r_div_tau_p,1.0728618349267305
+HIGH,2,tau_r_div_u_p,0.49041726595828006
+HIGH,2,u_p_x_tau_r^2,0.12347949418905813
+HIGH,2,u_p_x_tau_r u_p_div_u_r,0.1512473261832605
+HIGH,2,u_p_x_tau_r tau_r_div_tau_p,0.26089765705500756
+HIGH,2,u_p_x_tau_r tau_r_div_u_p,0.05745366115585953
+HIGH,2,u_p_div_u_r^2,-0.13691087944013886
+HIGH,2,u_p_div_u_r tau_r_div_tau_p,0.27778486400671815
+HIGH,2,u_p_div_u_r tau_r_div_u_p,0.11456649808416486
+HIGH,2,tau_r_div_tau_p^2,0.057222228777346354
+HIGH,2,tau_r_div_tau_p tau_r_div_u_p,-0.1865679591516871
+HIGH,2,tau_r_div_u_p^2,-0.00443413095960447
+HIGH,3,u_p_div_u_r,-1.2278818413890902
+HIGH,3,tau_r_div_tau_p,0.8992660022364619
+HIGH,3,tau_r_div_u_p,0.6693326562514517
+HIGH,3,u_p_div_u_r^2,0.04816434787251485
+HIGH,3,u_p_div_u_r tau_r_div_tau_p,0.6521112201601759
+HIGH,3,u_p_div_u_r tau_r_div_u_p,0.07810209467282594
+HIGH,3,tau_r_div_tau_p^2,-0.005979868620391742
+HIGH,3,tau_r_div_tau_p tau_r_div_u_p,-0.011101201105643116
+HIGH,3,tau_r_div_u_p^2,-0.09087572789343357
+HIGH,4,u_p_x_tau_r,-0.7185478021425629
+HIGH,4,u_p_div_u_r,-1.1019768756724984
+HIGH,4,tau_r_div_tau_p,1.164186444243434
+HIGH,4,u_p_x_tau_r^2,0.21255431132857242
+HIGH,4,u_p_x_tau_r u_p_div_u_r,0.2008724208336413
+HIGH,4,u_p_x_tau_r tau_r_div_tau_p,0.07291089972618439
+HIGH,4,u_p_div_u_r^2,-0.20240416791328542
+HIGH,4,u_p_div_u_r tau_r_div_tau_p,0.36822303993362915
+HIGH,4,tau_r_div_tau_p^2,0.02082639451205164
+HIGH,5,delta_peak_mm,-0.8587700497665385
+HIGH,5,u_p_div_u_r,-1.0339695192146379
+HIGH,5,tau_r_div_tau_p,1.072954930929023
+HIGH,5,delta_peak_mm^2,0.15513047236774846
+HIGH,5,delta_peak_mm u_p_div_u_r,0.05422819576776044
+HIGH,5,delta_peak_mm tau_r_div_tau_p,0.3063555754325551
+HIGH,5,u_p_div_u_r^2,0.0066631211762022005
+HIGH,5,u_p_div_u_r tau_r_div_tau_p,0.3222535747961591
+HIGH,5,tau_r_div_tau_p^2,0.09669645822168121

@@ -1,2 +1,0 @@
-Dataset,Features,Feature_List,Branch_Signature,Degree,N_Features,R2_train,RMSE_train,R2_val,RMSE_val,R2_test,RMSE_test,R2_cv_mean,R2_cv_std,Selection_Score
-LOW_2,tau_p_x_tau_r + tau_r_div_tau_p + tau_peak_MPa_csds + u_r_div_u_p + tau_p_div_tau_r + u_p_div_u_r,"['tau_p_x_tau_r', 'tau_r_div_tau_p', 'tau_peak_MPa_csds', 'u_r_div_u_p', 'tau_p_div_tau_r', 'u_p_div_u_r']",base_taup | product | ratio,2,6,0.9733033970813522,3.4980772528021475,0.9495917615780243,2.875686965663931,0.9932322340008383,2.8687422746509132,0.5807596368381805,0.3411158660576331,1.1458599933913511

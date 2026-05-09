@@ -1,0 +1,95 @@
+Dataset,Rank_in_saved_results,Polynomial_Term,Coefficient_in_scaled_space
+FULL,1,u_r_mm,-1.1528961964204891
+FULL,1,u_r_x_u_p,0.06530719041068075
+FULL,1,u_p_div_u_r,-1.9139851967999615
+FULL,1,tau_r_div_tau_p,0.7859677160437117
+FULL,1,u_r_mm^2,0.5691735075967931
+FULL,1,u_r_mm u_r_x_u_p,-0.40432158893341286
+FULL,1,u_r_mm u_p_div_u_r,0.18177748597729987
+FULL,1,u_r_mm tau_r_div_tau_p,-0.09454884745156468
+FULL,1,u_r_x_u_p^2,0.022634708112496616
+FULL,1,u_r_x_u_p u_p_div_u_r,0.16185847518717622
+FULL,1,u_r_x_u_p tau_r_div_tau_p,0.2161797805342904
+FULL,1,u_p_div_u_r^2,0.04981228027315484
+FULL,1,u_p_div_u_r tau_r_div_tau_p,0.6282265597064001
+FULL,1,tau_r_div_tau_p^2,0.023439221304354645
+FULL,2,u_r_mm,-0.8821738165020522
+FULL,2,u_r_x_u_p,-0.2372115848232672
+FULL,2,u_p_div_u_r,-1.8641312286797669
+FULL,2,tau_r_div_tau_p,0.8309871313624064
+FULL,2,tau_r_div_u_r,-0.05793026762329509
+FULL,2,u_r_mm^2,0.6144546553835856
+FULL,2,u_r_mm u_r_x_u_p,-0.44551367891818633
+FULL,2,u_r_mm u_p_div_u_r,0.31144276567403173
+FULL,2,u_r_mm tau_r_div_tau_p,-0.16887435421264846
+FULL,2,u_r_mm tau_r_div_u_r,0.3781919596352121
+FULL,2,u_r_x_u_p^2,0.029101934385454914
+FULL,2,u_r_x_u_p u_p_div_u_r,0.10311674149139173
+FULL,2,u_r_x_u_p tau_r_div_tau_p,0.3051874548219664
+FULL,2,u_r_x_u_p tau_r_div_u_r,-0.38183433536069344
+FULL,2,u_p_div_u_r^2,0.0787889171018458
+FULL,2,u_p_div_u_r tau_r_div_tau_p,0.6220206743479927
+FULL,2,u_p_div_u_r tau_r_div_u_r,0.008615723644789249
+FULL,2,tau_r_div_tau_p^2,0.0064213209626950785
+FULL,2,tau_r_div_tau_p tau_r_div_u_r,0.05713072572140871
+FULL,2,tau_r_div_u_r^2,-0.016607760110486376
+FULL,3,u_r_mm,-1.0865861432715092
+FULL,3,u_r_x_u_p,0.0075593777451025196
+FULL,3,u_p_div_u_r,-1.8279387649075332
+FULL,3,tau_r_div_tau_p,0.781008887779872
+FULL,3,u_r_div_tau_r,0.04667917124703588
+FULL,3,u_r_mm^2,0.5236056607084777
+FULL,3,u_r_mm u_r_x_u_p,-0.3564477762951415
+FULL,3,u_r_mm u_p_div_u_r,0.1057311382609502
+FULL,3,u_r_mm tau_r_div_tau_p,-0.07954302550535712
+FULL,3,u_r_mm u_r_div_tau_r,0.25444346865741563
+FULL,3,u_r_x_u_p^2,0.007949656893872632
+FULL,3,u_r_x_u_p u_p_div_u_r,0.19084259727884975
+FULL,3,u_r_x_u_p tau_r_div_tau_p,0.23326784661967476
+FULL,3,u_r_x_u_p u_r_div_tau_r,-0.22495526854790687
+FULL,3,u_p_div_u_r^2,0.06243391837894586
+FULL,3,u_p_div_u_r tau_r_div_tau_p,0.5966430216231051
+FULL,3,u_p_div_u_r u_r_div_tau_r,0.2875476687331384
+FULL,3,tau_r_div_tau_p^2,0.03794917557500977
+FULL,3,tau_r_div_tau_p u_r_div_tau_r,0.013888055604150422
+FULL,3,u_r_div_tau_r^2,-0.022314988148972616
+FULL,4,u_r_mm,-1.1583859572700452
+FULL,4,sigma_n_x_u_r,0.044440651152438226
+FULL,4,u_r_x_u_p,0.045246268538862607
+FULL,4,u_p_div_u_r,-1.8988243796431814
+FULL,4,tau_r_div_tau_p,0.7902455027559916
+FULL,4,u_r_mm^2,0.5908551246201916
+FULL,4,u_r_mm sigma_n_x_u_r,-0.02314316331540126
+FULL,4,u_r_mm u_r_x_u_p,-0.4198411724268096
+FULL,4,u_r_mm u_p_div_u_r,0.17587311380154902
+FULL,4,u_r_mm tau_r_div_tau_p,-0.09967118817540568
+FULL,4,sigma_n_x_u_r^2,0.009866490693913084
+FULL,4,sigma_n_x_u_r u_r_x_u_p,-0.036154690463521745
+FULL,4,sigma_n_x_u_r u_p_div_u_r,0.07692959054266624
+FULL,4,sigma_n_x_u_r tau_r_div_tau_p,0.011489412966366602
+FULL,4,u_r_x_u_p^2,0.024146389245722932
+FULL,4,u_r_x_u_p u_p_div_u_r,0.17930763015628548
+FULL,4,u_r_x_u_p tau_r_div_tau_p,0.206329155762844
+FULL,4,u_p_div_u_r^2,0.05046280199566622
+FULL,4,u_p_div_u_r tau_r_div_tau_p,0.6216193875698384
+FULL,4,tau_r_div_tau_p^2,0.031695816298494134
+FULL,5,u_r_mm,-0.9790645978909261
+FULL,5,u_r_x_u_p,-0.06170803463832362
+FULL,5,u_p_div_u_r,-1.9071464398272169
+FULL,5,tau_r_div_tau_p,0.7865325325545818
+FULL,5,tau_r_div_u_p,-0.04369081337825845
+FULL,5,u_r_mm^2,0.5946144161512807
+FULL,5,u_r_mm u_r_x_u_p,-0.43350640400964174
+FULL,5,u_r_mm u_p_div_u_r,0.3525358285527611
+FULL,5,u_r_mm tau_r_div_tau_p,-0.15552442980689526
+FULL,5,u_r_mm tau_r_div_u_p,0.15083942399642883
+FULL,5,u_r_x_u_p^2,0.03717119498648225
+FULL,5,u_r_x_u_p u_p_div_u_r,0.08246185594013825
+FULL,5,u_r_x_u_p tau_r_div_tau_p,0.2719891529435845
+FULL,5,u_r_x_u_p tau_r_div_u_p,-0.055640786356763346
+FULL,5,u_p_div_u_r^2,0.03593487955531097
+FULL,5,u_p_div_u_r tau_r_div_tau_p,0.6565553576186347
+FULL,5,u_p_div_u_r tau_r_div_u_p,-0.13585051654265415
+FULL,5,tau_r_div_tau_p^2,0.00884075296463618
+FULL,5,tau_r_div_tau_p tau_r_div_u_p,-0.02348372137513094
+FULL,5,tau_r_div_u_p^2,-0.0031127479849075703

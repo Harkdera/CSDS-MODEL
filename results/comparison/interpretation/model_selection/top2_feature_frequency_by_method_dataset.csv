@@ -1,0 +1,52 @@
+methodologie,dataset,feature,feature_label,total_occurrences,models_containing_feature,n_top_model_rows_considered
+methodologie_1,FULL,delta_peak_mm,$u_p$ (mm),6,6,6
+methodologie_1,FULL,tau_p_div_u_r,$\tau_p/u_r$,6,6,6
+methodologie_1,FULL,tau_r_div_tau_p,$\tau_r/\tau_p$,6,6,6
+methodologie_1,FULL,u_p_div_tau_p,$u_p/\tau_p$,6,6,6
+methodologie_1,FULL,u_p_div_u_r,$u_p/u_r$,6,6,6
+methodologie_1,FULL,tau_p_x_tau_r,$\tau_p \tau_r$,3,3,6
+methodologie_1,FULL,tau_r_MPa,$\tau_r$ (MPa),3,3,6
+methodologie_1,HIGH,tau_r_div_tau_p,$\tau_r/\tau_p$,6,6,6
+methodologie_1,HIGH,u_p_div_u_r,$u_p/u_r$,6,6,6
+methodologie_1,HIGH,u_p_x_tau_r,$u_p \tau_r$,4,4,6
+methodologie_1,HIGH,tau_r_div_u_p,$\tau_r/u_p$,3,3,6
+methodologie_1,HIGH,delta_peak_mm,$u_p$ (mm),2,2,6
+methodologie_1,HIGH,u_r_div_tau_r,$u_r/\tau_r$,2,2,6
+methodologie_1,HIGH,u_r_x_tau_r,$u_r \tau_r$,2,2,6
+methodologie_1,LOW_1,tau_peak_MPa_csds,$\tau_p$ (MPa),6,6,6
+methodologie_1,LOW_1,tau_r_div_tau_p,$\tau_r/\tau_p$,6,6,6
+methodologie_1,LOW_1,u_p_div_u_r,$u_p/u_r$,6,6,6
+methodologie_1,LOW_1,u_r_div_tau_r,$u_r/\tau_r$,4,4,6
+methodologie_1,LOW_1,tau_r_div_sigma_n,$\tau_r/\sigma_n$,3,3,6
+methodologie_1,LOW_1,u_p_div_tau_r,$u_p/\tau_r$,2,2,6
+methodologie_1,LOW_1,u_r_mm,$u_r$ (mm),2,2,6
+methodologie_1,LOW_1,sigma_n_div_tau_p,$\sigma_n/\tau_p$,1,1,6
+methodologie_1,LOW_2,tau_peak_MPa_csds,$\tau_p$ (MPa),6,6,6
+methodologie_1,LOW_2,tau_r_div_tau_p,$\tau_r/\tau_p$,6,6,6
+methodologie_1,LOW_2,u_p_div_u_r,$u_p/u_r$,6,6,6
+methodologie_1,LOW_2,u_r_div_u_p,$u_r/u_p$,3,3,6
+methodologie_2,FULL,tau_r_div_tau_p,$\tau_r/\tau_p$,6,6,6
+methodologie_2,FULL,u_p_div_u_r,$u_p/u_r$,6,6,6
+methodologie_2,FULL,u_r_mm,$u_r$ (mm),6,6,6
+methodologie_2,FULL,u_r_x_u_p,$u_r u_p$,6,6,6
+methodologie_2,FULL,u_r_div_tau_r,$u_r/\tau_r$,3,3,6
+methodologie_2,FULL,sigma_n_x_u_r,$\sigma_n u_r$,2,2,6
+methodologie_2,FULL,tau_r_div_u_r,$\tau_r/u_r$,1,1,6
+methodologie_2,HIGH,tau_r_div_tau_p,$\tau_r/\tau_p$,6,6,6
+methodologie_2,HIGH,u_p_div_u_r,$u_p/u_r$,6,6,6
+methodologie_2,HIGH,delta_peak_mm,$u_p$ (mm),3,3,6
+methodologie_2,HIGH,tau_r_div_u_p,$\tau_r/u_p$,3,3,6
+methodologie_2,HIGH,u_r_x_tau_p,$u_r \tau_p$,3,3,6
+methodologie_2,LOW_1,delta_peak_mm,$u_p$ (mm),6,6,6
+methodologie_2,LOW_1,tau_p_div_u_r,$\tau_p/u_r$,6,6,6
+methodologie_2,LOW_1,tau_r_div_tau_p,$\tau_r/\tau_p$,6,6,6
+methodologie_2,LOW_1,u_p_div_u_r,$u_p/u_r$,6,6,6
+methodologie_2,LOW_1,sigma_n_div_tau_r,$\sigma_n/\tau_r$,3,3,6
+methodologie_2,LOW_1,tau_r_MPa,$\tau_r$ (MPa),3,3,6
+methodologie_2,LOW_2,tau_p_div_u_p,$\tau_p/u_p$,6,6,6
+methodologie_2,LOW_2,tau_r_div_tau_p,$\tau_r/\tau_p$,6,6,6
+methodologie_2,LOW_2,u_p_div_u_r,$u_p/u_r$,6,6,6
+methodologie_2,LOW_2,u_r_div_u_p,$u_r/u_p$,6,6,6
+methodologie_2,LOW_2,u_p_x_tau_p,$u_p \tau_p$,3,3,6
+methodologie_2,LOW_2,u_r_x_tau_p,$u_r \tau_p$,2,2,6
+methodologie_2,LOW_2,tau_r_div_u_p,$\tau_r/u_p$,1,1,6

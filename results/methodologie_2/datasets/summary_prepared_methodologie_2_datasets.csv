@@ -1,5 +1,0 @@
-Dataset,Rows,Min_e_minus_c,Max_e_minus_c,Mean_log_e_minus_c,Output_File
-FULL,299,0.016998487580837385,73.47363196212504,0.673972380956891,/Users/hariderarako/Desktop/python/results/methodologie_2/datasets/full/full_methodologie_2_dataset.csv
-LOW_1,163,0.016998487580837385,73.47363196212504,0.8529731674805942,/Users/hariderarako/Desktop/python/results/methodologie_2/datasets/low/low_1_methodologie_2_dataset.csv
-LOW_2,69,0.08267414276697149,12.956717703253423,0.9994978001321625,/Users/hariderarako/Desktop/python/results/methodologie_2/datasets/low/low_2_methodologie_2_dataset.csv
-HIGH,67,0.030220729505912036,10.995519314430119,-0.09674974033351698,/Users/hariderarako/Desktop/python/results/methodologie_2/datasets/high/high_methodologie_2_dataset.csv

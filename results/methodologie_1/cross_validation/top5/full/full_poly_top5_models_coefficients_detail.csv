@@ -1,0 +1,136 @@
+Dataset,Rank_in_saved_results,Polynomial_Term,Coefficient_in_scaled_space
+FULL,1,delta_peak_mm,0.5892959608702831
+FULL,1,tau_r_MPa,1.2160116296705255
+FULL,1,u_p_div_u_r,0.7620574973655462
+FULL,1,tau_r_div_tau_p,-1.089955705710464
+FULL,1,u_p_div_tau_p,-1.1069119399529221
+FULL,1,tau_p_div_u_r,1.2942726249019945
+FULL,1,delta_peak_mm^2,0.033948256078380104
+FULL,1,delta_peak_mm tau_r_MPa,-0.16939445345030316
+FULL,1,delta_peak_mm u_p_div_u_r,-0.2550394198640392
+FULL,1,delta_peak_mm tau_r_div_tau_p,-0.3557316718881151
+FULL,1,delta_peak_mm u_p_div_tau_p,-0.4421208398022087
+FULL,1,delta_peak_mm tau_p_div_u_r,0.04315843858911212
+FULL,1,tau_r_MPa^2,-0.3070727186168531
+FULL,1,tau_r_MPa u_p_div_u_r,-0.3597285632835499
+FULL,1,tau_r_MPa tau_r_div_tau_p,0.10736289659372254
+FULL,1,tau_r_MPa u_p_div_tau_p,0.2983765407409287
+FULL,1,tau_r_MPa tau_p_div_u_r,0.22061610129340398
+FULL,1,u_p_div_u_r^2,0.3447968200068133
+FULL,1,u_p_div_u_r tau_r_div_tau_p,-0.3321574020736341
+FULL,1,u_p_div_u_r u_p_div_tau_p,0.26556232751027925
+FULL,1,u_p_div_u_r tau_p_div_u_r,0.30400400039727415
+FULL,1,tau_r_div_tau_p^2,-0.18900041296109235
+FULL,1,tau_r_div_tau_p u_p_div_tau_p,0.01886979795073214
+FULL,1,tau_r_div_tau_p tau_p_div_u_r,-0.2052624367001
+FULL,1,u_p_div_tau_p^2,0.29656929043961244
+FULL,1,u_p_div_tau_p tau_p_div_u_r,0.44629569509064715
+FULL,1,tau_p_div_u_r^2,-0.6093166743331053
+FULL,2,delta_peak_mm,1.2401955995504725
+FULL,2,u_p_div_u_r,0.6131899351848278
+FULL,2,tau_r_div_tau_p,-0.9068314171553045
+FULL,2,u_p_div_tau_p,-1.0962198564043018
+FULL,2,tau_p_div_u_r,1.3758448313131217
+FULL,2,tau_p_div_u_p,0.8818211331479228
+FULL,2,delta_peak_mm^2,0.0007567608657124051
+FULL,2,delta_peak_mm u_p_div_u_r,-0.3108075961170078
+FULL,2,delta_peak_mm tau_r_div_tau_p,-0.28118216398018503
+FULL,2,delta_peak_mm u_p_div_tau_p,-0.5801840517198815
+FULL,2,delta_peak_mm tau_p_div_u_r,-0.5643048799830515
+FULL,2,delta_peak_mm tau_p_div_u_p,1.0783379269897242
+FULL,2,u_p_div_u_r^2,0.3838341227153287
+FULL,2,u_p_div_u_r tau_r_div_tau_p,-0.4491541158558168
+FULL,2,u_p_div_u_r u_p_div_tau_p,0.2596469115261195
+FULL,2,u_p_div_u_r tau_p_div_u_r,0.10491575774103551
+FULL,2,u_p_div_u_r tau_p_div_u_p,-0.4550350594936386
+FULL,2,tau_r_div_tau_p^2,-0.17280202193653585
+FULL,2,tau_r_div_tau_p u_p_div_tau_p,0.01907294216838879
+FULL,2,tau_r_div_tau_p tau_p_div_u_r,-0.061967655732282974
+FULL,2,tau_r_div_tau_p tau_p_div_u_p,0.2350031289288718
+FULL,2,u_p_div_tau_p^2,0.33895536849437397
+FULL,2,u_p_div_tau_p tau_p_div_u_r,0.39762050270417615
+FULL,2,u_p_div_tau_p tau_p_div_u_p,0.49696714127930525
+FULL,2,tau_p_div_u_r^2,-0.18309937884130847
+FULL,2,tau_p_div_u_r tau_p_div_u_p,-0.3847992053136228
+FULL,2,tau_p_div_u_p^2,0.02730847412748551
+FULL,3,delta_peak_mm,1.2452356385044578
+FULL,3,u_p_div_u_r,0.5711210703319534
+FULL,3,tau_r_div_tau_p,-0.9519128827571314
+FULL,3,u_p_div_tau_p,-1.1437697637046726
+FULL,3,tau_p_div_u_r,1.4887988515648771
+FULL,3,tau_r_div_u_p,0.8007542534260589
+FULL,3,delta_peak_mm^2,0.011680081503427305
+FULL,3,delta_peak_mm u_p_div_u_r,-0.29616712089945557
+FULL,3,delta_peak_mm tau_r_div_tau_p,-0.40948297005874523
+FULL,3,delta_peak_mm u_p_div_tau_p,-0.5954692087320596
+FULL,3,delta_peak_mm tau_p_div_u_r,-0.6208820095942963
+FULL,3,delta_peak_mm tau_r_div_u_p,1.260838588563533
+FULL,3,u_p_div_u_r^2,0.3770016646071369
+FULL,3,u_p_div_u_r tau_r_div_tau_p,-0.34828585745506424
+FULL,3,u_p_div_u_r u_p_div_tau_p,0.2844993086233757
+FULL,3,u_p_div_u_r tau_p_div_u_r,0.17437872227605505
+FULL,3,u_p_div_u_r tau_r_div_u_p,-0.5099770738803386
+FULL,3,tau_r_div_tau_p^2,-0.19227179423263402
+FULL,3,tau_r_div_tau_p u_p_div_tau_p,0.030677522090644137
+FULL,3,tau_r_div_tau_p tau_p_div_u_r,-0.11167489302425962
+FULL,3,tau_r_div_tau_p tau_r_div_u_p,0.252090263831315
+FULL,3,u_p_div_tau_p^2,0.344756433192727
+FULL,3,u_p_div_tau_p tau_p_div_u_r,0.3898363334833179
+FULL,3,u_p_div_tau_p tau_r_div_u_p,0.5120481829248315
+FULL,3,tau_p_div_u_r^2,-0.26853110283423814
+FULL,3,tau_p_div_u_r tau_r_div_u_p,-0.2714428117417965
+FULL,3,tau_r_div_u_p^2,0.02664163573070608
+FULL,4,delta_peak_mm,0.5320545615956914
+FULL,4,u_p_x_tau_p,0.9391362021557458
+FULL,4,u_p_div_u_r,0.5886063849110074
+FULL,4,tau_r_div_tau_p,-0.9409753512226953
+FULL,4,u_p_div_tau_p,-1.2841298933767344
+FULL,4,tau_p_div_u_r,1.6056965908027923
+FULL,4,delta_peak_mm^2,-0.01818599959932997
+FULL,4,delta_peak_mm u_p_x_tau_p,-0.011708940727841071
+FULL,4,delta_peak_mm u_p_div_u_r,-0.18569464802852143
+FULL,4,delta_peak_mm tau_r_div_tau_p,-0.3332472112205118
+FULL,4,delta_peak_mm u_p_div_tau_p,-0.5488749196348423
+FULL,4,delta_peak_mm tau_p_div_u_r,-0.2366056865824483
+FULL,4,u_p_x_tau_p^2,-0.1596496015098786
+FULL,4,u_p_x_tau_p u_p_div_u_r,-0.1979674987871054
+FULL,4,u_p_x_tau_p tau_r_div_tau_p,0.03099778141724549
+FULL,4,u_p_x_tau_p u_p_div_tau_p,0.24155318415460436
+FULL,4,u_p_x_tau_p tau_p_div_u_r,0.1756000906808584
+FULL,4,u_p_div_u_r^2,0.5024884017428188
+FULL,4,u_p_div_u_r tau_r_div_tau_p,-0.5468422616914476
+FULL,4,u_p_div_u_r u_p_div_tau_p,0.2980125299405221
+FULL,4,u_p_div_u_r tau_p_div_u_r,-0.09445510132431337
+FULL,4,tau_r_div_tau_p^2,-0.1515015030094595
+FULL,4,tau_r_div_tau_p u_p_div_tau_p,-0.01831313238217795
+FULL,4,tau_r_div_tau_p tau_p_div_u_r,0.044043525180562225
+FULL,4,u_p_div_tau_p^2,0.33212787100322955
+FULL,4,u_p_div_tau_p tau_p_div_u_r,0.46748642405440033
+FULL,4,tau_p_div_u_r^2,-0.5020951715995718
+FULL,5,delta_peak_mm,0.5165892835578765
+FULL,5,tau_p_x_tau_r,0.8269658466279816
+FULL,5,u_p_div_u_r,0.7953010332918634
+FULL,5,tau_r_div_tau_p,-1.0161948014734328
+FULL,5,u_p_div_tau_p,-1.2702222779419923
+FULL,5,tau_p_div_u_r,1.6048173214213872
+FULL,5,delta_peak_mm^2,0.02342392299351392
+FULL,5,delta_peak_mm tau_p_x_tau_r,-0.20454004721962293
+FULL,5,delta_peak_mm u_p_div_u_r,-0.36117469023797966
+FULL,5,delta_peak_mm tau_r_div_tau_p,-0.38791730337414904
+FULL,5,delta_peak_mm u_p_div_tau_p,-0.7003264607660773
+FULL,5,delta_peak_mm tau_p_div_u_r,-0.3039622159362564
+FULL,5,tau_p_x_tau_r^2,-0.1384173325760318
+FULL,5,tau_p_x_tau_r u_p_div_u_r,-0.08184824623469662
+FULL,5,tau_p_x_tau_r tau_r_div_tau_p,0.08766779743382194
+FULL,5,tau_p_x_tau_r u_p_div_tau_p,0.36238640045255155
+FULL,5,tau_p_x_tau_r tau_p_div_u_r,0.26160295494390595
+FULL,5,u_p_div_u_r^2,0.43304961433095557
+FULL,5,u_p_div_u_r tau_r_div_tau_p,-0.4539029734796894
+FULL,5,u_p_div_u_r u_p_div_tau_p,0.4236709648432088
+FULL,5,u_p_div_u_r tau_p_div_u_r,0.23187622673012367
+FULL,5,tau_r_div_tau_p^2,-0.16432135193301678
+FULL,5,tau_r_div_tau_p u_p_div_tau_p,-0.06052196439420794
+FULL,5,tau_r_div_tau_p tau_p_div_u_r,-0.13697103030184235
+FULL,5,u_p_div_tau_p^2,0.363688820184965
+FULL,5,u_p_div_tau_p tau_p_div_u_r,0.4565542434213007
+FULL,5,tau_p_div_u_r^2,-0.8625287577352968

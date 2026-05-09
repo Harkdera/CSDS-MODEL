@@ -1,0 +1,15 @@
+Feature,Frequency
+tau_peak_MPa_csds,26
+tau_r_MPa,20
+sigma_n_x_u_r,15
+sigma_n_MPa,15
+sigma_n_div_tau_p,10
+u_p_div_tau_p,8
+u_p_div_tau_r,7
+tau_r_div_tau_p,6
+sigma_n_div_u_p,3
+u_r_mm,2
+u_r_div_tau_p,1
+u_r_div_tau_r,1
+tau_p_x_tau_r,1
+sigma_n_div_tau_r,1

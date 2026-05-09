@@ -1,0 +1,66 @@
+Dataset,Rank_in_saved_results,Polynomial_Term,Coefficient_in_scaled_space
+LOW_2,1,tau_peak_MPa_csds,0.14294429503496126
+LOW_2,1,u_p_div_u_r,0.30969905844751966
+LOW_2,1,u_r_div_u_p,-0.32240563417638457
+LOW_2,1,tau_r_div_tau_p,-0.45610588581587497
+LOW_2,1,tau_peak_MPa_csds^2,-0.019687319285311415
+LOW_2,1,tau_peak_MPa_csds u_p_div_u_r,0.0523110254699994
+LOW_2,1,tau_peak_MPa_csds u_r_div_u_p,0.0351411003406323
+LOW_2,1,tau_peak_MPa_csds tau_r_div_tau_p,0.0008605017378568231
+LOW_2,1,u_p_div_u_r^2,0.2009650983419848
+LOW_2,1,u_p_div_u_r u_r_div_u_p,-0.21278367109838184
+LOW_2,1,u_p_div_u_r tau_r_div_tau_p,-0.3777861407675089
+LOW_2,1,u_r_div_u_p^2,0.031553527608710615
+LOW_2,1,u_r_div_u_p tau_r_div_tau_p,0.0821114713882822
+LOW_2,1,tau_r_div_tau_p^2,-0.007679636116484764
+LOW_2,2,tau_peak_MPa_csds,0.1417008316144626
+LOW_2,2,u_p_div_u_r,0.7383297291107299
+LOW_2,2,tau_r_div_tau_p,-0.43487807731794514
+LOW_2,2,tau_peak_MPa_csds^2,-0.015535358442834374
+LOW_2,2,tau_peak_MPa_csds u_p_div_u_r,0.014859219977575092
+LOW_2,2,tau_peak_MPa_csds tau_r_div_tau_p,0.0058966754707109655
+LOW_2,2,u_p_div_u_r^2,0.22704838099979344
+LOW_2,2,u_p_div_u_r tau_r_div_tau_p,-0.4175180825643649
+LOW_2,2,tau_r_div_tau_p^2,-0.006416158513794857
+LOW_2,3,tau_p_x_tau_r,0.1331484554381759
+LOW_2,3,u_p_div_u_r,0.30226644187254686
+LOW_2,3,u_r_div_u_p,-0.31726305188649795
+LOW_2,3,tau_r_div_tau_p,-0.5345510905288507
+LOW_2,3,tau_p_x_tau_r^2,-0.028394837972795763
+LOW_2,3,tau_p_x_tau_r u_p_div_u_r,0.027109762549854786
+LOW_2,3,tau_p_x_tau_r u_r_div_u_p,0.017940528968929642
+LOW_2,3,tau_p_x_tau_r tau_r_div_tau_p,0.010177317476821641
+LOW_2,3,u_p_div_u_r^2,0.20915633007507012
+LOW_2,3,u_p_div_u_r u_r_div_u_p,-0.20404490994337057
+LOW_2,3,u_p_div_u_r tau_r_div_tau_p,-0.3953865895192186
+LOW_2,3,u_r_div_u_p^2,0.03051974149424526
+LOW_2,3,u_r_div_u_p tau_r_div_tau_p,0.06371743010620634
+LOW_2,3,tau_r_div_tau_p^2,-0.007580019503031839
+LOW_2,4,u_p_div_u_r,0.28859025882973244
+LOW_2,4,u_r_div_u_p,-0.3829061050587506
+LOW_2,4,tau_r_div_tau_p,-0.5512858450521451
+LOW_2,4,tau_p_div_u_p,0.08056818075701391
+LOW_2,4,u_p_div_u_r^2,0.2748712419347076
+LOW_2,4,u_p_div_u_r u_r_div_u_p,-0.08284417752074572
+LOW_2,4,u_p_div_u_r tau_r_div_tau_p,-0.41415880977567265
+LOW_2,4,u_p_div_u_r tau_p_div_u_p,-0.03320074286327803
+LOW_2,4,u_r_div_u_p^2,0.08727685120282724
+LOW_2,4,u_r_div_u_p tau_r_div_tau_p,0.11989935691933035
+LOW_2,4,u_r_div_u_p tau_p_div_u_p,-0.001578693436077013
+LOW_2,4,tau_r_div_tau_p^2,-0.03966137083449278
+LOW_2,4,tau_r_div_tau_p tau_p_div_u_p,-0.027059363405860147
+LOW_2,4,tau_p_div_u_p^2,-0.009855511110209558
+LOW_2,5,tau_r_MPa,0.1597174030294172
+LOW_2,5,u_p_div_u_r,0.2963556866167415
+LOW_2,5,u_r_div_u_p,-0.3130952012042114
+LOW_2,5,tau_r_div_tau_p,-0.6042901080355252
+LOW_2,5,tau_r_MPa^2,-0.037920552083149546
+LOW_2,5,tau_r_MPa u_p_div_u_r,0.01064519028029131
+LOW_2,5,tau_r_MPa u_r_div_u_p,0.001766986372879394
+LOW_2,5,tau_r_MPa tau_r_div_tau_p,0.036822171489641356
+LOW_2,5,u_p_div_u_r^2,0.2187561839479773
+LOW_2,5,u_p_div_u_r u_r_div_u_p,-0.19720495040316627
+LOW_2,5,u_p_div_u_r tau_r_div_tau_p,-0.3967239701365168
+LOW_2,5,u_r_div_u_p^2,0.027568800517015903
+LOW_2,5,u_r_div_u_p tau_r_div_tau_p,0.0649259528777296
+LOW_2,5,tau_r_div_tau_p^2,-0.014645715612698968

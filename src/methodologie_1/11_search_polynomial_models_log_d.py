@@ -14,10 +14,10 @@ from sklearn.linear_model import Ridge
 
 try:
     from methodologie_1.common import CV_FOLDS_BY_DATASET, REGRESSION_DIR, SPLIT_FILES, RANDOM_SEED, build_d_dataset, get_candidate_feature_names
-    from methodologie_1.search_utils import has_exact_redundancy_degree2, jaccard_similarity, is_diverse_enough, fit_and_evaluate_model
+    from methodologie_1.search_utils import build_random_individual, has_exact_redundancy_degree2, jaccard_similarity, is_diverse_enough, fit_and_evaluate_model
 except ModuleNotFoundError:
     from common import CV_FOLDS_BY_DATASET, REGRESSION_DIR, SPLIT_FILES, RANDOM_SEED, build_d_dataset, get_candidate_feature_names
-    from search_utils import has_exact_redundancy_degree2, jaccard_similarity, is_diverse_enough, fit_and_evaluate_model
+    from search_utils import build_random_individual, has_exact_redundancy_degree2, jaccard_similarity, is_diverse_enough, fit_and_evaluate_model
 
 warnings.filterwarnings("ignore")
 
@@ -90,11 +90,12 @@ def build_model(degree=2, ridge_alpha=1.0):
     ])
 
 
-def fit_and_evaluate(train_df, val_df, feature_cols, degree=2, ridge_alpha=1.0, cv_folds=5):
-    """Ajuste le modèle sur `log(d_csds)` puis retourne les métriques sur `log(d)` et `d`."""
+def fit_and_evaluate(train_df, val_df, test_df, feature_cols, degree=2, ridge_alpha=1.0, cv_folds=5):
+    """Ajuste `log(d)` puis retourne les métriques train/validation/test/CV sur `log(d)` et `d`."""
     result = fit_and_evaluate_model(
         train_df=train_df,
         val_df=val_df,
+        test_df=test_df,
         feature_cols=feature_cols,
         model_builder=lambda: build_model(degree=degree, ridge_alpha=ridge_alpha),
         target_col="log_d_csds",
@@ -112,10 +113,14 @@ def fit_and_evaluate(train_df, val_df, feature_cols, degree=2, ridge_alpha=1.0, 
         "RMSE_val_log": result["RMSE_val_target"],
         "R2_cv_mean_log": result["R2_cv_mean_target"],
         "R2_cv_std_log": result["R2_cv_std_target"],
+        "R2_test_log": result["R2_test_target"],
+        "RMSE_test_log": result["RMSE_test_target"],
         "R2_train_d": result["R2_train_metric"],
         "RMSE_train_d": result["RMSE_train_metric"],
         "R2_val_d": result["R2_val_metric"],
         "RMSE_val_d": result["RMSE_val_metric"],
+        "R2_test_d": result["R2_test_metric"],
+        "RMSE_test_d": result["RMSE_test_metric"],
     }
 
 
@@ -164,7 +169,7 @@ if not hasattr(creator, "IndividualCSDSLog"):
     creator.create("IndividualCSDSLog", list, fitness=creator.FitnessMaxCSDSLog)
 
 
-def setup_genetic_algorithm(train_df, val_df, all_features, cv_folds):
+def setup_genetic_algorithm(train_df, val_df, test_df, all_features, cv_folds):
     """Configure l'algorithme génétique qui explore les sous-ensembles de variables."""
     """
     Configure the genetic algorithm.
@@ -172,17 +177,18 @@ def setup_genetic_algorithm(train_df, val_df, all_features, cv_folds):
     toolbox = base.Toolbox()
 
     def create_individual():
-        n_features = random.randint(
+        return build_random_individual(
+            creator.IndividualCSDSLog,
+            len(all_features),
             GENETIC_PARAMS["min_features"],
-            GENETIC_PARAMS["max_features"]
+            GENETIC_PARAMS["max_features"],
         )
-        return creator.IndividualCSDSLog(random.sample(all_features, n_features))
 
     toolbox.register("individual", create_individual)
     toolbox.register("population", tools.initRepeat, list, toolbox.individual)
 
     def eval_features(individual):
-        feature_list = list(dict.fromkeys(individual))
+        feature_list = [all_features[idx] for idx, bit in enumerate(individual) if bit == 1]
 
         if len(feature_list) < GENETIC_PARAMS["min_features"]:
             return (-9999.0,)
@@ -197,6 +203,7 @@ def setup_genetic_algorithm(train_df, val_df, all_features, cv_folds):
             result = fit_and_evaluate(
                 train_df=train_df,
                 val_df=val_df,
+                test_df=test_df,
                 feature_cols=feature_list,
                 degree=MODEL_PARAMS["degree"],
                 ridge_alpha=MODEL_PARAMS["ridge_alpha"],
@@ -218,49 +225,9 @@ def setup_genetic_algorithm(train_df, val_df, all_features, cv_folds):
         except Exception:
             return (-9999.0,)
 
-    def mate_features(ind1, ind2):
-        set1 = list(dict.fromkeys(ind1))
-        set2 = list(dict.fromkeys(ind2))
-
-        union = list(dict.fromkeys(set1 + set2))
-        if len(union) == 0:
-            return ind1, ind2
-
-        size1 = random.randint(
-            GENETIC_PARAMS["min_features"],
-            min(GENETIC_PARAMS["max_features"], len(union))
-        )
-        size2 = random.randint(
-            GENETIC_PARAMS["min_features"],
-            min(GENETIC_PARAMS["max_features"], len(union))
-        )
-
-        child1 = random.sample(union, size1)
-        child2 = random.sample(union, size2)
-
-        ind1[:] = child1
-        ind2[:] = child2
-        return ind1, ind2
-
-    def mutate_features(individual):
-        current = list(dict.fromkeys(individual))
-        current_set = set(current)
-        all_set = set(all_features)
-
-        if random.random() < 0.5 and len(current) < GENETIC_PARAMS["max_features"]:
-            available = list(all_set - current_set)
-            if available:
-                current.append(random.choice(available))
-        elif len(current) > GENETIC_PARAMS["min_features"]:
-            idx = random.randrange(len(current))
-            current.pop(idx)
-
-        individual[:] = current
-        return (individual,)
-
     toolbox.register("evaluate", eval_features)
-    toolbox.register("mate", mate_features)
-    toolbox.register("mutate", mutate_features)
+    toolbox.register("mate", tools.cxTwoPoint)
+    toolbox.register("mutate", tools.mutFlipBit, indpb=0.08)
     toolbox.register("select", tools.selTournament, tournsize=GENETIC_PARAMS["tournament_size"])
 
     return toolbox
@@ -310,15 +277,23 @@ for dataset_name in SPLIT_FILES:
     print(f"Validation croisee utilisee: {cv_folds} folds")
     print("Target utilisee pour la selection: log_d_csds")
 
-    train_df, val_df = train_test_split(
+    train_val_df, test_df = train_test_split(
         data,
+        test_size=0.2,
+        random_state=GENETIC_PARAMS["random_seed"]
+    )
+    train_df, val_df = train_test_split(
+        train_val_df,
         test_size=0.2,
         random_state=GENETIC_PARAMS["random_seed"]
     )
     train_df = train_df.reset_index(drop=True)
     val_df = val_df.reset_index(drop=True)
+    test_df = test_df.reset_index(drop=True)
 
-    toolbox = setup_genetic_algorithm(train_df, val_df, all_features, cv_folds)
+    print(f"Split utilise: train={len(train_df)}, validation={len(val_df)}, test_externe={len(test_df)}")
+
+    toolbox = setup_genetic_algorithm(train_df, val_df, test_df, all_features, cv_folds)
     pop, logbook, hof = run_genetic_algorithm(toolbox)
 
     print("\n" + "=" * 100)
@@ -330,7 +305,7 @@ for dataset_name in SPLIT_FILES:
     branch_count = {}
 
     for indiv in hof:
-        feature_list = list(dict.fromkeys(indiv))
+        feature_list = [all_features[idx] for idx, bit in enumerate(indiv) if bit == 1]
         exact_key = tuple(sorted(feature_list))
 
         if exact_key in seen_exact_sets:
@@ -355,6 +330,7 @@ for dataset_name in SPLIT_FILES:
         result = fit_and_evaluate(
             train_df=train_df,
             val_df=val_df,
+            test_df=test_df,
             feature_cols=feature_list,
             degree=MODEL_PARAMS["degree"],
             ridge_alpha=MODEL_PARAMS["ridge_alpha"],
@@ -381,6 +357,8 @@ for dataset_name in SPLIT_FILES:
             "RMSE_train_log": result["RMSE_train_log"],
             "R2_val_log": result["R2_val_log"],
             "RMSE_val_log": result["RMSE_val_log"],
+            "R2_test_log": result["R2_test_log"],
+            "RMSE_test_log": result["RMSE_test_log"],
             "R2_cv_mean_log": result["R2_cv_mean_log"],
             "R2_cv_std_log": result["R2_cv_std_log"],
 
@@ -389,6 +367,8 @@ for dataset_name in SPLIT_FILES:
             "RMSE_train_d": result["RMSE_train_d"],
             "R2_val_d": result["R2_val_d"],
             "RMSE_val_d": result["RMSE_val_d"],
+            "R2_test_d": result["R2_test_d"],
+            "RMSE_test_d": result["RMSE_test_d"],
 
             "Selection_Score": score_used,
         })
@@ -400,11 +380,15 @@ for dataset_name in SPLIT_FILES:
         print(f"Branche           = {branch_signature}")
         print(f"R2_train_log      = {result['R2_train_log']:.6f}")
         print(f"R2_val_log        = {result['R2_val_log']:.6f}")
+        print(f"R2_test_log       = {result['R2_test_log']:.6f}")
         print(f"R2_cv_mean_log    = {result['R2_cv_mean_log']:.6f}")
         print(f"R2_cv_std_log     = {result['R2_cv_std_log']:.6f}")
         print(f"RMSE_val_log      = {result['RMSE_val_log']:.6f}")
+        print(f"RMSE_test_log     = {result['RMSE_test_log']:.6f}")
         print(f"R2_val_d          = {result['R2_val_d']:.6f}")
         print(f"RMSE_val_d        = {result['RMSE_val_d']:.6f}")
+        print(f"R2_test_d         = {result['R2_test_d']:.6f}")
+        print(f"RMSE_test_d       = {result['RMSE_test_d']:.6f}")
         print(f"Selection_Score   = {score_used:.6f}")
 
         if len(best_models) >= DIVERSITY_PARAMS["max_selected_models"]:

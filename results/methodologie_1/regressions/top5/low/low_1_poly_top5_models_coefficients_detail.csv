@@ -1,95 +1,101 @@
 Dataset,Rank_in_saved_results,Polynomial_Term,Coefficient_in_scaled_space
-LOW_1,1,u_r_div_tau_r,-1.097562298689394
-LOW_1,1,tau_peak_MPa_csds,1.678713297936775
-LOW_1,1,u_p_div_u_r,0.39781702592200197
-LOW_1,1,tau_r_div_tau_p,-0.769808876237627
-LOW_1,1,u_r_div_tau_r^2,0.15877127467216756
-LOW_1,1,u_r_div_tau_r tau_peak_MPa_csds,0.4466001512214197
-LOW_1,1,u_r_div_tau_r u_p_div_u_r,-0.8948925961216198
-LOW_1,1,u_r_div_tau_r tau_r_div_tau_p,-0.2561501915519771
-LOW_1,1,tau_peak_MPa_csds^2,-0.305979848293718
-LOW_1,1,tau_peak_MPa_csds u_p_div_u_r,-0.028024185970656736
-LOW_1,1,tau_peak_MPa_csds tau_r_div_tau_p,0.016647331975534106
-LOW_1,1,u_p_div_u_r^2,0.19716216981520657
-LOW_1,1,u_p_div_u_r tau_r_div_tau_p,-0.47771446715437127
-LOW_1,1,tau_r_div_tau_p^2,-0.1212009707937604
-LOW_1,2,tau_r_div_tau_p,-0.7037807360846206
-LOW_1,2,u_p_div_u_r,0.9149372107005349
-LOW_1,2,u_p_div_tau_r,-0.876380611724324
-LOW_1,2,tau_r_div_sigma_n,-0.04840194455784934
-LOW_1,2,tau_peak_MPa_csds,1.5769529400376663
-LOW_1,2,tau_r_div_tau_p^2,-0.12929526936581
-LOW_1,2,tau_r_div_tau_p u_p_div_u_r,-0.39968702106026044
-LOW_1,2,tau_r_div_tau_p u_p_div_tau_r,-0.25294279583651386
-LOW_1,2,tau_r_div_tau_p tau_r_div_sigma_n,0.010730672603906295
-LOW_1,2,tau_r_div_tau_p tau_peak_MPa_csds,0.029538555290039226
-LOW_1,2,u_p_div_u_r^2,0.19067352948139055
-LOW_1,2,u_p_div_u_r u_p_div_tau_r,0.045804216641764
-LOW_1,2,u_p_div_u_r tau_r_div_sigma_n,0.05091173940862098
-LOW_1,2,u_p_div_u_r tau_peak_MPa_csds,-0.08608314705212414
-LOW_1,2,u_p_div_tau_r^2,0.16794322818384788
-LOW_1,2,u_p_div_tau_r tau_r_div_sigma_n,-0.0005884932532882592
-LOW_1,2,u_p_div_tau_r tau_peak_MPa_csds,0.307956561834232
-LOW_1,2,tau_r_div_sigma_n^2,-0.035202312601829266
-LOW_1,2,tau_r_div_sigma_n tau_peak_MPa_csds,0.10686608284168587
-LOW_1,2,tau_peak_MPa_csds^2,-0.2789924767302379
-LOW_1,3,u_p_div_tau_p,-0.7078571042796611
-LOW_1,3,tau_peak_MPa_csds,1.5684798720609645
-LOW_1,3,u_p_div_u_r,0.8750453324365933
-LOW_1,3,tau_r_div_sigma_n,-0.047313478243622066
-LOW_1,3,tau_r_div_tau_p,-0.5283808170305739
-LOW_1,3,u_p_div_tau_p^2,0.1284491042136401
-LOW_1,3,u_p_div_tau_p tau_peak_MPa_csds,0.22808463925483213
-LOW_1,3,u_p_div_tau_p u_p_div_u_r,0.049546422201601374
-LOW_1,3,u_p_div_tau_p tau_r_div_sigma_n,-0.022055453070935194
-LOW_1,3,u_p_div_tau_p tau_r_div_tau_p,-0.12346484971193365
-LOW_1,3,tau_peak_MPa_csds^2,-0.2901234468274884
-LOW_1,3,tau_peak_MPa_csds u_p_div_u_r,-0.0628361063185644
-LOW_1,3,tau_peak_MPa_csds tau_r_div_sigma_n,0.0927242514543945
-LOW_1,3,tau_peak_MPa_csds tau_r_div_tau_p,-0.015574684163852685
-LOW_1,3,u_p_div_u_r^2,0.1787207614236169
-LOW_1,3,u_p_div_u_r tau_r_div_sigma_n,0.05767892880915628
-LOW_1,3,u_p_div_u_r tau_r_div_tau_p,-0.36705816572973776
-LOW_1,3,tau_r_div_sigma_n^2,-0.030963840561093435
-LOW_1,3,tau_r_div_sigma_n tau_r_div_tau_p,0.012662750763218874
-LOW_1,3,tau_r_div_tau_p^2,-0.11911174184647227
-LOW_1,4,tau_r_div_tau_p,-0.5314877460551085
-LOW_1,4,tau_p_div_sigma_n,-0.019713084592503188
-LOW_1,4,tau_peak_MPa_csds,1.5846956015909677
-LOW_1,4,u_p_div_u_r,0.8352883713178341
-LOW_1,4,u_p_div_tau_p,-0.6827766164385537
-LOW_1,4,tau_r_div_tau_p^2,-0.15726254188858704
-LOW_1,4,tau_r_div_tau_p tau_p_div_sigma_n,-0.0878098162600522
-LOW_1,4,tau_r_div_tau_p tau_peak_MPa_csds,0.10427158651756616
-LOW_1,4,tau_r_div_tau_p u_p_div_u_r,-0.30727967773023446
-LOW_1,4,tau_r_div_tau_p u_p_div_tau_p,-0.07963441001356249
-LOW_1,4,tau_p_div_sigma_n^2,-0.047715433485408944
-LOW_1,4,tau_p_div_sigma_n tau_peak_MPa_csds,0.14069485593373746
-LOW_1,4,tau_p_div_sigma_n u_p_div_u_r,0.12683733518314919
-LOW_1,4,tau_p_div_sigma_n u_p_div_tau_p,0.06308081528559122
-LOW_1,4,tau_peak_MPa_csds^2,-0.2942644887101009
-LOW_1,4,tau_peak_MPa_csds u_p_div_u_r,-0.085070519603876
-LOW_1,4,tau_peak_MPa_csds u_p_div_tau_p,0.23724797591802546
-LOW_1,4,u_p_div_u_r^2,0.18126152198001713
-LOW_1,4,u_p_div_u_r u_p_div_tau_p,0.010621612032455416
-LOW_1,4,u_p_div_tau_p^2,0.13161487425107732
-LOW_1,5,tau_r_div_tau_p,-0.5388022667853587
-LOW_1,5,u_p_div_u_r,0.5151235624578226
-LOW_1,5,tau_r_div_sigma_n,-0.059590370729964925
-LOW_1,5,u_r_div_tau_p,-0.900829901351257
-LOW_1,5,tau_peak_MPa_csds,1.5734724369640198
-LOW_1,5,tau_r_div_tau_p^2,-0.12082675702678991
-LOW_1,5,tau_r_div_tau_p u_p_div_u_r,-0.4116727078586446
-LOW_1,5,tau_r_div_tau_p tau_r_div_sigma_n,0.02331458899353637
-LOW_1,5,tau_r_div_tau_p u_r_div_tau_p,-0.14483585061543985
-LOW_1,5,tau_r_div_tau_p tau_peak_MPa_csds,-0.021918968974868183
-LOW_1,5,u_p_div_u_r^2,0.2033897361191781
-LOW_1,5,u_p_div_u_r tau_r_div_sigma_n,0.05312000560140415
-LOW_1,5,u_p_div_u_r u_r_div_tau_p,-0.4841831194893824
-LOW_1,5,u_p_div_u_r tau_peak_MPa_csds,-0.05251175375644254
-LOW_1,5,tau_r_div_sigma_n^2,-0.03202674695708242
-LOW_1,5,tau_r_div_sigma_n u_r_div_tau_p,-0.0175600236129944
-LOW_1,5,tau_r_div_sigma_n tau_peak_MPa_csds,0.10298086749052664
-LOW_1,5,u_r_div_tau_p^2,0.10812606143709518
-LOW_1,5,u_r_div_tau_p tau_peak_MPa_csds,0.20231438552868258
-LOW_1,5,tau_peak_MPa_csds^2,-0.29925800596022806
+LOW_1,1,tau_r_div_tau_p,-0.694448225249661
+LOW_1,1,tau_peak_MPa_csds,1.6283736543674447
+LOW_1,1,u_p_div_u_r,0.29278449230278736
+LOW_1,1,delta_peak_mm,0.06733556634807483
+LOW_1,1,u_r_div_tau_r,-1.1373659817941648
+LOW_1,1,tau_r_div_tau_p^2,-0.10833783732963825
+LOW_1,1,tau_r_div_tau_p tau_peak_MPa_csds,0.02703056319948543
+LOW_1,1,tau_r_div_tau_p u_p_div_u_r,-0.26419280772267983
+LOW_1,1,tau_r_div_tau_p delta_peak_mm,-0.13353327821770902
+LOW_1,1,tau_r_div_tau_p u_r_div_tau_r,-0.2506463601928629
+LOW_1,1,tau_peak_MPa_csds^2,-0.32406673502130556
+LOW_1,1,tau_peak_MPa_csds u_p_div_u_r,0.06926966741282878
+LOW_1,1,tau_peak_MPa_csds delta_peak_mm,-0.14541410307786026
+LOW_1,1,tau_peak_MPa_csds u_r_div_tau_r,0.23209798609244323
+LOW_1,1,u_p_div_u_r^2,0.20572534631959646
+LOW_1,1,u_p_div_u_r delta_peak_mm,-0.3548223658188072
+LOW_1,1,u_p_div_u_r u_r_div_tau_r,-0.728266939207976
+LOW_1,1,delta_peak_mm^2,0.2130650413206025
+LOW_1,1,delta_peak_mm u_r_div_tau_r,0.13064200188245073
+LOW_1,1,u_r_div_tau_r^2,0.06929531047214567
+LOW_1,2,u_p_div_u_r,0.7748925002089689
+LOW_1,2,tau_r_div_tau_p,-0.6787889572668573
+LOW_1,2,delta_peak_mm,0.11023723080951639
+LOW_1,2,u_p_div_tau_r,-0.9936684685883089
+LOW_1,2,tau_peak_MPa_csds,1.4884350385151925
+LOW_1,2,u_p_div_u_r^2,0.17196896531069336
+LOW_1,2,u_p_div_u_r tau_r_div_tau_p,-0.2092596478106805
+LOW_1,2,u_p_div_u_r delta_peak_mm,-0.32802718818035553
+LOW_1,2,u_p_div_u_r u_p_div_tau_r,0.0679663437368425
+LOW_1,2,u_p_div_u_r tau_peak_MPa_csds,0.035236238737559586
+LOW_1,2,tau_r_div_tau_p^2,-0.09586470027903757
+LOW_1,2,tau_r_div_tau_p delta_peak_mm,-0.14640017695378818
+LOW_1,2,tau_r_div_tau_p u_p_div_tau_r,-0.22482984299229483
+LOW_1,2,tau_r_div_tau_p tau_peak_MPa_csds,0.03642308728538367
+LOW_1,2,delta_peak_mm^2,0.19604986282961584
+LOW_1,2,delta_peak_mm u_p_div_tau_r,0.16475757384938766
+LOW_1,2,delta_peak_mm tau_peak_MPa_csds,-0.12087696928542263
+LOW_1,2,u_p_div_tau_r^2,0.07010037804527827
+LOW_1,2,u_p_div_tau_r tau_peak_MPa_csds,0.053943197970862986
+LOW_1,2,tau_peak_MPa_csds^2,-0.3139068778100471
+LOW_1,3,u_r_div_tau_r,-1.0530164046180632
+LOW_1,3,tau_r_div_tau_p,-0.7378966515128838
+LOW_1,3,u_p_div_u_r,0.4125987722299153
+LOW_1,3,sigma_n_div_tau_r,0.12996319153082145
+LOW_1,3,tau_peak_MPa_csds,1.696948064830413
+LOW_1,3,u_r_div_tau_r^2,0.13897040332875332
+LOW_1,3,u_r_div_tau_r tau_r_div_tau_p,-0.2773918434141245
+LOW_1,3,u_r_div_tau_r u_p_div_u_r,-0.865309397520738
+LOW_1,3,u_r_div_tau_r sigma_n_div_tau_r,0.15786274781218032
+LOW_1,3,u_r_div_tau_r tau_peak_MPa_csds,0.3044821448868774
+LOW_1,3,tau_r_div_tau_p^2,-0.11480211307532005
+LOW_1,3,tau_r_div_tau_p u_p_div_u_r,-0.5125106704301298
+LOW_1,3,tau_r_div_tau_p sigma_n_div_tau_r,-0.025314579648079868
+LOW_1,3,tau_r_div_tau_p tau_peak_MPa_csds,0.01573018225773334
+LOW_1,3,u_p_div_u_r^2,0.2196618958934753
+LOW_1,3,u_p_div_u_r sigma_n_div_tau_r,-0.04695856007083546
+LOW_1,3,u_p_div_u_r tau_peak_MPa_csds,-0.05834722513311697
+LOW_1,3,sigma_n_div_tau_r^2,-0.02924858513866615
+LOW_1,3,sigma_n_div_tau_r tau_peak_MPa_csds,-0.05279967016389681
+LOW_1,3,tau_peak_MPa_csds^2,-0.3328497506178789
+LOW_1,4,tau_r_div_tau_p,-0.7344414078978427
+LOW_1,4,tau_peak_MPa_csds,1.6630937031845472
+LOW_1,4,u_r_div_tau_r,-1.1464367380050597
+LOW_1,4,tau_r_div_sigma_n,-0.08151220011818897
+LOW_1,4,u_p_div_u_r,0.41225575176538715
+LOW_1,4,tau_r_div_tau_p^2,-0.13898810318785654
+LOW_1,4,tau_r_div_tau_p tau_peak_MPa_csds,0.022145794356921517
+LOW_1,4,tau_r_div_tau_p u_r_div_tau_r,-0.26903548862136883
+LOW_1,4,tau_r_div_tau_p tau_r_div_sigma_n,0.015394814702656962
+LOW_1,4,tau_r_div_tau_p u_p_div_u_r,-0.47920612961240927
+LOW_1,4,tau_peak_MPa_csds^2,-0.2914800655137176
+LOW_1,4,tau_peak_MPa_csds u_r_div_tau_r,0.42009396211735445
+LOW_1,4,tau_peak_MPa_csds tau_r_div_sigma_n,0.09872283784177215
+LOW_1,4,tau_peak_MPa_csds u_p_div_u_r,-0.0687703941353292
+LOW_1,4,u_r_div_tau_r^2,0.1577553626183693
+LOW_1,4,u_r_div_tau_r tau_r_div_sigma_n,-0.061465240128615005
+LOW_1,4,u_r_div_tau_r u_p_div_u_r,-0.8292017567153845
+LOW_1,4,tau_r_div_sigma_n^2,-0.033690400747946624
+LOW_1,4,tau_r_div_sigma_n u_p_div_u_r,0.03583392950041442
+LOW_1,4,u_p_div_u_r^2,0.21613369817692002
+LOW_1,5,tau_peak_MPa_csds,1.576952940037677
+LOW_1,5,tau_r_div_sigma_n,-0.04840194455784831
+LOW_1,5,tau_r_div_tau_p,-0.7037807360846206
+LOW_1,5,u_p_div_tau_r,-0.8763806117243087
+LOW_1,5,u_p_div_u_r,0.9149372107005338
+LOW_1,5,tau_peak_MPa_csds^2,-0.27899247673023914
+LOW_1,5,tau_peak_MPa_csds tau_r_div_sigma_n,0.10686608284168786
+LOW_1,5,tau_peak_MPa_csds tau_r_div_tau_p,0.029538555290038786
+LOW_1,5,tau_peak_MPa_csds u_p_div_tau_r,0.30795656183424364
+LOW_1,5,tau_peak_MPa_csds u_p_div_u_r,-0.08608314705212632
+LOW_1,5,tau_r_div_sigma_n^2,-0.03520231260182916
+LOW_1,5,tau_r_div_sigma_n tau_r_div_tau_p,0.010730672603906718
+LOW_1,5,tau_r_div_sigma_n u_p_div_tau_r,-0.0005884932532844809
+LOW_1,5,tau_r_div_sigma_n u_p_div_u_r,0.050911739408620454
+LOW_1,5,tau_r_div_tau_p^2,-0.12929526936580982
+LOW_1,5,tau_r_div_tau_p u_p_div_tau_r,-0.2529427958365153
+LOW_1,5,tau_r_div_tau_p u_p_div_u_r,-0.39968702106026566
+LOW_1,5,u_p_div_tau_r^2,0.167943228183847
+LOW_1,5,u_p_div_tau_r u_p_div_u_r,0.04580421664176452
+LOW_1,5,u_p_div_u_r^2,0.19067352948139385

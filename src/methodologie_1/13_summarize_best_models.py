@@ -210,6 +210,10 @@ for dataset_name in DATA_FILES:
                 "Saved_R2_cv_std_log": row.get("R2_cv_std_log", np.nan),
                 "Saved_R2_val_d": row.get("R2_val_d", np.nan),
                 "Saved_RMSE_val_d": row.get("RMSE_val_d", np.nan),
+                "Saved_R2_test_log": row.get("R2_test_log", np.nan),
+                "Saved_RMSE_test_log": row.get("RMSE_test_log", np.nan),
+                "Saved_R2_test_d": row.get("R2_test_d", np.nan),
+                "Saved_RMSE_test_d": row.get("RMSE_test_d", np.nan),
                 "Saved_Selection_Score": row.get("Selection_Score", np.nan),
             })
 
@@ -262,6 +266,10 @@ for dataset_name in DATA_FILES:
                     "Saved_R2_cv_std_log": row.get("R2_cv_std_log", np.nan),
                     "Saved_R2_val_d": row.get("R2_val_d", np.nan),
                     "Saved_RMSE_val_d": row.get("RMSE_val_d", np.nan),
+                    "Saved_R2_test_log": row.get("R2_test_log", np.nan),
+                    "Saved_RMSE_test_log": row.get("RMSE_test_log", np.nan),
+                    "Saved_R2_test_d": row.get("R2_test_d", np.nan),
+                    "Saved_RMSE_test_d": row.get("RMSE_test_d", np.nan),
                     "Saved_Selection_Score": row.get("Selection_Score", np.nan),
                 })
 

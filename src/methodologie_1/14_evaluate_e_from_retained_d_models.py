@@ -95,6 +95,10 @@ def load_exp_models_for_dataset(dataset_name):
             "Saved_R2_cv_mean_log": row.get("Saved_R2_cv_mean_log", np.nan),
             "Saved_R2_val_d": row.get("Saved_R2_val_d", np.nan),
             "Saved_RMSE_val_d": row.get("Saved_RMSE_val_d", np.nan),
+            "Saved_R2_test_log": row.get("Saved_R2_test_log", np.nan),
+            "Saved_RMSE_test_log": row.get("Saved_RMSE_test_log", np.nan),
+            "Saved_R2_test_d": row.get("Saved_R2_test_d", np.nan),
+            "Saved_RMSE_test_d": row.get("Saved_RMSE_test_d", np.nan),
             "Saved_Selection_Score": row.get("Saved_Selection_Score", np.nan),
         })
 
@@ -127,6 +131,10 @@ def load_poly_models_for_dataset(dataset_name):
             "Saved_R2_cv_mean_log": row.get("Saved_R2_cv_mean_log", np.nan),
             "Saved_R2_val_d": row.get("Saved_R2_val_d", np.nan),
             "Saved_RMSE_val_d": row.get("Saved_RMSE_val_d", np.nan),
+            "Saved_R2_test_log": row.get("Saved_R2_test_log", np.nan),
+            "Saved_RMSE_test_log": row.get("Saved_RMSE_test_log", np.nan),
+            "Saved_R2_test_d": row.get("Saved_R2_test_d", np.nan),
+            "Saved_RMSE_test_d": row.get("Saved_RMSE_test_d", np.nan),
             "Saved_Selection_Score": row.get("Saved_Selection_Score", np.nan),
         })
 
@@ -336,6 +344,10 @@ for dataset_name in DATA_FILES:
             "Saved_R2_cv_mean_log": model_spec["Saved_R2_cv_mean_log"],
             "Saved_R2_val_d": model_spec["Saved_R2_val_d"],
             "Saved_RMSE_val_d": model_spec["Saved_RMSE_val_d"],
+            "Saved_R2_test_log": model_spec["Saved_R2_test_log"],
+            "Saved_RMSE_test_log": model_spec["Saved_RMSE_test_log"],
+            "Saved_R2_test_d": model_spec["Saved_R2_test_d"],
+            "Saved_RMSE_test_d": model_spec["Saved_RMSE_test_d"],
             "Saved_Selection_Score": model_spec["Saved_Selection_Score"],
             "N_rows": n_total,
             "N_e_converged": n_conv,

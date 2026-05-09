@@ -1,0 +1,2 @@
+model_label,best_lambda,n_components,degree,feature_cols
+PCA 5 composantes FULL,0.0001,5,2,tau_r_div_tau_p + u_p_div_u_r + u_r_mm + u_r_x_u_p + tau_p_div_u_p + tau_r_MPa + tau_r_div_u_p + tau_p_div_u_r + tau_p_x_tau_r + tau_r_div_u_r

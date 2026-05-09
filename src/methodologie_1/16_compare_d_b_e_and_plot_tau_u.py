@@ -23,6 +23,7 @@ B_INPUT_ROOT = B_FROM_D_DIR
 OUTPUT_ROOT = COMPARE_DIR
 DATASET_FOLDERS = dict(GROUP_DIR)
 MASTER_DATA_CANDIDATES = [CONVERGED_FILE]
+WRITE_PER_MODEL_SAMPLE_PLOTS = False
 
 
 # ============================================================
@@ -832,12 +833,13 @@ def main() -> None:
                 comparison_df.to_csv(comparison_file, index=False)
 
                 plots_dir = METHOD_1_MODEL_FIGURES_DIR / folder_name / "per_model_curves" / model_name
-                create_plots_for_model(
-                    comparison_df=comparison_df,
-                    dataset_name=dataset_name,
-                    model_name=model_name,
-                    plots_dir=plots_dir,
-                )
+                if WRITE_PER_MODEL_SAMPLE_PLOTS:
+                    create_plots_for_model(
+                        comparison_df=comparison_df,
+                        dataset_name=dataset_name,
+                        model_name=model_name,
+                        plots_dir=plots_dir,
+                    )
 
                 summary_row = summarize_model(
                     comparison_df=comparison_df,
@@ -848,7 +850,10 @@ def main() -> None:
                 global_summary.append(summary_row)
 
                 print(f"Comparison saved: {comparison_file}")
-                print(f"Plots saved in: {plots_dir}")
+                if WRITE_PER_MODEL_SAMPLE_PLOTS:
+                    print(f"Per-model plots saved in: {plots_dir}")
+                else:
+                    print("Per-model plots skipped; combined all-model sample plots will be regenerated.")
                 print(f"RMSE(d) = {summary_row['rmse_d']:.6f}")
                 print(f"RMSE(b) = {summary_row['rmse_b']:.6f}")
                 print(f"RMSE(e) = {summary_row['rmse_e']:.6f}")

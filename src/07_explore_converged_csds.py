@@ -3,6 +3,8 @@
 from pathlib import Path
 import pandas as pd
 import numpy as np
+import matplotlib
+matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 import seaborn as sns
 
@@ -14,7 +16,18 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 FILE = BASE_DIR / "data" / "processed" / "csds_parameters_converged_only.csv"
 
 OUT_DIR = BASE_DIR / "results" / "eda" / "converged_csds"
+GROUPS_OUT_ROOT = BASE_DIR / "results" / "eda" / "groups"
+
+GROUP_INPUTS = {
+    "full": BASE_DIR / "data" / "processed" / "csds_parameters_converged_only.csv",
+    "low": BASE_DIR / "data" / "interim" / "csds_tau_peak_low.csv",
+    "high": BASE_DIR / "data" / "interim" / "csds_tau_peak_high.csv",
+    "low_1": BASE_DIR / "data" / "interim" / "csds_tau_peak_low_1.csv",
+    "low_2": BASE_DIR / "data" / "interim" / "csds_tau_peak_low_2.csv",
+}
+
 OUT_DIR.mkdir(parents=True, exist_ok=True)
+GROUPS_OUT_ROOT.mkdir(parents=True, exist_ok=True)
 
 # ================================
 # 2) Colonnes retenues pour l'EDA
@@ -30,7 +43,31 @@ TARGET_COLS = [
     "c_csds",
     "d_csds",
     "e_csds",
+    "e_minus_c_csds",
+    "log_d_csds",
+    "log_e_minus_c_csds",
 ]
+
+VARIABLE_LABELS = {
+    "sigma_n_MPa": "sigma_n (MPa)",
+    "delta_peak_mm": "u_p (mm)",
+    "tau_peak_MPa_csds": "tau_p (MPa)",
+    "u_r_mm": "u_r (mm)",
+    "tau_r_MPa": "tau_r (MPa)",
+    "a_csds": "a (MPa)",
+    "b_csds": "b (MPa)",
+    "c_csds": "c (1/mm)",
+    "d_csds": "d (MPa)",
+    "e_csds": "e (1/mm)",
+    "e_minus_c_csds": "e - c (1/mm)",
+    "log_d_csds": "log(d)",
+    "log_e_minus_c_csds": "log(e - c)",
+}
+
+
+def variable_label(col: str) -> str:
+    """Return a consistent display label for figures."""
+    return VARIABLE_LABELS.get(col, col)
 
 # ================================
 # 3) Fonction de statistiques descriptives
@@ -83,134 +120,149 @@ def descriptive_stats(series: pd.Series) -> dict:
         "n_outliers": n_outliers,
     }
 
-# ================================
-# 4) Charger les données
-# ================================
-df = pd.read_csv(FILE)
-numeric_cols = [c for c in TARGET_COLS if c in df.columns]
 
-print("\n" + "=" * 80)
-print("INPUT FILE")
-print("=" * 80)
-print(FILE)
+def run_eda_for_dataset(df: pd.DataFrame, dataset_label: str, output_dir: Path) -> Path:
+    """Generate descriptive statistics and EDA figures for one CSDS dataset."""
+    df = df.copy()
+    if "d_csds" in df.columns:
+        d_values = pd.to_numeric(df["d_csds"], errors="coerce")
+        df["log_d_csds"] = np.where(d_values > 0, np.log(d_values), np.nan)
+    if {"e_csds", "c_csds"}.issubset(df.columns):
+        e_values = pd.to_numeric(df["e_csds"], errors="coerce")
+        c_values = pd.to_numeric(df["c_csds"], errors="coerce")
+        e_minus_c = e_values - c_values
+        df["e_minus_c_csds"] = e_minus_c
+        df["log_e_minus_c_csds"] = np.where(e_minus_c > 0, np.log(e_minus_c), np.nan)
 
-print("\n" + "=" * 80)
-print("OUTPUT FOLDER")
-print("=" * 80)
-print(OUT_DIR)
+    output_dir.mkdir(parents=True, exist_ok=True)
+    numeric_cols = [c for c in TARGET_COLS if c in df.columns]
 
-print("\n" + "=" * 80)
-print("RUNNING EDA FOR FULL DATASET")
-print("=" * 80)
+    print("\n" + "=" * 80)
+    print(f"RUNNING EDA FOR {dataset_label.upper()}")
+    print("=" * 80)
+    print(f"Output folder: {output_dir}")
+    print("Columns included in EDA:")
+    for col in numeric_cols:
+        print(" -", col)
 
-print("Columns included in EDA:")
-for col in numeric_cols:
-    print(" -", col)
+    summary = {}
 
-# ================================
-# 5) Statistiques descriptives + histogrammes + boîtes à moustaches
-# ================================
-summary = {}
+    for col in numeric_cols:
+        print(f"Processing: {dataset_label} / {col}")
+        data_col = pd.to_numeric(df[col], errors="coerce").dropna()
+        label = variable_label(col)
 
-for col in numeric_cols:
-    print(f"Processing: {col}")
-    data_col = pd.to_numeric(df[col], errors="coerce").dropna()
+        stats = descriptive_stats(data_col)
+        summary[col] = stats
 
-    stats = descriptive_stats(data_col)
-    summary[col] = stats
-
-    # Générer l'histogramme de la variable.
-    plt.figure(figsize=(7, 5))
-    sns.histplot(data_col, kde=True)
-    plt.title(f"FULL - Histogram - {col}")
-    plt.xlabel(col)
-    plt.ylabel("Frequency")
-    plt.text(
-        0.70, 0.95,
-        f"mean = {stats['mean']:.3g}\nstd = {stats['std']:.3g}",
-        transform=plt.gca().transAxes,
-        fontsize=9,
-        bbox=dict(facecolor="white", alpha=0.7, edgecolor="black")
-    )
-    plt.tight_layout()
-    plt.savefig(OUT_DIR / f"{col}_hist.png", dpi=300)
-    plt.close()
-
-    # Générer la boîte à moustaches de la variable.
-    plt.figure(figsize=(6, 4))
-    ax = sns.boxplot(x=data_col)
-    plt.title(f"FULL - Boxplot - {col}")
-    ax.text(
-        0.01, 0.95,
-        f"min = {stats['min']:.3g}",
-        transform=ax.transAxes,
-        fontsize=8,
-        bbox=dict(facecolor="white", alpha=0.6)
-    )
-    ax.text(
-        0.01, 0.85,
-        f"max = {stats['max']:.3g}",
-        transform=ax.transAxes,
-        fontsize=8,
-        bbox=dict(facecolor="white", alpha=0.6)
-    )
-    plt.tight_layout()
-    plt.savefig(OUT_DIR / f"{col}_box.png", dpi=300)
-    plt.close()
-
-# ================================
-# 6) Nuages de points par paire de variables
-# ================================
-print("\nGenerating scatter plots...")
-
-for i in range(len(numeric_cols)):
-    for j in range(i + 1, len(numeric_cols)):
-        x_col = numeric_cols[i]
-        y_col = numeric_cols[j]
-
-        x = pd.to_numeric(df[x_col], errors="coerce")
-        y = pd.to_numeric(df[y_col], errors="coerce")
-        mask = x.notna() & y.notna()
-
-        if mask.sum() == 0:
-            continue
-
-        plt.figure(figsize=(6, 5))
-        plt.scatter(x[mask], y[mask], alpha=0.7)
-        plt.xlabel(x_col)
-        plt.ylabel(y_col)
-        plt.title(f"FULL - {y_col} vs {x_col}")
+        # Générer l'histogramme de la variable.
+        plt.figure(figsize=(7, 5))
+        sns.histplot(data_col, kde=True)
+        plt.title(f"{dataset_label.upper()} - Histogramme - {label}")
+        plt.xlabel(label)
+        plt.ylabel("Fréquence")
+        plt.text(
+            0.70, 0.95,
+            f"mean = {stats['mean']:.3g}\nstd = {stats['std']:.3g}",
+            transform=plt.gca().transAxes,
+            fontsize=9,
+            bbox=dict(facecolor="white", alpha=0.7, edgecolor="black")
+        )
         plt.tight_layout()
-        plt.savefig(OUT_DIR / f"{y_col}_vs_{x_col}_scatter.png", dpi=300)
+        plt.savefig(output_dir / f"{col}_hist.png", dpi=300)
         plt.close()
 
-# ================================
-# 7) Carte de chaleur des corrélations
-# ================================
-if len(numeric_cols) > 1:
-    corr_df = df[numeric_cols].apply(pd.to_numeric, errors="coerce")
-    corr = corr_df.corr()
+        # Générer la boîte à moustaches de la variable.
+        plt.figure(figsize=(6, 4))
+        ax = sns.boxplot(x=data_col)
+        plt.title(f"{dataset_label.upper()} - Boîte à moustaches - {label}")
+        ax.text(
+            0.01, 0.95,
+            f"min = {stats['min']:.3g}",
+            transform=ax.transAxes,
+            fontsize=8,
+            bbox=dict(facecolor="white", alpha=0.6)
+        )
+        ax.text(
+            0.01, 0.85,
+            f"max = {stats['max']:.3g}",
+            transform=ax.transAxes,
+            fontsize=8,
+            bbox=dict(facecolor="white", alpha=0.6)
+        )
+        plt.tight_layout()
+        plt.savefig(output_dir / f"{col}_box.png", dpi=300)
+        plt.close()
 
-    plt.figure(figsize=(10, 8))
-    sns.heatmap(corr, annot=True, cmap="coolwarm", fmt=".2f", square=True)
-    plt.title("FULL - Correlation heatmap")
-    plt.tight_layout()
-    plt.savefig(OUT_DIR / "correlation_heatmap.png", dpi=300)
-    plt.close()
+    print(f"Generating scatter plots for {dataset_label}...")
 
-# ================================
-# 8) Exporter les statistiques descriptives
-# ================================
-stats_df = pd.DataFrame(summary).T
-stats_output = OUT_DIR / "descriptive_statistics.csv"
-stats_df.to_csv(stats_output, index=True)
+    for i in range(len(numeric_cols)):
+        for j in range(i + 1, len(numeric_cols)):
+            x_col = numeric_cols[i]
+            y_col = numeric_cols[j]
 
-# ================================
-# 9) Message final
-# ================================
-print("\n" + "=" * 80)
-print("EDA COMPLETE")
-print("=" * 80)
-print(f"Figures and statistics saved in: {OUT_DIR}")
-print("\nMain stats file:")
-print(stats_output)
+            x = pd.to_numeric(df[x_col], errors="coerce")
+            y = pd.to_numeric(df[y_col], errors="coerce")
+            mask = x.notna() & y.notna()
+
+            if mask.sum() == 0:
+                continue
+
+            plt.figure(figsize=(6, 5))
+            plt.scatter(x[mask], y[mask], alpha=0.7)
+            plt.xlabel(variable_label(x_col))
+            plt.ylabel(variable_label(y_col))
+            plt.title(
+                f"{dataset_label.upper()} - {variable_label(y_col)} en fonction de {variable_label(x_col)}"
+            )
+            plt.tight_layout()
+            plt.savefig(output_dir / f"{y_col}_vs_{x_col}_scatter.png", dpi=300)
+            plt.close()
+
+    if len(numeric_cols) > 1:
+        corr_df = df[numeric_cols].apply(pd.to_numeric, errors="coerce")
+        corr = corr_df.corr().rename(index=VARIABLE_LABELS, columns=VARIABLE_LABELS)
+
+        plt.figure(figsize=(10, 8))
+        sns.heatmap(corr, annot=True, cmap="coolwarm", fmt=".2f", square=True)
+        plt.title(f"{dataset_label.upper()} - Matrice de corrélation")
+        plt.tight_layout()
+        plt.savefig(output_dir / "correlation_heatmap.png", dpi=300)
+        plt.close()
+
+    stats_df = pd.DataFrame(summary).T
+    stats_output = output_dir / "descriptive_statistics.csv"
+    stats_df.to_csv(stats_output, index=True)
+
+    return stats_output
+
+def main() -> None:
+    print("\n" + "=" * 80)
+    print("INPUT FILE")
+    print("=" * 80)
+    print(FILE)
+
+    # Sortie historique conservée pour compatibilité avec les premières analyses.
+    df = pd.read_csv(FILE)
+    stats_outputs = [run_eda_for_dataset(df, "full", OUT_DIR)]
+
+    # Sorties organisées par groupe. Elles incluent aussi sigma_n_MPa, afin que
+    # les figures HIGH/LOW utilisées dans le mémoire soient reproductibles.
+    for group_name, group_file in GROUP_INPUTS.items():
+        if not group_file.exists():
+            print(f"Skipping {group_name}: missing file {group_file}")
+            continue
+        group_df = pd.read_csv(group_file)
+        group_out_dir = GROUPS_OUT_ROOT / group_name
+        stats_outputs.append(run_eda_for_dataset(group_df, group_name, group_out_dir))
+
+    print("\n" + "=" * 80)
+    print("EDA COMPLETE")
+    print("=" * 80)
+    print("Statistics files:")
+    for stats_output in stats_outputs:
+        print(f"- {stats_output}")
+
+
+if __name__ == "__main__":
+    main()

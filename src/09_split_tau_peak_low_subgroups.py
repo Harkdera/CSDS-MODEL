@@ -2,6 +2,8 @@
 
 from pathlib import Path
 import pandas as pd
+import matplotlib
+matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 import seaborn as sns
 
@@ -19,6 +21,9 @@ RESULTS_DATASETS_DIR = BASE_DIR / "results" / "datasets"
 
 OUTPUT_DIR = BASE_DIR / "results" / "split" / "tau_peak_low_subgroups"
 OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
+
+TAU_PEAK_LABEL = "tau_p (MPa)"
+Y_LABEL = "Fréquence"
 
 df = pd.read_csv(INPUT_FILE)
 df_converged = pd.read_csv(CONVERGED_FILE)
@@ -114,9 +119,9 @@ plt.text(
     bbox=dict(facecolor="white", alpha=0.8)
 )
 
-plt.xlabel("tau_peak_MPa_csds (MPa)")
-plt.ylabel("Frequency")
-plt.title(f"LOW group: tau_peak_MPa_csds split at {SPLIT} MPa")
+plt.xlabel(TAU_PEAK_LABEL)
+plt.ylabel(Y_LABEL)
+plt.title(f"Groupe LOW : histogramme de tau_p avec seuil à {SPLIT} MPa")
 plt.legend()
 plt.tight_layout()
 plt.savefig(full_hist_path, dpi=300)
@@ -132,9 +137,9 @@ low_1_box_path = OUTPUT_DIR / "tau_peak_low_1_box.png"
 
 plt.figure(figsize=(8, 5))
 sns.histplot(low_1_tau, kde=True, bins=20)
-plt.title("LOW_1 - Histogram - tau_peak_MPa_csds")
-plt.xlabel("tau_peak_MPa_csds (MPa)")
-plt.ylabel("Frequency")
+plt.title("LOW_1 - Histogramme - tau_p")
+plt.xlabel(TAU_PEAK_LABEL)
+plt.ylabel(Y_LABEL)
 plt.text(
     0.72, 0.95,
     f"mean = {low_1_tau.mean():.3g}\nstd = {low_1_tau.std():.3g}",
@@ -148,7 +153,7 @@ plt.close()
 
 plt.figure(figsize=(8, 4))
 ax = sns.boxplot(x=low_1_tau)
-plt.title("LOW_1 - Boxplot - tau_peak_MPa_csds")
+plt.title("LOW_1 - Boîte à moustaches - tau_p")
 ax.text(
     0.01, 0.95,
     f"min = {low_1_tau.min():.3g}",
@@ -177,9 +182,9 @@ low_2_box_path = OUTPUT_DIR / "tau_peak_low_2_box.png"
 
 plt.figure(figsize=(8, 5))
 sns.histplot(low_2_tau, kde=True, bins=20)
-plt.title("LOW_2 - Histogram - tau_peak_MPa_csds")
-plt.xlabel("tau_peak_MPa_csds (MPa)")
-plt.ylabel("Frequency")
+plt.title("LOW_2 - Histogramme - tau_p")
+plt.xlabel(TAU_PEAK_LABEL)
+plt.ylabel(Y_LABEL)
 plt.text(
     0.72, 0.95,
     f"mean = {low_2_tau.mean():.3g}\nstd = {low_2_tau.std():.3g}",
@@ -193,7 +198,7 @@ plt.close()
 
 plt.figure(figsize=(8, 4))
 ax = sns.boxplot(x=low_2_tau)
-plt.title("LOW_2 - Boxplot - tau_peak_MPa_csds")
+plt.title("LOW_2 - Boîte à moustaches - tau_p")
 ax.text(
     0.01, 0.95,
     f"min = {low_2_tau.min():.3g}",

@@ -80,6 +80,7 @@ def ensure_creator_classes(fitness_name: str, individual_name: str):
 def fit_and_evaluate_model(
     train_df: pd.DataFrame,
     val_df: pd.DataFrame,
+    test_df: pd.DataFrame | None,
     feature_cols: list[str],
     model_builder: Callable[[], object],
     target_col: str = "d_csds",
@@ -87,7 +88,13 @@ def fit_and_evaluate_model(
     cv_folds: int = 5,
     transform_prediction: Callable[[np.ndarray], np.ndarray] | None = None,
 ) -> dict[str, float]:
-    """Ajuste un modèle puis retourne les métriques sur la cible entraînée et la cible finale."""
+    """Ajuste un modèle et retourne les métriques train/validation/test/CV.
+
+    Cette fonction garde la méthodologie 1 alignée avec la méthodologie 2 :
+    le modèle est sélectionné sur validation + stabilité en validation croisée,
+    puis la performance est aussi rapportée sur un jeu test externe non utilisé
+    pendant l'ajustement ni pendant la sélection génétique.
+    """
     X_train = train_df[feature_cols]
     y_train = train_df[target_col]
     X_val = val_df[feature_cols]
@@ -98,12 +105,20 @@ def fit_and_evaluate_model(
 
     train_pred = model.predict(X_train)
     val_pred = model.predict(X_val)
+    test_pred = None
+    if test_df is not None:
+        X_test = test_df[feature_cols]
+        test_pred = model.predict(X_test)
 
     cv = KFold(n_splits=cv_folds, shuffle=True, random_state=RANDOM_SEED)
     cv_scores = cross_val_score(model, X_train, y_train, cv=cv, scoring="r2")
 
     train_metrics = compute_metrics(y_train, train_pred)
     val_metrics = compute_metrics(y_val, val_pred)
+    if test_df is not None and test_pred is not None:
+        test_metrics = compute_metrics(test_df[target_col], test_pred)
+    else:
+        test_metrics = {"R2": np.nan, "RMSE": np.nan}
 
     result = {
         "n_features": len(feature_cols),
@@ -111,6 +126,8 @@ def fit_and_evaluate_model(
         "RMSE_train_target": train_metrics["RMSE"],
         "R2_val_target": val_metrics["R2"],
         "RMSE_val_target": val_metrics["RMSE"],
+        "R2_test_target": test_metrics["R2"],
+        "RMSE_test_target": test_metrics["RMSE"],
         "R2_cv_mean_target": float(np.mean(cv_scores)),
         "R2_cv_std_target": float(np.std(cv_scores)),
     }
@@ -120,11 +137,18 @@ def fit_and_evaluate_model(
         val_metric_pred = transform_prediction(val_pred)
         train_metric_metrics = compute_metrics(train_df[metric_target_col], train_metric_pred)
         val_metric_metrics = compute_metrics(val_df[metric_target_col], val_metric_pred)
+        if test_df is not None and test_pred is not None:
+            test_metric_pred = transform_prediction(test_pred)
+            test_metric_metrics = compute_metrics(test_df[metric_target_col], test_metric_pred)
+        else:
+            test_metric_metrics = {"R2": np.nan, "RMSE": np.nan}
         result.update({
             "R2_train_metric": train_metric_metrics["R2"],
             "RMSE_train_metric": train_metric_metrics["RMSE"],
             "R2_val_metric": val_metric_metrics["R2"],
             "RMSE_val_metric": val_metric_metrics["RMSE"],
+            "R2_test_metric": test_metric_metrics["R2"],
+            "RMSE_test_metric": test_metric_metrics["RMSE"],
         })
 
     return result

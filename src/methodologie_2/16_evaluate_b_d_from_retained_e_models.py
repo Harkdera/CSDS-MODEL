@@ -76,6 +76,12 @@ def load_retained_models_for_dataset(dataset_name: str) -> list[dict]:
                 "Saved_R2_cv_mean_z": row.get("Saved_R2_cv_mean_z", np.nan),
                 "Saved_R2_val_e": row.get("Saved_R2_val_e", np.nan),
                 "Saved_RMSE_val_e": row.get("Saved_RMSE_val_e", np.nan),
+                "Saved_R2_test_z": row.get("Saved_R2_test_z", np.nan),
+                "Saved_RMSE_test_z": row.get("Saved_RMSE_test_z", np.nan),
+                "Saved_R2_test_e": row.get("Saved_R2_test_e", np.nan),
+                "Saved_RMSE_test_e": row.get("Saved_RMSE_test_e", np.nan),
+                "Saved_R2_test_tau_u": row.get("Saved_R2_test_tau_u", np.nan),
+                "Saved_RMSE_test_tau_u": row.get("Saved_RMSE_test_tau_u", np.nan),
                 "Saved_Selection_Score": row.get("Saved_Selection_Score", np.nan),
             })
 
@@ -94,6 +100,12 @@ def load_retained_models_for_dataset(dataset_name: str) -> list[dict]:
                 "Saved_R2_cv_mean_z": row.get("Saved_R2_cv_mean_z", np.nan),
                 "Saved_R2_val_e": row.get("Saved_R2_val_e", np.nan),
                 "Saved_RMSE_val_e": row.get("Saved_RMSE_val_e", np.nan),
+                "Saved_R2_test_z": row.get("Saved_R2_test_z", np.nan),
+                "Saved_RMSE_test_z": row.get("Saved_RMSE_test_z", np.nan),
+                "Saved_R2_test_e": row.get("Saved_R2_test_e", np.nan),
+                "Saved_RMSE_test_e": row.get("Saved_RMSE_test_e", np.nan),
+                "Saved_R2_test_tau_u": row.get("Saved_R2_test_tau_u", np.nan),
+                "Saved_RMSE_test_tau_u": row.get("Saved_RMSE_test_tau_u", np.nan),
                 "Saved_Selection_Score": row.get("Saved_Selection_Score", np.nan),
             })
 
@@ -182,6 +194,12 @@ def main() -> None:
                 "saved_r2_cv_mean_z": model_spec["Saved_R2_cv_mean_z"],
                 "saved_r2_val_e": model_spec["Saved_R2_val_e"],
                 "saved_rmse_val_e": model_spec["Saved_RMSE_val_e"],
+                "saved_r2_test_z": model_spec["Saved_R2_test_z"],
+                "saved_rmse_test_z": model_spec["Saved_RMSE_test_z"],
+                "saved_r2_test_e": model_spec["Saved_R2_test_e"],
+                "saved_rmse_test_e": model_spec["Saved_RMSE_test_e"],
+                "saved_r2_test_tau_u": model_spec["Saved_R2_test_tau_u"],
+                "saved_rmse_test_tau_u": model_spec["Saved_RMSE_test_tau_u"],
                 "saved_selection_score": model_spec["Saved_Selection_Score"],
                 "n_rows": len(temp),
                 "rmse_z": z_metrics["RMSE"],
